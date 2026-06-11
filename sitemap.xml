@@ -6,27 +6,27 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://irishguru.com/about.html</loc>
+    <loc>https://irishguru.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://irishguru.com/services.html</loc>
+    <loc>https://irishguru.com/services/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://irishguru.com/industries.html</loc>
+    <loc>https://irishguru.com/industries/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://irishguru.com/case-studies.html</loc>
+    <loc>https://irishguru.com/case-studies/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://irishguru.com/contact.html</loc>
+    <loc>https://irishguru.com/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

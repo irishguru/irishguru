@@ -111,16 +111,25 @@
 
   function initActiveNav() {
     const parts = window.location.pathname.split('/').filter(Boolean);
-    const segment = parts.length ? parts[parts.length - 1] : 'index.html';
+    const last = parts.length ? parts[parts.length - 1] : '';
     const pageMap = {
-      'index.html': 'home',
-      'about.html': 'about',
-      'services.html': 'services',
-      'industries.html': 'industries',
-      'case-studies.html': 'case-studies',
-      'contact.html': 'contact'
+      'about': 'about',
+      'services': 'services',
+      'industries': 'industries',
+      'case-studies': 'case-studies',
+      'contact': 'contact',
+      'index.html': 'home'
     };
-    const currentPage = pageMap[segment] || 'home';
+
+    let currentPage = 'home';
+    if (last && pageMap[last]) {
+      currentPage = pageMap[last];
+    } else if (last === 'irishguru' || last === '') {
+      currentPage = 'home';
+    } else if (parts.length >= 2) {
+      const segment = parts[parts.length - 1];
+      if (pageMap[segment]) currentPage = pageMap[segment];
+    }
 
     document.querySelectorAll('[data-nav]').forEach((link) => {
       if (link.getAttribute('data-nav') === currentPage) {
