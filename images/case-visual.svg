@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="cv" x1="0" y1="0" x2="560" y2="420">
+      <stop offset="0%" stop-color="#1a342b"/>
+      <stop offset="60%" stop-color="#0c1612"/>
+      <stop offset="100%" stop-color="#060a08"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="560" y2="0">
+      <stop offset="0%" stop-color="#d4924f" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#d4924f"/>
+      <stop offset="100%" stop-color="#d4924f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141e1a"/>
+      <stop offset="100%" stop-color="#0a100d"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/></filter>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#d4924f"/>
+    </marker>
+  </defs>
+  <rect width="560" height="420" rx="20" fill="url(#cv)"/>
+  <rect x="1" y="1" width="558" height="418" rx="19" stroke="#d4924f" stroke-opacity="0.2"/>
+  <rect width="560" height="120" fill="url(#wave)" fill-opacity="0.04"/>
+  <text x="28" y="40" fill="#d4924f" font-size="11" font-weight="700" letter-spacing="0.14em">TELECOM · IRELAND</text>
+  <text x="28" y="76" fill="#eef1ee" font-size="22" font-weight="800">Billing archive migration</text>
+  <rect x="28" y="100" width="504" height="1" fill="url(#wave)" opacity="0.6"/>
+
+  <g transform="translate(28,130)" filter="url(#shadow)">
+    <rect width="150" height="104" rx="12" fill="url(#card)" stroke="#2d4a40"/>
+    <text x="16" y="28" fill="#7a8480" font-size="9" font-weight="700">LEGACY</text>
+    <text x="16" y="54" fill="#eef1ee" font-size="20" font-weight="800">22 yrs</text>
+    <text x="16" y="76" fill="#7a8480" font-size="10">Proprietary HW</text>
+
+    <path d="M170 52 H205" stroke="#d4924f" stroke-width="2" marker-end="url(#arr)"/>
+
+    <rect x="215" y="0" width="150" height="104" rx="12" fill="url(#card)" stroke="#d4924f" stroke-opacity="0.55"/>
+    <text x="231" y="28" fill="#d4924f" font-size="9" font-weight="700">CLOUD</text>
+    <text x="231" y="54" fill="#eef1ee" font-size="20" font-weight="800">13 wks</text>
+    <text x="231" y="76" fill="#7a8480" font-size="10">Event-driven</text>
+
+    <rect x="380" y="0" width="124" height="104" rx="12" fill="url(#card)" stroke="#d4924f" stroke-opacity="0.35"/>
+    <text x="396" y="28" fill="#7a8480" font-size="9" font-weight="700">SAVING</text>
+    <text x="396" y="54" fill="#d4924f" font-size="20" font-weight="800">€980K</text>
+    <text x="396" y="76" fill="#7a8480" font-size="10">Annual run-cost</text>
+  </g>
+
+  <g transform="translate(28,264)">
+    <text x="0" y="0" fill="#7a8480" font-size="10" font-weight="600">Migration waves</text>
+    <rect x="0" y="14" width="504" height="14" rx="7" fill="#1a2420"/>
+    <rect x="0" y="14" width="126" height="14" rx="7" fill="#2d4a40"/>
+    <rect x="126" y="14" width="126" height="14" rx="7" fill="#3d5a4f"/>
+    <rect x="252" y="14" width="126" height="14" rx="7" fill="#8a5a2a"/>
+    <rect x="378" y="14" width="126" height="14" rx="7" fill="url(#wave)"/>
+    <text x="0" y="50" fill="#7a8480" font-size="9">W1</text>
+    <text x="126" y="50" fill="#7a8480" font-size="9">W2</text>
+    <text x="252" y="50" fill="#7a8480" font-size="9">W3</text>
+    <text x="378" y="50" fill="#d4924f" font-size="9" font-weight="700">Cutover</text>
+  </g>
+
+  <text x="28" y="392" fill="#5a6560" font-size="10">0 regulatory access incidents · 58% faster compliance queries</text>
+</svg>

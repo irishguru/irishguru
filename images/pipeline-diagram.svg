@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="pg" x1="0" y1="0" x2="720" y2="0">
+      <stop offset="0%" stop-color="#b87333"/>
+      <stop offset="50%" stop-color="#d4924f"/>
+      <stop offset="100%" stop-color="#3d5a4f"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#161f1b"/>
+      <stop offset="100%" stop-color="#0a100d"/>
+    </linearGradient>
+    <filter id="cardShadow"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/></filter>
+  </defs>
+
+  <line x1="80" y1="100" x2="640" y2="100" stroke="url(#pg)" stroke-width="2" stroke-opacity="0.4"/>
+
+  <g filter="url(#cardShadow)">
+    <rect x="24" y="60" width="116" height="80" rx="12" fill="url(#card)" stroke="#d4924f" stroke-opacity="0.45"/>
+    <text x="40" y="90" fill="#d4924f" font-family="system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="0.08em">DISCOVER</text>
+    <text x="40" y="114" fill="#8a928c" font-family="system-ui,sans-serif" font-size="11">Assess &amp; scope</text>
+  </g>
+  <g filter="url(#cardShadow)">
+    <rect x="156" y="60" width="116" height="80" rx="12" fill="url(#card)" stroke="#3d5a4f" stroke-opacity="0.55"/>
+    <text x="172" y="90" fill="#d4924f" font-family="system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="0.08em">DESIGN</text>
+    <text x="172" y="114" fill="#8a928c" font-family="system-ui,sans-serif" font-size="11">Architecture</text>
+  </g>
+  <g filter="url(#cardShadow)">
+    <rect x="288" y="60" width="116" height="80" rx="12" fill="url(#card)" stroke="#3d5a4f" stroke-opacity="0.55"/>
+    <text x="304" y="90" fill="#d4924f" font-family="system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="0.08em">BUILD</text>
+    <text x="304" y="114" fill="#8a928c" font-family="system-ui,sans-serif" font-size="11">IaC &amp; pipelines</text>
+  </g>
+  <g filter="url(#cardShadow)">
+    <rect x="420" y="60" width="116" height="80" rx="12" fill="url(#card)" stroke="#d4924f" stroke-opacity="0.5"/>
+    <text x="436" y="90" fill="#d4924f" font-family="system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="0.08em">SECURE</text>
+    <text x="436" y="114" fill="#8a928c" font-family="system-ui,sans-serif" font-size="11">DevSecOps gates</text>
+  </g>
+  <g filter="url(#cardShadow)">
+    <rect x="552" y="56" width="124" height="88" rx="12" fill="url(#card)" stroke="#d4924f" stroke-width="1.25"/>
+    <rect x="552" y="56" width="124" height="2" rx="1" fill="#d4924f" fill-opacity="0.6"/>
+    <text x="568" y="90" fill="#f0c080" font-family="system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="0.08em">RELEASE</text>
+    <text x="568" y="114" fill="#eef1ee" font-family="system-ui,sans-serif" font-size="11">Production</text>
+  </g>
+
+  <polygon points="140,100 152,94 152,106" fill="#d4924f" fill-opacity="0.7"/>
+  <polygon points="272,100 284,94 284,106" fill="#d4924f" fill-opacity="0.7"/>
+  <polygon points="404,100 416,94 416,106" fill="#d4924f" fill-opacity="0.7"/>
+  <polygon points="536,100 548,94 548,106" fill="#d4924f" fill-opacity="0.7"/>
+
+  <text x="24" y="172" fill="#6b726d" font-family="system-ui,sans-serif" font-size="11">Irish Guru delivery model — outcome milestones at each stage</text>
+</svg>

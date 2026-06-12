@@ -222,9 +222,14 @@
   }
 
   function initReveal() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const elements = document.querySelectorAll('.reveal');
+
+    if (reducedMotion) {
+      elements.forEach((el) => el.classList.add('is-visible'));
+      return;
+    }
+
     if (!elements.length) return;
 
     const observer = new IntersectionObserver(
@@ -242,6 +247,171 @@
     elements.forEach((el) => observer.observe(el));
   }
 
+  function animateCounter(el, target, suffix, decimals, duration) {
+    const start = performance.now();
+    const from = 0;
+
+    const step = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = from + (target - from) * eased;
+      el.textContent = value.toFixed(decimals) + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+  }
+
+  function initCounters() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const counters = document.querySelectorAll('[data-counter]');
+    if (!counters.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          if (el.dataset.counted) return;
+          el.dataset.counted = 'true';
+
+          const target = parseFloat(el.getAttribute('data-counter'));
+          const suffix = el.getAttribute('data-counter-suffix') || '';
+          const decimals = parseInt(el.getAttribute('data-counter-decimals') || '0', 10);
+          animateCounter(el, target, suffix, decimals, 1400);
+          observer.unobserve(el);
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    counters.forEach((el) => observer.observe(el));
+  }
+
+  function initHeroStage() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const scene = document.getElementById('hero-scene');
+    if (!scene) return;
+
+    const core = scene.querySelector('.visual-theater__core, .platform-scene__core');
+    const chips = scene.querySelectorAll('.platform-chip');
+    const orbits = scene.querySelectorAll('.visual-theater__orbit');
+    const glow = scene.querySelector('.visual-theater__glow');
+    let raf = null;
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    if (core) core.style.animation = 'none';
+
+    const onMove = (e) => {
+      const rect = scene.getBoundingClientRect();
+      targetX = (e.clientX - rect.left) / rect.width - 0.5;
+      targetY = (e.clientY - rect.top) / rect.height - 0.5;
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+
+    const update = () => {
+      currentX += (targetX - currentX) * 0.08;
+      currentY += (targetY - currentY) * 0.08;
+      raf = null;
+
+      const rotY = -14 + currentX * 10;
+      const rotX = 14 - currentY * 8;
+      const shiftX = currentX * 16;
+      const shiftY = currentY * 12;
+
+      if (core) {
+        core.style.transform =
+          `rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.02) translate(${shiftX}px, ${shiftY}px)`;
+      }
+
+      orbits.forEach((orbit, i) => {
+        const depth = (i + 1) * 4;
+        orbit.style.transform =
+          `translate(calc(-50% + ${currentX * depth}px), calc(-50% + ${currentY * depth}px)) rotateX(72deg)`;
+      });
+
+      if (glow) {
+        glow.style.transform =
+          `translate(${currentX * 20}px, ${currentY * 16}px) scale(${1 + Math.abs(currentX) * 0.04})`;
+      }
+
+      chips.forEach((chip, i) => {
+        const depth = (i + 1) * 5;
+        chip.style.transform = `translate3d(${currentX * depth}px, ${currentY * depth}px, 0)`;
+      });
+
+      if (Math.abs(targetX - currentX) > 0.001 || Math.abs(targetY - currentY) > 0.001) {
+        raf = requestAnimationFrame(update);
+      }
+    };
+
+    scene.addEventListener('mousemove', onMove);
+    scene.addEventListener('mouseleave', () => {
+      targetX = 0;
+      targetY = 0;
+      if (!raf) raf = requestAnimationFrame(update);
+    });
+  }
+
+  function initStoryCompose() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const compose = document.querySelector('.story-compose');
+    if (!compose) return;
+
+    const layers = compose.querySelectorAll('.story-compose__layer');
+    let raf = null;
+    let targetX = 0;
+    let targetY = 0;
+
+    const onMove = (e) => {
+      const rect = compose.getBoundingClientRect();
+      targetX = (e.clientX - rect.left) / rect.width - 0.5;
+      targetY = (e.clientY - rect.top) / rect.height - 0.5;
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+
+    const update = () => {
+      raf = null;
+      layers.forEach((layer, i) => {
+        const depth = (i + 1) * 6;
+        layer.style.transform =
+          `translate3d(${targetX * depth}px, ${targetY * depth}px, 0)`;
+      });
+    };
+
+    compose.addEventListener('mousemove', onMove);
+    compose.addEventListener('mouseleave', () => {
+      targetX = 0;
+      targetY = 0;
+      layers.forEach((layer) => { layer.style.transform = ''; });
+    });
+  }
+
+  function initImpactCharts() {
+    const rows = document.querySelectorAll('.impact-chart__row');
+    if (!rows.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-animated');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    rows.forEach((row) => observer.observe(row));
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initHeader();
@@ -250,5 +420,9 @@
     initFAQ();
     initForm();
     initReveal();
+    initCounters();
+    initImpactCharts();
+    initHeroStage();
+    initStoryCompose();
   });
 })();

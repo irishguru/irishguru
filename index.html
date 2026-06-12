@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#1a342b" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0c100e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#040706" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#020403" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,158 +106,248 @@
   </header>
 
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="hero__layout">
-          <div>
-            <p class="hero__eyebrow">Dublin · Ireland &amp; UK delivery</p>
-            <h1 id="hero-title" class="display hero__title">Consulting that ships to production — <em>not slide decks</em></h1>
-            <p class="lead hero__desc">Irish Guru embeds senior architects and engineers inside your organisation to deliver AI programmes, cloud migration, platform reliability, and secure release pipelines — with the governance controls your auditors and regulators expect.</p>
-            <div class="btn-group">
+    <section class="hero hero--apex" aria-labelledby="hero-title">
+      <div class="hero__atmosphere" aria-hidden="true">
+        <div class="hero__light hero__light--key"></div>
+        <div class="hero__light hero__light--fill"></div>
+        <div class="hero__light hero__light--rim"></div>
+        <div class="hero__beam"></div>
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__horizon"></div>
+        <div class="hero__grid-lines"></div>
+        <div class="hero__grain"></div>
+        <div class="hero__vignette"></div>
+      </div>
+      <div class="container container--wide">
+        <div class="hero__stage-layout">
+          <div class="hero__copy-panel reveal">
+            <p class="hero__badge">Irish &amp; UK regulated delivery</p>
+            <h1 id="hero-title" class="hero__headline">
+              <span class="hero__headline-line">Consulting that ships</span>
+              <span class="hero__headline-line hero__headline-line--accent">to production.</span>
+            </h1>
+            <p class="hero__lede">Senior architects and engineers embedded in your organisation — AI programmes, cloud migration, and secure release pipelines with the governance your auditors expect.</p>
+            <div class="hero__actions">
               <a href="contact/" class="btn btn--primary btn--lg">Schedule a Call</a>
               <a href="services/" class="btn btn--secondary btn--lg">View Services</a>
             </div>
-          </div>
-          <aside class="hero__aside reveal" aria-label="Delivery track record">
-            <p class="hero__proof-title">Delivery track record</p>
-            <ul class="hero__proof-list">
-              <li class="hero__proof-item">
-                <span class="hero__proof-value">3–5×</span>
-                <span class="hero__proof-label">Increase in deployment frequency on platform and DevOps engagements</span>
-              </li>
-              <li class="hero__proof-item">
-                <span class="hero__proof-value">11 wks</span>
-                <span class="hero__proof-label">Median time to first regulated production release on modernisation programmes</span>
-              </li>
-              <li class="hero__proof-item">
-                <span class="hero__proof-value">94%</span>
-                <span class="hero__proof-label">Client renewal rate on multi-year architecture and delivery contracts</span>
-              </li>
+            <ul class="hero__trust">
+              <li>Dublin HQ · UK on-site</li>
+              <li>ISO 27001-aligned practices</li>
+              <li>Outcome-defined engagements</li>
             </ul>
-            <p class="hero__note">We scope every engagement against production outcomes — release cadence, migration milestones, audit readiness — not hours billed.</p>
-          </aside>
+          </div>
+          <div class="hero__visual-theater reveal reveal--delay-1">
+            <div class="visual-theater" id="hero-scene">
+              <div class="visual-theater__orbit visual-theater__orbit--outer" aria-hidden="true"></div>
+              <div class="visual-theater__orbit visual-theater__orbit--inner" aria-hidden="true"></div>
+              <div class="visual-theater__pedestal" aria-hidden="true"></div>
+              <div class="visual-theater__glow" aria-hidden="true"></div>
+              <img class="visual-theater__core" src="images/hero-network.svg" alt="" width="720" height="580" loading="eager" decoding="async">
+              <div class="platform-chip platform-chip--1" aria-hidden="true">
+                <p class="platform-chip__val" data-counter="3.8" data-counter-suffix="×" data-counter-decimals="1">3.8×</p>
+                <p class="platform-chip__lbl">Deploy frequency</p>
+              </div>
+              <div class="platform-chip platform-chip--2" aria-hidden="true">
+                <p class="platform-chip__val" data-counter="11" data-counter-suffix=" wks">11 wks</p>
+                <p class="platform-chip__lbl">To production</p>
+              </div>
+              <div class="platform-chip platform-chip--3" aria-hidden="true">
+                <p class="platform-chip__val" data-counter="94" data-counter-suffix="%">94%</p>
+                <p class="platform-chip__lbl">Renewal rate</p>
+              </div>
+              <div class="visual-theater__fog" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__metrics-bar reveal reveal--delay-2" aria-label="Firm-wide delivery metrics">
+          <div class="metric-pill">
+            <p class="metric-pill__val" data-counter="120" data-counter-suffix="+">120+</p>
+            <p class="metric-pill__lbl">Production releases delivered</p>
+          </div>
+          <div class="metric-pill">
+            <p class="metric-pill__val" data-counter="18" data-counter-suffix="">18</p>
+            <p class="metric-pill__lbl">Regulated-sector clients</p>
+          </div>
+          <div class="metric-pill">
+            <p class="metric-pill__val" data-counter="30" data-counter-suffix="%">30%</p>
+            <p class="metric-pill__lbl">Typical infra cost reduction</p>
+          </div>
+          <div class="metric-pill">
+            <p class="metric-pill__val" data-counter="0" data-counter-suffix="">0</p>
+            <p class="metric-pill__lbl">Junior backfill on engagements</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="intro-strip" aria-label="Company positioning">
-      <div class="container intro-strip__inner">
-        <p class="intro-strip__label">Who we are</p>
-        <p class="intro-strip__text">A Dublin-based consultancy for CTOs, engineering directors, and transformation leads who need senior people on the ground — designing architecture, running migrations, hardening pipelines, and handing over systems your team can operate without us.</p>
+    <section class="intro-editorial" aria-label="Company positioning">
+      <div class="container intro-editorial__inner reveal">
+        <p class="intro-editorial__label">Who we are</p>
+        <p class="intro-editorial__text">A Dublin-based consultancy for CTOs, engineering directors, and transformation leads who need senior people on the ground — designing architecture, running migrations, hardening pipelines, and handing over systems your team can operate without us.</p>
       </div>
     </section>
 
-    <section class="section" id="services" aria-labelledby="services-title">
-      <div class="container">
+    <section class="section section--light" id="services" aria-labelledby="services-title">
+      <div class="container container--wide">
         <header class="section__header section__header--wide reveal">
           <div class="section__rule" aria-hidden="true"></div>
           <span class="section__eyebrow">Services</span>
           <h2 id="services-title" class="section__title">From architecture decisions to release acceleration</h2>
           <p class="section__desc">Each practice area is led by consultants who implement — not delegate. Engagements are scoped to business outcomes: lower run cost, faster releases, compliant migration, reliable platforms.</p>
         </header>
-        <div class="service-index reveal">
-          <article class="service-index__item service-index__item--featured">
-            <span class="service-index__num">01</span>
-            <div>
-              <h3 class="service-index__title"><a href="services/#ai">Artificial Intelligence</a></h3>
-              <p class="service-index__desc">Use-case selection, data readiness, model deployment, and AI governance for organisations moving past pilot programmes. We build production pipelines with human-in-the-loop review where regulators require it.</p>
-              <p class="service-index__outcome">Typical outcome: first governed production model within 14 weeks</p>
-            </div>
-            <a href="services/#ai" class="link-arrow service-index__link">Details <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <div class="bento reveal">
+          <article class="bento-card bento-card--featured">
+            <span class="bento-card__num">01</span>
+            <h3 class="bento-card__title"><a href="services/#ai">Artificial Intelligence</a></h3>
+            <p class="bento-card__desc">Use-case selection, data readiness, model deployment, and AI governance for organisations moving past pilot programmes. We build production pipelines with human-in-the-loop review where regulators require it.</p>
+            <p class="bento-card__outcome">Typical outcome: first governed production model within 14 weeks</p>
+            <a href="services/#ai" class="link-arrow bento-card__link">Explore AI consulting <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
           </article>
-          <article class="service-index__item">
-            <span class="service-index__num">02</span>
-            <div>
-              <h3 class="service-index__title"><a href="services/#cloud">Cloud Enablement</a></h3>
-              <p class="service-index__desc">Landing zones, workload migration, and FinOps operating models on AWS, Azure, and GCP — designed for Irish and UK data residency requirements.</p>
-              <p class="service-index__outcome">Typical outcome: 25–35% infrastructure cost reduction within two quarters</p>
-            </div>
-            <a href="services/#cloud" class="link-arrow service-index__link">Details <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <article class="bento-card bento-card--tall">
+            <span class="bento-card__num">02</span>
+            <h3 class="bento-card__title"><a href="services/#cloud">Cloud Enablement</a></h3>
+            <p class="bento-card__desc">Landing zones, workload migration, and FinOps on AWS, Azure, and GCP — designed for Irish and UK data residency.</p>
+            <p class="bento-card__outcome">25–35% cost reduction in two quarters</p>
           </article>
-          <article class="service-index__item">
-            <span class="service-index__num">03</span>
-            <div>
-              <h3 class="service-index__title"><a href="services/#devops">DevOps &amp; DevSecOps</a></h3>
-              <p class="service-index__desc">CI/CD, infrastructure as code, automated security gates, and SRE practices — integrated into your existing toolchain without six-month tooling projects.</p>
-              <p class="service-index__outcome">Typical outcome: critical vulnerability remediation from weeks to under 48 hours</p>
-            </div>
-            <a href="services/#devops" class="link-arrow service-index__link">Details <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <article class="bento-card bento-card--half">
+            <span class="bento-card__num">03</span>
+            <h3 class="bento-card__title"><a href="services/#devops">DevOps &amp; DevSecOps</a></h3>
+            <p class="bento-card__desc">CI/CD, IaC, automated security gates, and SRE — integrated without six-month tooling projects.</p>
+            <p class="bento-card__outcome">CVE remediation under 48 hours</p>
           </article>
-          <article class="service-index__item">
-            <span class="service-index__num">04</span>
-            <div>
-              <h3 class="service-index__title"><a href="services/#platform">Platform Engineering</a></h3>
-              <p class="service-index__desc">Internal developer platforms with golden paths, self-service environments, and observability standards — reducing platform team toil and product-team wait time.</p>
-              <p class="service-index__outcome">Typical outcome: developer onboarding reduced from weeks to days</p>
-            </div>
-            <a href="services/#platform" class="link-arrow service-index__link">Details <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <article class="bento-card bento-card--half">
+            <span class="bento-card__num">04</span>
+            <h3 class="bento-card__title"><a href="services/#platform">Platform Engineering</a></h3>
+            <p class="bento-card__desc">Internal developer platforms with golden paths and self-service environments.</p>
+            <p class="bento-card__outcome">Onboarding: weeks to days</p>
           </article>
-          <article class="service-index__item">
-            <span class="service-index__num">05</span>
-            <div>
-              <h3 class="service-index__title"><a href="services/#data">Data &amp; Analytics</a></h3>
-              <p class="service-index__desc">Lakehouse and warehouse architecture, pipeline engineering, data governance, and reporting platforms that support both operational decisions and AI workloads.</p>
-              <p class="service-index__outcome">Typical outcome: monthly reporting cycles cut by 60%+</p>
-            </div>
-            <a href="services/#data" class="link-arrow service-index__link">Details <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <article class="bento-card bento-card--third">
+            <span class="bento-card__num">05</span>
+            <h3 class="bento-card__title"><a href="services/#data">Data &amp; Analytics</a></h3>
+            <p class="bento-card__desc">Lakehouse architecture, pipelines, and governance for AI workloads.</p>
           </article>
-          <article class="service-index__item">
-            <span class="service-index__num">06</span>
-            <div>
-              <h3 class="service-index__title"><a href="services/#strategy">Technology Strategy</a></h3>
-              <p class="service-index__desc">Target architecture, migration sequencing, vendor selection, and investment cases — written by practitioners who will also execute the roadmap.</p>
-              <p class="service-index__outcome">Typical outcome: board-ready 18-month roadmap in four weeks</p>
-            </div>
-            <a href="services/#strategy" class="link-arrow service-index__link">Details <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <article class="bento-card bento-card--third">
+            <span class="bento-card__num">06</span>
+            <h3 class="bento-card__title"><a href="services/#strategy">Technology Strategy</a></h3>
+            <p class="bento-card__desc">Roadmaps written by practitioners who execute them.</p>
+          </article>
+          <article class="bento-card bento-card--third">
+            <h3 class="bento-card__title"><a href="services/">View all services</a></h3>
+            <p class="bento-card__desc">Automation, modernisation, and delivery acceleration.</p>
+            <a href="services/" class="link-arrow bento-card__link">Full descriptions <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
           </article>
         </div>
-        <p class="mt-10 reveal"><a href="services/" class="link-arrow">Full service descriptions <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></p>
       </div>
     </section>
 
-    <section class="section section--muted" id="why" aria-labelledby="why-title">
-      <div class="container">
-        <div class="diff-grid">
-          <aside class="diff-aside reveal">
+    <section class="story-spotlight story-spotlight--void" id="why" aria-labelledby="why-title">
+      <div class="container container--wide">
+        <div class="story-spotlight__grid story-spotlight__grid--reverse">
+          <div class="story-spotlight__visual reveal">
+            <div class="story-compose" aria-hidden="true">
+              <div class="story-compose__glow"></div>
+              <div class="story-compose__layer story-compose__layer--back">
+                <div class="story-visual story-visual--elevated">
+                  <img src="images/architecture-stack.svg" alt="" width="480" height="400" loading="lazy" decoding="async">
+                  <span class="story-visual__caption">Target architecture</span>
+                </div>
+              </div>
+              <div class="story-compose__layer story-compose__layer--front">
+                <div class="story-visual story-visual--primary">
+                  <img src="images/delivery-lifecycle.svg" alt="Delivery lifecycle diagram: Discover, Design, Deliver, Operate, Exit with outcome milestones" width="560" height="320" loading="lazy" decoding="async">
+                  <span class="story-visual__caption">Delivery lifecycle</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal reveal--delay-1">
             <div class="section__rule" aria-hidden="true"></div>
             <span class="section__eyebrow">Why Irish Guru</span>
-            <blockquote class="diff-aside__quote">Large integrators sell capacity. We sell completed milestones — architecture signed off, migration waves delivered, pipelines in production.</blockquote>
-            <p class="text-muted">Our model suits organisations that have been burned by advisory-only engagements and need people who will sit in your stand-ups, write the Terraform, and stay through the go-live window.</p>
-          </aside>
-          <div class="diff-list reveal">
-            <article class="diff-item">
-              <p class="diff-item__label">Scope</p>
-              <h3 class="diff-item__title">Outcome-defined engagements</h3>
-              <p class="diff-item__desc">Every statement of work ties fees to measurable targets: deployment frequency, migration wave completion, audit findings closed, or platform adoption rates — reviewed weekly with your sponsor.</p>
-            </article>
-            <article class="diff-item">
-              <p class="diff-item__label">Regulation</p>
-              <h3 class="diff-item__title">Regulated-sector delivery muscle</h3>
-              <p class="diff-item__desc">We operate routinely under Central Bank of Ireland oversight, FCA expectations, NCSC cloud principles, OGP procurement rules, and NHS DSPT requirements — without treating compliance as a separate workstream.</p>
-            </article>
-            <article class="diff-item">
-              <p class="diff-item__label">Team</p>
-              <h3 class="diff-item__title">Senior practitioners, no backfill</h3>
-              <p class="diff-item__desc">The architect in your discovery workshop runs the migration. There is no handoff to a junior bench after contract signature — and no account-management layer between you and the people doing the work.</p>
-            </article>
-            <article class="diff-item">
-              <p class="diff-item__label">Handover</p>
-              <h3 class="diff-item__title">Architecture through to release</h3>
-              <p class="diff-item__desc">We own design decisions through CI/CD implementation and operational handover — runbooks, on-call playbooks, and knowledge transfer are part of delivery, not optional extras.</p>
-            </article>
+            <h2 id="why-title" class="section__title" style="color:#f4f6f4;margin-bottom:1rem;">Milestones delivered — not hours billed</h2>
+            <blockquote class="editorial-quote">Large integrators sell capacity. We sell completed milestones — architecture signed off, migration waves delivered, pipelines in production.</blockquote>
+            <p style="color:rgba(255,255,255,0.62);margin-bottom:0;max-width:32rem;line-height:var(--leading-relaxed);">Our model suits organisations burned by advisory-only engagements — people who sit in your stand-ups, write the Terraform, and stay through go-live.</p>
+            <div class="maturity-ladder" aria-label="Delivery maturity model">
+              <div class="maturity-ladder__step">
+                <span class="maturity-ladder__num">1</span>
+                <span class="maturity-ladder__label">Assess &amp; baseline current state</span>
+                <span class="maturity-ladder__badge">Discover</span>
+              </div>
+              <div class="maturity-ladder__step">
+                <span class="maturity-ladder__num">2</span>
+                <span class="maturity-ladder__label">Design target architecture &amp; roadmap</span>
+                <span class="maturity-ladder__badge">Define</span>
+              </div>
+              <div class="maturity-ladder__step maturity-ladder__step--active">
+                <span class="maturity-ladder__num">3</span>
+                <span class="maturity-ladder__label">Deliver production outcomes with your team</span>
+                <span class="maturity-ladder__badge">Deploy</span>
+              </div>
+              <div class="maturity-ladder__step">
+                <span class="maturity-ladder__num">4</span>
+                <span class="maturity-ladder__label">Hand over runbooks &amp; exit cleanly</span>
+                <span class="maturity-ladder__badge">Operate</span>
+              </div>
+            </div>
+            <div class="diff-stack" style="margin-top:1.5rem;">
+              <article class="diff-card">
+                <p class="diff-card__label">Scope</p>
+                <h3 class="diff-card__title">Outcome-defined engagements</h3>
+                <p class="diff-card__desc">Fees tied to deployment frequency, migration waves, audit findings closed — reviewed weekly with your sponsor.</p>
+              </article>
+              <article class="diff-card">
+                <p class="diff-card__label">Regulation</p>
+                <h3 class="diff-card__title">Regulated-sector delivery muscle</h3>
+                <p class="diff-card__desc">Central Bank, FCA, NCSC, OGP, NHS DSPT — compliance built into delivery, not a separate workstream.</p>
+              </article>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--tight-top" id="capabilities" aria-labelledby="tech-title">
-      <div class="container">
+    <section class="section section--contrast" id="capabilities" aria-labelledby="tech-title">
+      <div class="container container--wide">
         <header class="section__header reveal">
           <span class="section__eyebrow">Capabilities</span>
           <h2 id="tech-title" class="section__title">Technologies we deploy in client environments</h2>
           <p class="section__desc">Tooling is selected for your constraints — existing licences, team skills, and regulator preferences — not vendor partnerships.</p>
         </header>
-        <div class="cap-grid reveal">
+        <div class="proof-stage reveal">
+          <div class="proof-stage__beam" aria-hidden="true"></div>
+          <div class="proof-dashboard">
+          <div class="proof-dashboard__main" aria-label="Engagement impact dashboard">
+            <div class="viz-frame">
+              <img src="images/impact-dashboard.svg" alt="Dashboard showing deployment frequency uplift, cost reduction, audit closure rate, and release velocity trend" width="520" height="360" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="proof-dashboard__side">
+            <div class="metric-tile">
+              <p class="metric-tile__value" data-counter="3.8" data-counter-suffix="×" data-counter-decimals="1">3.8×</p>
+              <p class="metric-tile__label">Average deployment frequency increase across DevOps engagements</p>
+            </div>
+            <div class="metric-tile">
+              <p class="metric-tile__value" data-counter="30" data-counter-suffix="%">30%</p>
+              <p class="metric-tile__label">Typical infrastructure cost reduction within two quarters</p>
+            </div>
+            <div class="metric-tile">
+              <p class="metric-tile__value" data-counter="65" data-counter-suffix="%">65%</p>
+              <p class="metric-tile__label">Developer onboarding time saved on platform programmes</p>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="pipeline-stage reveal" aria-label="Delivery pipeline diagram">
+          <div class="pipeline-stage__header">
+            <p class="viz-panel__title">How we deliver — end to end</p>
+            <p class="pipeline-stage__desc">Five stages. Measurable exit criteria at each gate.</p>
+          </div>
+          <div class="pipeline-stage__canvas">
+            <img src="images/pipeline-diagram.svg" alt="Delivery pipeline: Discover, Design, Build, Secure, Release" width="720" height="200" loading="lazy" decoding="async">
+          </div>
+        </div>
+        <div class="cap-grid reveal" style="margin-top: 2.5rem;">
           <div class="cap-group">
             <h3 class="cap-group__title">Cloud &amp; Infrastructure</h3>
             <div class="cap-tags">
@@ -290,98 +380,114 @@
       </div>
     </section>
 
-    <section class="section section--accent" id="industries" aria-labelledby="industries-title">
-      <div class="container">
+    <section class="section section--void" id="industries" aria-labelledby="industries-title">
+      <div class="container container--wide">
         <header class="section__header reveal">
           <div class="section__rule" aria-hidden="true"></div>
           <span class="section__eyebrow">Industries</span>
           <h2 id="industries-title" class="section__title">Sector context for Ireland and the UK</h2>
           <p class="section__desc">We reduce ramp-up time because we already understand the regulators, procurement routes, and operational constraints in your sector.</p>
         </header>
-        <div class="industry-index reveal">
-          <article class="industry-row">
-            <p class="industry-row__region">Ireland &amp; UK</p>
-            <div>
-              <h3 class="industry-row__title"><a href="industries/#financial-services">Financial Services</a></h3>
-              <p class="industry-row__desc">Core modernisation, payments infrastructure, regulatory reporting, and AI-assisted operations for banks, insurers, and regulated fintech firms.</p>
-              <p class="industry-row__context">Central Bank of Ireland · FCA · PCI-DSS · PSD2 open banking · SOX-aligned change control</p>
-            </div>
+        <div class="industry-bento reveal">
+          <article class="industry-card industry-card--lead industry-card--finance">
+            <p class="industry-card__region">Ireland &amp; UK</p>
+            <h3 class="industry-card__title"><a href="industries/#financial-services">Financial Services</a></h3>
+            <p class="industry-card__desc">Core modernisation, payments infrastructure, regulatory reporting, and AI-assisted operations for banks, insurers, and regulated fintech firms.</p>
+            <p class="industry-card__context">Central Bank of Ireland · FCA · PCI-DSS · PSD2 · SOX-aligned change control</p>
           </article>
-          <article class="industry-row">
-            <p class="industry-row__region">Ireland &amp; UK</p>
-            <div>
-              <h3 class="industry-row__title"><a href="industries/#public-sector">Public Sector</a></h3>
-              <p class="industry-row__desc">Cloud migration, digital service rebuilds, and secure platform engineering for government departments and local authorities.</p>
-              <p class="industry-row__context">OGP frameworks · CCS G-Cloud · NCSC cloud security principles · Public Spending Code business cases</p>
-            </div>
+          <article class="industry-card industry-card--public">
+            <p class="industry-card__region">Public Sector</p>
+            <h3 class="industry-card__title"><a href="industries/#public-sector">Government &amp; Local Authority</a></h3>
+            <p class="industry-card__desc">Cloud migration and secure platform engineering for government departments.</p>
+            <p class="industry-card__context">OGP · CCS G-Cloud · NCSC principles</p>
           </article>
-          <article class="industry-row">
-            <p class="industry-row__region">Ireland &amp; UK</p>
-            <div>
-              <h3 class="industry-row__title"><a href="industries/#healthcare">Healthcare</a></h3>
-              <p class="industry-row__desc">Interoperable data platforms, clinical workflow automation, and compliant cloud infrastructure for health systems and life sciences.</p>
-              <p class="industry-row__context">HSE · NHS England · HL7 FHIR · GDPR health data · NHS DSPT compliance</p>
-            </div>
+          <article class="industry-card industry-card--health">
+            <p class="industry-card__region">Healthcare</p>
+            <h3 class="industry-card__title"><a href="industries/#healthcare">Health &amp; Life Sciences</a></h3>
+            <p class="industry-card__desc">Interoperable data platforms and compliant cloud for health systems.</p>
+            <p class="industry-card__context">HSE · NHS · HL7 FHIR · DSPT</p>
           </article>
-          <article class="industry-row">
-            <p class="industry-row__region">Ireland &amp; UK</p>
-            <div>
-              <h3 class="industry-row__title"><a href="industries/#telecom">Telecom</a></h3>
-              <p class="industry-row__desc">Billing and revenue platform modernisation, network automation, and customer self-service engineering for telecommunications providers.</p>
-              <p class="industry-row__context">ComReg · Ofcom · high-volume transaction migration · 99.9%+ availability targets</p>
-            </div>
+          <article class="industry-card industry-card--telecom">
+            <p class="industry-card__region">Telecom</p>
+            <h3 class="industry-card__title"><a href="industries/#telecom">Telecommunications</a></h3>
+            <p class="industry-card__desc">Billing modernisation and network automation at scale.</p>
+            <p class="industry-card__context">ComReg · Ofcom · 99.9%+ availability</p>
           </article>
-          <article class="industry-row">
-            <p class="industry-row__region">Ireland &amp; UK</p>
-            <div>
-              <h3 class="industry-row__title"><a href="industries/#enterprise">Enterprise &amp; Corporate Services</a></h3>
-              <p class="industry-row__desc">Shared-services consolidation, ERP integration, and engineering productivity programmes for large corporate groups with multi-site IT estates.</p>
-              <p class="industry-row__context">Multi-entity cloud governance · SAP/Oracle integration · group-wide FinOps · developer platform rollout</p>
-            </div>
+          <article class="industry-card industry-card--enterprise">
+            <p class="industry-card__region">Enterprise</p>
+            <h3 class="industry-card__title"><a href="industries/#enterprise">Corporate Services</a></h3>
+            <p class="industry-card__desc">Shared-services consolidation and engineering productivity programmes.</p>
+            <p class="industry-card__context">Multi-entity governance · FinOps · SAP/Oracle</p>
           </article>
         </div>
         <p class="mt-8 reveal"><a href="industries/" class="link-arrow">Industry detail <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a></p>
       </div>
     </section>
 
-    <section class="section" id="case-study" aria-labelledby="case-title">
-      <div class="container">
-        <article class="case-feature reveal">
-          <div>
-            <p class="case-feature__eyebrow">Case study · Telecom · Ireland</p>
-            <h2 id="case-title" class="case-feature__title">Billing archive migration for a national telecom operator</h2>
-            <p class="case-feature__desc">A national operator needed to retire a 22-year-old billing archive on proprietary hardware. Regulators, customer service, and legal discovery all required uninterrupted access to historical records throughout the migration.</p>
-            <dl class="case-feature__metrics">
+    <section class="section section--light" id="case-study" aria-labelledby="case-title">
+      <div class="container container--wide">
+        <header class="section__header reveal">
+          <span class="section__eyebrow">Case study</span>
+          <h2 id="case-title" class="section__title">Proof in production</h2>
+          <p class="section__desc">Real outcomes from regulated-sector programmes — not hypothetical ROI models.</p>
+        </header>
+        <article class="case-immersive case-immersive--stage reveal">
+          <div class="case-immersive__visual">
+            <div class="case-stage__rim" aria-hidden="true"></div>
+            <div class="case-stage__glow" aria-hidden="true"></div>
+            <img src="images/case-visual.svg" alt="Telecom billing archive migration visual showing legacy to cloud transition, four migration waves, and €980K annual savings" width="560" height="420" loading="lazy" decoding="async">
+          </div>
+          <div class="case-immersive__body">
+            <p class="case-feature__eyebrow">Telecom · Ireland</p>
+            <h3 class="case-feature__title" style="font-size:var(--text-2xl);margin-bottom:1rem;">Billing archive migration for a national telecom operator</h3>
+            <p class="case-feature__desc">A national operator needed to retire a 22-year-old billing archive on proprietary hardware. Regulators, customer service, and legal discovery required uninterrupted access throughout migration.</p>
+            <dl class="case-immersive__metrics">
               <div>
-                <dt class="case-feature__metric-value">13 weeks</dt>
-                <dd class="case-feature__metric-label">Kick-off to production cutover with parallel running</dd>
+                <dt class="case-immersive__metric-val" data-counter="13" data-counter-suffix=" wks">13 wks</dt>
+                <dd class="case-immersive__metric-lbl">Kick-off to production cutover</dd>
               </div>
               <div>
-                <dt class="case-feature__metric-value">58%</dt>
-                <dd class="case-feature__metric-label">Faster compliance query response (P95 latency)</dd>
+                <dt class="case-immersive__metric-val" data-counter="58" data-counter-suffix="%">58%</dt>
+                <dd class="case-immersive__metric-lbl">Faster compliance query response</dd>
               </div>
               <div>
-                <dt class="case-feature__metric-value">€980K</dt>
-                <dd class="case-feature__metric-label">Annual run-cost saving post-decommission</dd>
+                <dt class="case-immersive__metric-val">€980K</dt>
+                <dd class="case-immersive__metric-lbl">Annual run-cost saving</dd>
               </div>
               <div>
-                <dt class="case-feature__metric-value">0</dt>
-                <dd class="case-feature__metric-label">Regulatory access incidents during or after migration</dd>
+                <dt class="case-immersive__metric-val" data-counter="0" data-counter-suffix="">0</dt>
+                <dd class="case-immersive__metric-lbl">Regulatory access incidents</dd>
               </div>
             </dl>
+            <p style="font-size:var(--text-sm);opacity:0.8;line-height:var(--leading-relaxed);margin-bottom:1.5rem;"><strong style="color:var(--color-accent);">Approach:</strong> Event-driven ingestion to cloud object storage, indexed search layer, and read-only API. Four migration waves with automated reconciliation.</p>
             <a href="case-studies/" class="btn btn--accent">Read all case studies</a>
           </div>
-          <dl class="case-feature__meta">
-            <dt>Challenge</dt>
-            <dd>Legacy archive could not scale with query volume. Hardware refresh quoted at €1.4M with 18-month lead time.</dd>
-            <dt>Approach</dt>
-            <dd>Event-driven ingestion to cloud object storage, indexed search layer, and read-only API for downstream systems. Migration executed in four waves with automated reconciliation.</dd>
-            <dt>Services</dt>
-            <dd>Cloud Enablement · Data &amp; Analytics · Technology Strategy</dd>
-          </dl>
         </article>
       </div>
     </section>
+
+    <div class="stat-band">
+      <div class="container">
+        <div class="stat-band__inner reveal" aria-label="Firm-wide metrics">
+          <div class="stat-card" style="background:transparent;border:none;box-shadow:none;padding:0;">
+            <p class="stat-card__value" data-counter="120" data-counter-suffix="+">120+</p>
+            <p class="stat-card__label">Production releases delivered</p>
+          </div>
+          <div class="stat-card" style="background:transparent;border:none;box-shadow:none;padding:0;">
+            <p class="stat-card__value" data-counter="18" data-counter-suffix="">18</p>
+            <p class="stat-card__label">Regulated-sector clients</p>
+          </div>
+          <div class="stat-card" style="background:transparent;border:none;box-shadow:none;padding:0;">
+            <p class="stat-card__value" data-counter="94" data-counter-suffix="%">94%</p>
+            <p class="stat-card__label">Contract renewal rate</p>
+          </div>
+          <div class="stat-card" style="background:transparent;border:none;box-shadow:none;padding:0;">
+            <p class="stat-card__value" data-counter="11" data-counter-suffix=" wks">11 wks</p>
+            <p class="stat-card__label">Median time to first release</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container">
       <div class="trust-strip reveal" role="list" aria-label="Trust signals">
@@ -392,7 +498,7 @@
       </div>
     </div>
 
-    <section class="section section--muted" id="faq" aria-labelledby="faq-title">
+    <section class="section section--contrast" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <header class="section__header reveal">
           <div class="section__rule" aria-hidden="true"></div>
@@ -469,7 +575,7 @@
       </div>
     </section>
 
-    <section class="cta-band" aria-labelledby="cta-title">
+    <section class="cta-band cta-band--cinematic" aria-labelledby="cta-title">
       <div class="container cta-band__inner reveal">
         <div>
           <h2 id="cta-title" class="cta-band__title">Discuss your next migration, platform, or AI programme</h2>
