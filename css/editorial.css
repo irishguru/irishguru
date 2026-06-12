@@ -388,7 +388,7 @@
 .platform-scene {
   position: relative;
   width: 100%;
-  aspect-ratio: 720 / 560;
+  aspect-ratio: 640 / 520;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -409,6 +409,13 @@
 }
 
 .hero__visual-frame {
+  display: none; /* frameless — the SVG is the scene */
+}
+
+/* Only show frame on non-open hero layouts */
+.hero--apex:not(.hero--open) .hero__visual-frame,
+.hero--flagship .hero__visual-frame {
+  display: block;
   position: absolute;
   inset: 0.6rem;
   border-radius: calc(var(--radius-2xl) - 0.5rem);
@@ -418,13 +425,15 @@
   box-shadow: inset 0 0 0 1px rgba(212, 146, 79, 0.07);
 }
 
-/* Glow behind the SVG core */
+/* Glow behind the SVG — dual copper + emerald to match the new scene */
 .visual-theater__glow,
 .platform-scene__glow {
   position: absolute;
-  inset: 8% 12%;
-  background: radial-gradient(ellipse at 50% 50%, rgba(212, 146, 79, 0.2), transparent 68%);
-  filter: blur(36px);
+  inset: 4% 6%;
+  background:
+    radial-gradient(ellipse 60% 55% at 68% 30%, rgba(224, 152, 64, 0.26), transparent 65%),
+    radial-gradient(ellipse 45% 40% at 22% 72%, rgba(34, 200, 120, 0.20), transparent 65%);
+  filter: blur(44px);
   pointer-events: none;
   z-index: 0;
   animation: glow-breathe 9s ease-in-out infinite alternate;
@@ -519,24 +528,27 @@
   line-height: 1.35;
 }
 
-/* Chip positions — corners clear of SVG pentagon nodes */
+/* Chip positions — float around the 3-layer stack composition */
+/* Upper-left: above AI panel left anchor */
 .platform-chip--1 {
-  top: 4%;
+  top: 3%;
   left: 2%;
   animation: chip-float-a 6.5s ease-in-out infinite alternate;
 }
 
+/* Right side: floats beside the AI panel's right edge */
 .platform-chip--2 {
-  top: 4%;
-  right: 2%;
+  top: 22%;
+  right: 1%;
   left: auto;
   animation: chip-float-b 7.5s ease-in-out infinite alternate-reverse;
   animation-delay: -1.5s;
 }
 
+/* Center-low: between Platform and Cloud panels */
 .platform-chip--3 {
-  bottom: 18%;
-  left: 50%;
+  bottom: 20%;
+  left: 40%;
   animation: chip-float-c 8s ease-in-out infinite alternate;
   animation-delay: -3s;
 }
@@ -612,14 +624,12 @@
 
 .hero--open .hero__lede { max-width: 38rem; }
 
-/* More atmospheric, less boxy visual theater */
+/* Fully frameless — the SVG carries its own depth and lighting */
 .hero--open .hero__visual-theater {
-  background: rgba(2, 8, 4, 0.16);
-  border-color: rgba(224, 152, 64, 0.09);
-  box-shadow:
-    0 56px 140px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04),
-    inset 0 -36px 72px rgba(0, 0, 0, 0.22);
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
 }
 
 /* ─── Copy block (open — no glass panel) ────────────────────────────────── */
@@ -755,8 +765,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__scroll-cue__bar { animation: none; opacity: 0.35; }
-  .hero__eyeline-dot      { animation: none; }
+  .hero__scroll-cue__bar     { animation: none; opacity: 0.35; }
+  .hero__eyeline-dot         { animation: none; }
+  .platform-chip             { animation: none !important; }
+  /* SVG-internal animations are handled by the SVG's own @media prefers-reduced-motion */
 }
 
 /* ─── Metrics bar ────────────────────────────────────────────────────────── */
