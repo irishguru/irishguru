@@ -7,37 +7,37 @@
 
 /* --- Tokens --------------------------------------------------------------- */
 :root {
-  --color-bg: #eceee9;
-  --color-bg-elevated: #f7f8f5;
-  --color-bg-muted: #e2e6e0;
-  --color-bg-inset: #d4d9d2;
-  --color-bg-accent: #dce8e2;
-  --color-surface: #f7f8f5;
-  --color-border: #bcc4bc;
-  --color-border-subtle: #d0d6cf;
+  --color-bg: #ffffff;
+  --color-bg-elevated: #f8f9f7;
+  --color-bg-muted: #f0f2ee;
+  --color-bg-inset: #e6ebe6;
+  --color-bg-accent: #e8f4ec;
+  --color-surface: #ffffff;
+  --color-border: #c8d0c8;
+  --color-border-subtle: #dce3dc;
 
-  --color-text: #0c100e;
-  --color-text-muted: #3f4842;
-  --color-text-subtle: #5c6560;
-  --color-text-inverse: #f2f4f1;
+  --color-text: #080f0c;
+  --color-text-muted: #2a3530;
+  --color-text-subtle: #4a5a52;
+  --color-text-inverse: #f4f8f5;
 
-  --color-primary: #0c1e17;
-  --color-primary-hover: #061210;
-  --color-accent: #c47e28;
-  --color-accent-hover: #a96a1e;
-  --color-accent-muted: rgba(196, 126, 40, 0.18);
-  --color-accent-line: rgba(196, 126, 40, 0.55);
-  --color-sage: #2d5545;
-  --color-sage-vivid: #1e9e68;
-  --color-sage-muted: rgba(45, 85, 69, 0.16);
-  --color-glow: rgba(196, 126, 40, 0.26);
-  --color-glow-sage: rgba(45, 85, 69, 0.22);
+  --color-primary: #08201a;
+  --color-primary-hover: #041410;
+  --color-accent: #c05c10;
+  --color-accent-hover: #a04a08;
+  --color-accent-muted: rgba(192, 92, 16, 0.14);
+  --color-accent-line: rgba(192, 92, 16, 0.55);
+  --color-sage: #0d5e3c;
+  --color-sage-vivid: #0a9e60;
+  --color-sage-muted: rgba(13, 94, 60, 0.14);
+  --color-glow: rgba(192, 92, 16, 0.22);
+  --color-glow-sage: rgba(13, 94, 60, 0.18);
 
-  --glass-bg: rgba(247, 248, 245, 0.72);
-  --glass-border: rgba(255, 255, 255, 0.55);
-  --viz-surface: #f0f2ee;
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(8, 32, 26, 0.1);
+  --viz-surface: #f0f4f1;
 
-  --color-focus: #a66b2e;
+  --color-focus: #9a4a08;
   --color-error: #9b2c2c;
 
   --font-display: 'Cabinet Grotesk', system-ui, sans-serif;
@@ -85,9 +85,9 @@
   --radius-xl: 1.25rem;
   --radius-2xl: 1.75rem;
 
-  --shadow-sm: 0 1px 0 rgba(12, 16, 14, 0.05);
-  --shadow-md: 0 12px 40px rgba(12, 16, 14, 0.09), 0 4px 12px rgba(12, 16, 14, 0.04);
-  --shadow-lg: 0 28px 72px rgba(12, 16, 14, 0.14), 0 8px 24px rgba(12, 16, 14, 0.06);
+  --shadow-sm: 0 1px 3px rgba(8, 32, 26, 0.08);
+  --shadow-md: 0 12px 40px rgba(8, 32, 26, 0.12), 0 4px 12px rgba(8, 32, 26, 0.06);
+  --shadow-lg: 0 28px 72px rgba(8, 32, 26, 0.18), 0 8px 24px rgba(8, 32, 26, 0.08);
   --shadow-glow: 0 0 60px var(--color-glow);
   --shadow-header: 0 1px 0 var(--color-border-subtle);
 
