@@ -1,244 +1,215 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 560" fill="none" aria-hidden="true">
   <defs>
-    <!-- Copper gradient -->
-    <linearGradient id="cu" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f0c070"/>
-      <stop offset="55%" stop-color="#d4924f"/>
-      <stop offset="100%" stop-color="#8a5a24"/>
-    </linearGradient>
-    <!-- Sage gradient -->
-    <linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5a9080"/>
-      <stop offset="100%" stop-color="#1a3028"/>
-    </linearGradient>
-    <!-- Panel fill gradient -->
-    <linearGradient id="pf" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#141e1a" stop-opacity="0.94"/>
-      <stop offset="100%" stop-color="#070d0a" stop-opacity="0.90"/>
-    </linearGradient>
-    <!-- Tier edge highlight -->
-    <linearGradient id="th" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f0c070" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#d4924f" stop-opacity="0.4"/>
-    </linearGradient>
-    <!-- Node ring copper -->
-    <radialGradient id="nr" cx="50%" cy="50%" r="50%">
+
+    <!-- Gradients -->
+    <radialGradient id="bg-glow" cx="340" cy="275" r="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0d1f18"/>
+      <stop offset="100%" stop-color="#020504"/>
+    </radialGradient>
+    <radialGradient id="hub-fill" cx="340" cy="275" r="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e3028"/>
+      <stop offset="100%" stop-color="#0a1610"/>
+    </radialGradient>
+    <radialGradient id="hub-glow" cx="340" cy="275" r="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d4924f" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#d4924f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="key-light" cx="580" cy="80" r="380" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#d4924f" stop-opacity="0.18"/>
       <stop offset="100%" stop-color="#d4924f" stop-opacity="0"/>
     </radialGradient>
-    <!-- Ambient hub glow -->
-    <radialGradient id="hg" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#d4924f" stop-opacity="0.5"/>
-      <stop offset="50%" stop-color="#d4924f" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#d4924f" stop-opacity="0"/>
+    <radialGradient id="fill-light" cx="80" cy="460" r="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3d5a4f" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#3d5a4f" stop-opacity="0"/>
     </radialGradient>
-    <!-- Sage ambient glow -->
-    <radialGradient id="sg2" cx="50%" cy="55%" r="50%">
-      <stop offset="0%" stop-color="#3d6b58" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#3d6b58" stop-opacity="0"/>
-    </radialGradient>
-    <!-- Node drop shadow -->
-    <filter id="ns" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#000" flood-opacity="0.45"/>
+    <linearGradient id="spoke-cu" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#d4924f" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d4924f" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="spoke-sg" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#3d5a4f" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3d5a4f" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="card-fill" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#141f1a"/>
+      <stop offset="100%" stop-color="#0a1210"/>
+    </linearGradient>
+    <linearGradient id="node-cu" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#1e2e24"/>
+      <stop offset="100%" stop-color="#0e1914"/>
+    </linearGradient>
+    <linearGradient id="node-sg" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#162418"/>
+      <stop offset="100%" stop-color="#0a1410"/>
+    </linearGradient>
+    <linearGradient id="ring-grad" cx="340" cy="275" r="168" x1="0" y1="0" x2="720" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d4924f" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#3d5a4f" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#d4924f" stop-opacity="0.18"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="hub-shadow" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="0" stdDeviation="22" flood-color="#d4924f" flood-opacity="0.45"/>
     </filter>
-    <!-- Hub glow filter -->
-    <filter id="hf" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="8" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="node-shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
     </filter>
-    <!-- Soft glow filter for tiers -->
-    <filter id="tf" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#d4924f" flood-opacity="0.15"/>
+    <filter id="card-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
     </filter>
+    <filter id="line-glow" x="-10%" y="-200%" width="120%" height="500%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Dot pattern -->
+    <pattern id="dots" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="14" cy="14" r="0.7" fill="#ffffff" fill-opacity="0.055"/>
+    </pattern>
+
   </defs>
 
-  <!-- ─── Ambient glow layers ─── -->
-  <ellipse cx="360" cy="272" rx="250" ry="200" fill="url(#hg)"/>
-  <ellipse cx="360" cy="285" rx="310" ry="245" fill="url(#sg2)"/>
+  <!-- ── Background ── -->
+  <rect width="720" height="560" fill="url(#bg-glow)"/>
+  <rect width="720" height="560" fill="url(#dots)"/>
+  <rect width="720" height="560" fill="url(#key-light)"/>
+  <rect width="720" height="560" fill="url(#fill-light)"/>
 
-  <!-- ─── Isometric floor grid ─── -->
-  <g opacity="0.18" stroke-linecap="round">
-    <!-- Main horizontal perspective lines -->
-    <path d="M80 452 L360 318 L640 452" stroke="#4a7060" stroke-width="1.1"/>
-    <path d="M148 486 L360 370 L572 486" stroke="#3d5a4f" stroke-width="0.8"/>
-    <path d="M216 514 L360 418 L504 514" stroke="#2a4038" stroke-width="0.6"/>
-    <!-- Vertical grid lines -->
-    <line x1="220" y1="452" x2="220" y2="528" stroke="#3d5a4f" stroke-width="0.8"/>
-    <line x1="290" y1="406" x2="290" y2="540" stroke="#3d5a4f" stroke-width="0.55"/>
-    <line x1="360" y1="318" x2="360" y2="548" stroke="#4a7060" stroke-width="1"/>
-    <line x1="430" y1="406" x2="430" y2="540" stroke="#3d5a4f" stroke-width="0.55"/>
-    <line x1="500" y1="452" x2="500" y2="528" stroke="#3d5a4f" stroke-width="0.8"/>
+  <!-- ── Outer pentagon ring (dashed) ── -->
+  <!-- Connecting the 5 nodes: (340,110) (517,227) (457,412) (223,412) (163,227) -->
+  <polygon points="340,110 517,227 457,412 223,412 163,227"
+    stroke="url(#ring-grad)" stroke-width="1" stroke-dasharray="4 6"
+    fill="none" stroke-opacity="0.55"/>
+
+  <!-- ── Mid ring (subtle decorative circle) ── -->
+  <circle cx="340" cy="275" r="168" stroke="#d4924f" stroke-opacity="0.07" stroke-width="0.75" stroke-dasharray="2 8"/>
+
+  <!-- ── Hub glow ── -->
+  <ellipse cx="340" cy="275" rx="68" ry="68" fill="url(#hub-glow)"/>
+
+  <!-- ── Spoke lines (hub → each node) ── -->
+  <!-- To top node (340, 110) -->
+  <line x1="340" y1="243" x2="340" y2="140" stroke="#d4924f" stroke-width="1" stroke-opacity="0.45" filter="url(#line-glow)"/>
+  <!-- Mid pulse dot on top spoke -->
+  <circle cx="340" cy="192" r="3.5" fill="#d4924f" fill-opacity="0.65"/>
+
+  <!-- To upper-right (517, 227) -->
+  <line x1="364" y1="257" x2="489" y2="236" stroke="#d4924f" stroke-width="1" stroke-opacity="0.38" filter="url(#line-glow)"/>
+  <circle cx="427" cy="246" r="3" fill="#d4924f" fill-opacity="0.5"/>
+
+  <!-- To lower-right (457, 412) -->
+  <line x1="358" y1="300" x2="433" y2="384" stroke="#3d5a4f" stroke-width="1" stroke-opacity="0.38" filter="url(#line-glow)"/>
+  <circle cx="395" cy="342" r="3" fill="#3d5a4f" fill-opacity="0.55"/>
+
+  <!-- To lower-left (223, 412) -->
+  <line x1="322" y1="300" x2="247" y2="384" stroke="#3d5a4f" stroke-width="1" stroke-opacity="0.38" filter="url(#line-glow)"/>
+  <circle cx="285" cy="342" r="3" fill="#3d5a4f" fill-opacity="0.55"/>
+
+  <!-- To upper-left (163, 227) -->
+  <line x1="316" y1="257" x2="191" y2="236" stroke="#3d5a4f" stroke-width="1" stroke-opacity="0.38" filter="url(#line-glow)"/>
+  <circle cx="254" cy="246" r="3" fill="#3d5a4f" fill-opacity="0.5"/>
+
+  <!-- ── Hub ── -->
+  <circle cx="340" cy="275" r="38" fill="url(#hub-fill)" filter="url(#hub-shadow)"/>
+  <circle cx="340" cy="275" r="38" stroke="#d4924f" stroke-width="1.5"/>
+  <!-- Hub inner ring -->
+  <circle cx="340" cy="275" r="26" stroke="#d4924f" stroke-opacity="0.25" stroke-width="0.75"/>
+  <!-- Hub core fill -->
+  <circle cx="340" cy="275" r="14" fill="#d4924f" fill-opacity="0.82"/>
+  <circle cx="336" cy="271" r="5" fill="#ffffff" fill-opacity="0.24"/>
+  <!-- Hub crosshairs -->
+  <line x1="326" y1="275" x2="354" y2="275" stroke="#ffffff" stroke-opacity="0.18" stroke-width="0.75"/>
+  <line x1="340" y1="261" x2="340" y2="289" stroke="#ffffff" stroke-opacity="0.18" stroke-width="0.75"/>
+
+  <!-- ── Node 1: Artificial Intelligence (top, 340, 110) ── -->
+  <g filter="url(#node-shadow)">
+    <circle cx="340" cy="110" r="32" fill="url(#node-cu)" stroke="#d4924f" stroke-width="1.25"/>
   </g>
+  <!-- AI glyph: simple brain-like curved lines -->
+  <path d="M330,105 Q335,98 340,104 Q345,98 350,105 Q352,112 346,116 L340,119 L334,116 Q328,112 330,105Z" stroke="#d4924f" stroke-width="1.2" fill="none" stroke-opacity="0.8"/>
+  <text x="340" y="150" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#d4924f">Artificial Intelligence</text>
+  <text x="340" y="163" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#7a8f88">OpenAI · Databricks</text>
 
-  <!-- ─── Isometric platform stack — 3 tiers ─── -->
-
-  <!-- Tier 1: Foundation (largest) — Infrastructure -->
-  <g filter="url(#tf)">
-    <!-- Top face -->
-    <path d="M192 348 L360 263 L528 348 L360 433 Z" fill="#050807" stroke="url(#sg)" stroke-opacity="0.42" stroke-width="1.5"/>
-    <!-- Right face -->
-    <path d="M528 348 L528 384 L360 469 L360 433 Z" fill="#080f0c" stroke="#3d5a4f" stroke-opacity="0.28" stroke-width="1"/>
-    <!-- Left face -->
-    <path d="M192 348 L192 384 L360 469 L360 433 Z" fill="#070e0b" stroke="#3d5a4f" stroke-opacity="0.28" stroke-width="1"/>
-    <!-- Top face edge highlight -->
-    <path d="M192 348 L360 263" stroke="url(#sg)" stroke-opacity="0.55" stroke-width="1"/>
+  <!-- ── Node 2: Cloud Enablement (upper-right, 517, 227) ── -->
+  <g filter="url(#node-shadow)">
+    <circle cx="517" cy="227" r="30" fill="url(#node-cu)" stroke="#d4924f" stroke-width="1" stroke-opacity="0.8"/>
   </g>
+  <!-- Cloud glyph -->
+  <path d="M506,228 Q506,220 514,219 Q514,213 522,215 Q528,210 530,218 Q535,218 535,224 Q535,230 529,230 L507,230 Q503,230 506,228Z" stroke="#d4924f" stroke-width="1.1" fill="none" stroke-opacity="0.75"/>
+  <text x="546" y="232" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#e8d0a8">Cloud Enablement</text>
+  <text x="546" y="245" font-family="system-ui, sans-serif" font-size="8.5" fill="#7a8f88">AWS · Azure · GCP</text>
 
-  <!-- Tier 2: Platform Core (medium) -->
-  <g filter="url(#tf)">
-    <!-- Top face -->
-    <path d="M228 322 L360 248 L492 322 L360 396 Z" fill="#0c1812" stroke="url(#cu)" stroke-opacity="0.32" stroke-width="1.25"/>
-    <!-- Right face -->
-    <path d="M492 322 L492 352 L360 426 L360 396 Z" fill="#101e18" stroke="#d4924f" stroke-opacity="0.2" stroke-width="0.75"/>
-    <!-- Left face -->
-    <path d="M228 322 L228 352 L360 426 L360 396 Z" fill="#0e1c16" stroke="#d4924f" stroke-opacity="0.2" stroke-width="0.75"/>
-    <!-- Top face edge highlights -->
-    <path d="M228 322 L360 248 L492 322" stroke="url(#cu)" stroke-opacity="0.38" stroke-width="1" fill="none"/>
-  </g>
-
-  <!-- Tier 3: AI Core (top, smallest) -->
-  <g filter="url(#tf)">
-    <!-- Top face -->
-    <path d="M276 300 L360 258 L444 300 L360 342 Z" fill="#132019" stroke="url(#th)" stroke-width="1.5"/>
-    <!-- Right face -->
-    <path d="M444 300 L444 321 L360 363 L360 342 Z" fill="#172618" stroke="#d4924f" stroke-opacity="0.3" stroke-width="0.75"/>
-    <!-- Left face -->
-    <path d="M276 300 L276 321 L360 363 L360 342 Z" fill="#152418" stroke="#d4924f" stroke-opacity="0.3" stroke-width="0.75"/>
-    <!-- Top highlight line -->
-    <path d="M276 300 L360 258 L444 300" stroke="#f0c070" stroke-opacity="0.55" stroke-width="1.25" fill="none"/>
-  </g>
-
-  <!-- ─── Central hub ─── -->
-  <!-- Outer orbit ring dashed -->
-  <circle cx="360" cy="285" r="58" stroke="#d4924f" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="2 9"/>
-  <!-- Inner ring -->
-  <circle cx="360" cy="285" r="38" stroke="#d4924f" stroke-opacity="0.22" stroke-width="0.75"/>
-  <!-- Hub body -->
-  <circle cx="360" cy="285" r="26" fill="#040705" stroke="url(#cu)" stroke-width="2" filter="url(#hf)"/>
-  <!-- Hub centre glyph: inner circle -->
-  <circle cx="360" cy="285" r="12" fill="#d4924f" fill-opacity="0.88"/>
-  <!-- Hub specular highlight -->
-  <circle cx="355" cy="280" r="4" fill="#fff" fill-opacity="0.28"/>
-  <!-- Hub crosshair marks -->
-  <line x1="348" y1="285" x2="372" y2="285" stroke="#fff" stroke-opacity="0.15" stroke-width="0.75"/>
-  <line x1="360" y1="273" x2="360" y2="297" stroke="#fff" stroke-opacity="0.15" stroke-width="0.75"/>
-
-  <!-- ─── Connection lines from hub (360,285) to 6 nodes ─── -->
-  <!-- Hexagonal positions, r≈148:
-       AI      (360, 137)   → 0°   top
-       Cloud   (488, 211)   → 60°  top-right
-       SecOps  (488, 359)   → 120° bottom-right
-       Platform(360, 433)   → 180° bottom
-       DevOps  (232, 359)   → 240° bottom-left
-       Data    (232, 211)   → 300° top-left  -->
-  <g stroke="#d4924f" stroke-opacity="0.16" stroke-width="1" stroke-dasharray="3 7">
-    <line x1="360" y1="259" x2="360" y2="163"/>
-    <line x1="360" y1="262" x2="464" y2="225"/>
-    <line x1="360" y1="308" x2="464" y2="345"/>
-    <line x1="360" y1="311" x2="360" y2="409"/>
-    <line x1="360" y1="308" x2="256" y2="345"/>
-    <line x1="360" y1="262" x2="256" y2="225"/>
-  </g>
-  <!-- Sage accent lines (horizontal pair) -->
-  <g stroke="#4a7060" stroke-opacity="0.18" stroke-width="0.75">
-    <line x1="386" y1="285" x2="462" y2="285"/>
-    <line x1="258" y1="285" x2="334" y2="285"/>
-  </g>
-
-  <!-- ─── Data flow markers on connection lines ─── -->
-  <g fill="#d4924f" fill-opacity="0.65">
-    <!-- To AI -->
-    <circle cx="360" cy="200" r="2.5"/>
-    <!-- To Cloud -->
-    <circle cx="412" cy="244" r="2"/>
-    <!-- To SecOps -->
-    <circle cx="412" cy="326" r="2"/>
-    <!-- To Platform -->
-    <circle cx="360" cy="370" r="2.5"/>
-    <!-- To DevOps -->
-    <circle cx="308" cy="326" r="2"/>
-    <!-- To Data -->
-    <circle cx="308" cy="244" r="2"/>
-  </g>
-
-  <!-- ─── Node 1: AI & ML — top (360, 137) ─── -->
-  <g filter="url(#ns)">
-    <circle cx="360" cy="137" r="29" fill="url(#nr)"/>
-    <circle cx="360" cy="137" r="25" fill="#0a1510" stroke="#d4924f" stroke-opacity="0.52" stroke-width="1.5"/>
-    <circle cx="360" cy="137" r="15" fill="#132019" stroke="#d4924f" stroke-opacity="0.3" stroke-width="0.75"/>
-  </g>
-  <!-- AI glyph: hexagon shape -->
-  <path d="M360 128 L367 132 L367 141 L360 145 L353 141 L353 132 Z" fill="none" stroke="#d4924f" stroke-opacity="0.82" stroke-width="1.25" stroke-linejoin="round"/>
-  <circle cx="360" cy="137" r="3" fill="#d4924f" fill-opacity="0.7"/>
-  <!-- Node label -->
-  <text x="360" y="172" text-anchor="middle" fill="#c8d4cc" font-family="system-ui,-apple-system,sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em">AI &amp; ML</text>
-
-  <!-- ─── Node 2: Cloud — top-right (488, 211) ─── -->
-  <g filter="url(#ns)">
-    <circle cx="488" cy="211" r="27" fill="url(#nr)"/>
-    <circle cx="488" cy="211" r="23" fill="#0a1510" stroke="#d4924f" stroke-opacity="0.45" stroke-width="1.25"/>
-    <circle cx="488" cy="211" r="14" fill="#0f1a14" stroke="#d4924f" stroke-opacity="0.28" stroke-width="0.75"/>
-  </g>
-  <!-- Cloud glyph: arc cloud -->
-  <path d="M480 213 Q478 207 484 206 Q485 202 490 203 Q494 200 497 203 Q501 202 500 207 Q502 211 499 213 Z" fill="none" stroke="#d4924f" stroke-opacity="0.75" stroke-width="1.25" stroke-linejoin="round"/>
-  <text x="522" y="207" text-anchor="start" fill="#c8d4cc" font-family="system-ui,-apple-system,sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em">CLOUD</text>
-  <text x="522" y="218" text-anchor="start" fill="#7a9088" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" letter-spacing="0.06em">IE &amp; UK</text>
-
-  <!-- ─── Node 3: DevSecOps — bottom-right (488, 359) ─── -->
-  <g filter="url(#ns)">
-    <circle cx="488" cy="359" r="27" fill="url(#sg2)"/>
-    <circle cx="488" cy="359" r="23" fill="#0a1510" stroke="#4a8070" stroke-opacity="0.55" stroke-width="1.25"/>
-    <circle cx="488" cy="359" r="14" fill="#0f1a14" stroke="#4a8070" stroke-opacity="0.32" stroke-width="0.75"/>
-  </g>
-  <!-- Shield glyph -->
-  <path d="M488 351 L496 355 L496 362 Q496 367 488 370 Q480 367 480 362 L480 355 Z" fill="none" stroke="#5aaa88" stroke-opacity="0.78" stroke-width="1.25" stroke-linejoin="round"/>
-  <text x="522" y="355" text-anchor="start" fill="#c8d4cc" font-family="system-ui,-apple-system,sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em">DEVSECOPS</text>
-  <text x="522" y="366" text-anchor="start" fill="#7a9088" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" letter-spacing="0.06em">&lt; 48h CVE SLA</text>
-
-  <!-- ─── Node 4: Platform Engineering — bottom (360, 433) ─── -->
-  <g filter="url(#ns)">
-    <circle cx="360" cy="433" r="27" fill="url(#sg2)"/>
-    <circle cx="360" cy="433" r="23" fill="#0a1510" stroke="#4a8070" stroke-opacity="0.5" stroke-width="1.25"/>
-    <circle cx="360" cy="433" r="14" fill="#0f1a14" stroke="#4a8070" stroke-opacity="0.28" stroke-width="0.75"/>
-  </g>
-  <!-- Server layers glyph -->
-  <rect x="353" y="426" width="14" height="4" rx="1" fill="none" stroke="#5aaa88" stroke-opacity="0.78" stroke-width="1.1"/>
-  <rect x="353" y="432" width="14" height="4" rx="1" fill="none" stroke="#5aaa88" stroke-opacity="0.58" stroke-width="1.1"/>
-  <rect x="353" y="438" width="14" height="4" rx="1" fill="none" stroke="#5aaa88" stroke-opacity="0.38" stroke-width="1.1"/>
-  <text x="360" y="468" text-anchor="middle" fill="#c8d4cc" font-family="system-ui,-apple-system,sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em">PLATFORM</text>
-
-  <!-- ─── Node 5: DevOps — bottom-left (232, 359) ─── -->
-  <g filter="url(#ns)">
-    <circle cx="232" cy="359" r="27" fill="url(#nr)"/>
-    <circle cx="232" cy="359" r="23" fill="#0a1510" stroke="#d4924f" stroke-opacity="0.42" stroke-width="1.25"/>
-    <circle cx="232" cy="359" r="14" fill="#0f1a14" stroke="#d4924f" stroke-opacity="0.26" stroke-width="0.75"/>
-  </g>
-  <!-- Pipeline arrow glyph -->
-  <path d="M224 359 L240 359 M235 354 L240 359 L235 364" fill="none" stroke="#d4924f" stroke-opacity="0.72" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="198" y="355" text-anchor="end" fill="#c8d4cc" font-family="system-ui,-apple-system,sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em">DEVOPS</text>
-  <text x="198" y="366" text-anchor="end" fill="#7a9088" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" letter-spacing="0.06em">CI/CD</text>
-
-  <!-- ─── Node 6: Data & Analytics — top-left (232, 211) ─── -->
-  <g filter="url(#ns)">
-    <circle cx="232" cy="211" r="27" fill="url(#nr)"/>
-    <circle cx="232" cy="211" r="23" fill="#0a1510" stroke="#d4924f" stroke-opacity="0.42" stroke-width="1.25"/>
-    <circle cx="232" cy="211" r="14" fill="#0f1a14" stroke="#d4924f" stroke-opacity="0.26" stroke-width="0.75"/>
+  <!-- ── Node 3: Data &amp; Analytics (lower-right, 457, 412) ── -->
+  <g filter="url(#node-shadow)">
+    <circle cx="457" cy="412" r="30" fill="url(#node-sg)" stroke="#3d5a4f" stroke-width="1" stroke-opacity="0.9"/>
   </g>
   <!-- Bar chart glyph -->
-  <rect x="224" y="215" width="3.5" height="5" rx="0.75" fill="#d4924f" fill-opacity="0.65"/>
-  <rect x="229" y="211" width="3.5" height="9" rx="0.75" fill="#d4924f" fill-opacity="0.75"/>
-  <rect x="234" y="207" width="3.5" height="13" rx="0.75" fill="#d4924f" fill-opacity="0.85"/>
-  <text x="198" y="207" text-anchor="end" fill="#c8d4cc" font-family="system-ui,-apple-system,sans-serif" font-size="9" font-weight="700" letter-spacing="0.1em">DATA</text>
-  <text x="198" y="218" text-anchor="end" fill="#7a9088" font-family="system-ui,-apple-system,sans-serif" font-size="7.5" letter-spacing="0.06em">&amp; ANALYTICS</text>
+  <rect x="445" y="408" width="5" height="10" rx="1.5" fill="#7fbfaa" fill-opacity="0.8"/>
+  <rect x="452" y="404" width="5" height="14" rx="1.5" fill="#7fbfaa" fill-opacity="0.9"/>
+  <rect x="459" y="400" width="5" height="18" rx="1.5" fill="#7fbfaa"/>
+  <text x="457" y="452" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#7fbfaa">Data &amp; Analytics</text>
+  <text x="457" y="465" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#6a8078">Snowflake · dbt · Kafka</text>
 
-  <!-- ─── Decorative: outer ring connectors (subtle arcs between nodes) ─── -->
-  <!-- Top arc: AI to Cloud -->
-  <path d="M377 128 Q435 118 478 202" stroke="#d4924f" stroke-opacity="0.09" stroke-width="0.75" fill="none"/>
-  <!-- Right arc: Cloud to SecOps -->
-  <path d="M498 230 Q508 285 498 340" stroke="#d4924f" stroke-opacity="0.09" stroke-width="0.75" fill="none"/>
-  <!-- Left arc: Data to DevOps -->
-  <path d="M222 230 Q212 285 222 340" stroke="#d4924f" stroke-opacity="0.09" stroke-width="0.75" fill="none"/>
+  <!-- ── Node 4: DevSecOps (lower-left, 223, 412) ── -->
+  <g filter="url(#node-shadow)">
+    <circle cx="223" cy="412" r="30" fill="url(#node-sg)" stroke="#3d5a4f" stroke-width="1" stroke-opacity="0.85"/>
+  </g>
+  <!-- Shield glyph -->
+  <path d="M223,400 L231,403 L231,412 Q231,419 223,422 Q215,419 215,412 L215,403 Z" stroke="#7fbfaa" stroke-width="1.1" fill="none" stroke-opacity="0.85"/>
+  <text x="223" y="452" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#7fbfaa">DevSecOps</text>
+  <text x="223" y="465" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8.5" fill="#6a8078">Snyk · Vault · SAST</text>
 
-  <!-- ─── Subtle corner grain mask (atmospheric) ─── -->
-  <rect width="720" height="560" fill="url(#hg)" opacity="0.04"/>
+  <!-- ── Node 5: Platform Engineering (upper-left, 163, 227) ── -->
+  <g filter="url(#node-shadow)">
+    <circle cx="163" cy="227" r="30" fill="url(#node-cu)" stroke="#d4924f" stroke-width="1" stroke-opacity="0.75"/>
+  </g>
+  <!-- Server/stack glyph -->
+  <rect x="151" y="217" width="24" height="7" rx="2" stroke="#d4924f" stroke-width="1.1" fill="none" stroke-opacity="0.8"/>
+  <rect x="151" y="226" width="24" height="7" rx="2" stroke="#d4924f" stroke-width="1.1" fill="none" stroke-opacity="0.65"/>
+  <rect x="151" y="235" width="24" height="7" rx="2" stroke="#d4924f" stroke-width="1.1" fill="none" stroke-opacity="0.5"/>
+  <text x="110" y="264" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#e8d0a8">Platform Engineering</text>
+  <text x="110" y="277" font-family="system-ui, sans-serif" font-size="8.5" fill="#7a8f88">K8s · Backstage · IaC</text>
+
+  <!-- ── Floating info card 1 (top-right) ── -->
+  <g filter="url(#card-shadow)">
+    <rect x="556" y="82" width="146" height="80" rx="12" fill="url(#card-fill)"/>
+    <rect x="556" y="82" width="146" height="80" rx="12" stroke="#d4924f" stroke-opacity="0.3"/>
+    <rect x="556" y="82" width="146" height="2.5" rx="1.25" fill="#d4924f" fill-opacity="0.55"/>
+  </g>
+  <text x="572" y="105" font-family="system-ui, sans-serif" font-size="9" fill="#8a9890" font-weight="600" letter-spacing="1">REGULATED CLIENTS</text>
+  <text x="572" y="130" font-family="system-ui, sans-serif" font-size="30" font-weight="800" fill="#d4924f" letter-spacing="-1">18</text>
+  <text x="572" y="150" font-family="system-ui, sans-serif" font-size="9" fill="#7a8f88">FS, Telco, Public Sector</text>
+
+  <!-- ── Floating info card 2 (lower-right) ── -->
+  <g filter="url(#card-shadow)">
+    <rect x="556" y="380" width="146" height="80" rx="12" fill="url(#card-fill)"/>
+    <rect x="556" y="380" width="146" height="80" rx="12" stroke="#3d5a4f" stroke-opacity="0.4"/>
+    <rect x="556" y="380" width="146" height="2.5" rx="1.25" fill="#3d5a4f" fill-opacity="0.75"/>
+  </g>
+  <text x="572" y="403" font-family="system-ui, sans-serif" font-size="9" fill="#8a9890" font-weight="600" letter-spacing="1">RENEWAL RATE</text>
+  <text x="572" y="428" font-family="system-ui, sans-serif" font-size="30" font-weight="800" fill="#7fbfaa" letter-spacing="-1">94%</text>
+  <text x="572" y="448" font-family="system-ui, sans-serif" font-size="9" fill="#6a8078">Contract satisfaction</text>
+
+  <!-- ── Floating tag (left side, near Platform node) ── -->
+  <g filter="url(#card-shadow)">
+    <rect x="12" y="178" width="130" height="42" rx="8" fill="url(#card-fill)"/>
+    <rect x="12" y="178" width="130" height="42" rx="8" stroke="#3d5a4f" stroke-opacity="0.35"/>
+  </g>
+  <circle cx="28" cy="199" r="3.5" fill="#4caf8a"/>
+  <text x="40" y="195" font-family="system-ui, sans-serif" font-size="8.5" fill="#eef1ee" font-weight="600">ISO 27001-aligned</text>
+  <text x="40" y="208" font-family="system-ui, sans-serif" font-size="8" fill="#7a8f88">Governance built in</text>
+
+  <!-- ── Bottom floating tag ── -->
+  <g filter="url(#card-shadow)">
+    <rect x="204" y="492" width="272" height="42" rx="8" fill="url(#card-fill)"/>
+    <rect x="204" y="492" width="272" height="42" rx="8" stroke="#d4924f" stroke-opacity="0.28"/>
+  </g>
+  <circle cx="222" cy="513" r="3.5" fill="#d4924f"/>
+  <text x="234" y="509" font-family="system-ui, sans-serif" font-size="8.5" fill="#eef1ee" font-weight="600">Senior-led delivery — architects who ship</text>
+  <text x="234" y="522" font-family="system-ui, sans-serif" font-size="8" fill="#7a8f88">Dublin HQ · Ireland and UK regulated delivery</text>
+
 </svg>
