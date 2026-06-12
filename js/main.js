@@ -320,17 +320,31 @@
       const shiftY = currentY * 4;
 
       if (core) {
-        core.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
+        if (Math.abs(shiftX) < 0.5 && Math.abs(shiftY) < 0.5) {
+          core.style.transform = '';
+        } else {
+          core.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
+        }
       }
 
       if (glow) {
-        glow.style.transform = `translate(${currentX * 10}px, ${currentY * 8}px)`;
+        if (Math.abs(currentX) < 0.01 && Math.abs(currentY) < 0.01) {
+          glow.style.transform = '';
+        } else {
+          glow.style.transform = `translate(${currentX * 10}px, ${currentY * 8}px)`;
+        }
       }
 
       chips.forEach((chip, i) => {
         const depth = (i + 1) * 3;
+        const px = currentX * depth;
+        const py = currentY * depth;
+        if (Math.abs(px) < 0.5 && Math.abs(py) < 0.5) {
+          chip.style.transform = '';
+          return;
+        }
         const base = chip.classList.contains('platform-chip--3') ? 'translateX(-50%) ' : '';
-        chip.style.transform = `${base}translate(${currentX * depth}px, ${currentY * depth}px)`;
+        chip.style.transform = `${base}translate(${px}px, ${py}px)`;
       });
 
       if (Math.abs(targetX - currentX) > 0.001 || Math.abs(targetY - currentY) > 0.001) {
@@ -342,7 +356,12 @@
     scene.addEventListener('mouseleave', () => {
       targetX = 0;
       targetY = 0;
-      if (!raf) raf = requestAnimationFrame(update);
+      currentX = 0;
+      currentY = 0;
+      raf = null;
+      if (core) core.style.transform = '';
+      chips.forEach((chip) => { chip.style.transform = ''; });
+      if (glow) glow.style.transform = '';
     });
   }
 
