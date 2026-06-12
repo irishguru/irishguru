@@ -39,12 +39,14 @@
   align-items: center;
   padding-block: clamp(5.5rem, 13vw, 9rem) clamp(3.5rem, 7vw, 6rem);
   border-bottom: 1px solid rgba(224, 152, 64, 0.14);
+  /* Hard fallback – always dark regardless of theme variables */
+  background-color: #020d06;
   background:
     radial-gradient(ellipse 72% 54% at 84% 4%, rgba(224, 152, 64, 0.28), transparent 52%),
     radial-gradient(ellipse 60% 46% at 6% 92%, rgba(26, 102, 64, 0.28), transparent 50%),
     radial-gradient(ellipse 42% 34% at 52% 100%, rgba(0, 0, 0, 0.55), transparent 72%),
     radial-gradient(ellipse 32% 28% at 28% 26%, rgba(13, 80, 40, 0.18), transparent 62%),
-    linear-gradient(158deg, #020c05 0%, #041408 28%, var(--void) 100%);
+    linear-gradient(158deg, #020c05 0%, #041408 28%, #031008 100%);
   color: var(--hero-ink);
   overflow: hidden;
   isolation: isolate;
@@ -388,10 +390,7 @@
 .platform-scene {
   position: relative;
   width: 100%;
-  aspect-ratio: 640 / 520;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  aspect-ratio: 4 / 3;
 }
 
 .hero__visual-theater {
@@ -790,6 +789,266 @@
 /* On mobile the visual is hidden – copy is the hero */
 @media (max-width: 599px) {
   .hscene { display: none; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   HERO CAPABILITY BENTO — 6-card CSS grid, no external assets
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Container fills visual-theater's aspect-ratio box */
+.hero-bento {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-areas:
+    "ai m1"
+    "ai m2"
+    "plat plat"
+    "cloud devsec";
+  grid-template-columns: 1.35fr 1fr;
+  grid-template-rows: 1fr 1fr 0.72fr 0.88fr;
+  gap: clamp(5px, 0.6vw, 8px);
+  padding: clamp(4px, 0.5vw, 6px);
+  /* Subtle cinematic tilt — whole dashboard leans in shared perspective */
+  transform: perspective(1100px) rotateX(2deg) rotateY(-7deg);
+  transform-origin: 50% 50%;
+}
+
+/* Grid area assignments */
+.hb--ai      { grid-area: ai; }
+.hb--m1      { grid-area: m1; }
+.hb--m2      { grid-area: m2; }
+.hb--platform{ grid-area: plat; }
+.hb--cloud   { grid-area: cloud; }
+.hb--devsec  { grid-area: devsec; }
+
+/* ─── Base card ─────────────────────────────────────────────────────────── */
+.hb {
+  position: relative;
+  overflow: hidden;
+  border-radius: clamp(7px, 0.9vw, 11px);
+  border: 1px solid rgba(255, 255, 255, 0.065);
+  box-shadow:
+    0 10px 36px rgba(0, 0, 0, 0.48),
+    0 2px 8px rgba(0, 0, 0, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  transition: box-shadow 0.35s ease;
+}
+
+/* Frosted glass top-corner highlight */
+.hb::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(158deg, rgba(255,255,255,0.07) 0%, transparent 44%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Glowing top edge — coloured per card */
+.hb__line {
+  position: absolute;
+  top: 0;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Inner radial glow (AI card only) */
+.hb__glow-inner {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(ellipse at 60% 20%, rgba(224,152,64,0.16) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(14px);
+}
+
+/* Card body */
+.hb__body {
+  position: relative;
+  z-index: 3;
+  padding: clamp(0.52rem, 1.05vw, 0.82rem) clamp(0.65rem, 1.1vw, 0.92rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(0.22rem, 0.45vw, 0.36rem);
+}
+
+.hb__body--row {
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(0.5rem, 0.9vw, 0.75rem);
+  flex-wrap: nowrap;
+}
+
+/* Eyebrow label */
+.hb__eye {
+  margin: 0;
+  font-size: clamp(0.38rem, 0.65vw, 0.48rem);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  opacity: 0.65;
+  white-space: nowrap;
+}
+
+/* Descriptor text (AI card) */
+.hb__desc {
+  margin: 0;
+  font-size: clamp(0.42rem, 0.7vw, 0.52rem);
+  line-height: 1.5;
+  color: rgba(240, 250, 244, 0.42);
+}
+
+/* Tech tag pills */
+.hb__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.14rem, 0.28vw, 0.22rem);
+}
+
+.hb__tags span {
+  display: inline-block;
+  font-size: clamp(0.38rem, 0.62vw, 0.48rem);
+  font-weight: 500;
+  padding: 0.1rem clamp(0.22rem, 0.45vw, 0.35rem);
+  border-radius: 3px;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+/* Icon (top-right of AI card) */
+.hb__icon {
+  position: absolute;
+  bottom: clamp(0.45rem, 0.8vw, 0.65rem);
+  right: clamp(0.45rem, 0.8vw, 0.65rem);
+  width: clamp(16px, 2.5vw, 22px);
+  z-index: 3;
+  opacity: 0.28;
+}
+.hb__icon svg { width: 100%; height: 100%; }
+
+/* ─── AI & Intelligence ──────────────────────────────────────────────────── */
+.hb--ai {
+  background-color: rgba(22, 9, 2, 0.93);
+  border-color: rgba(224, 152, 64, 0.20);
+  box-shadow:
+    0 14px 44px rgba(0, 0, 0, 0.52),
+    0 0 32px rgba(224, 152, 64, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.09);
+}
+.hb--ai .hb__line {
+  background: linear-gradient(90deg, transparent, rgba(224,152,64,0.90) 22%, rgba(224,152,64,0.75) 78%, transparent);
+  box-shadow: 0 0 18px rgba(224,152,64,0.56), 0 0 36px rgba(224,152,64,0.20);
+}
+.hb--ai .hb__eye  { color: rgba(245, 192, 96, 0.82); }
+.hb--ai .hb__tags span {
+  background: rgba(224,152,64,0.13);
+  border: 1px solid rgba(224,152,64,0.30);
+  color: rgba(245,192,96,0.90);
+}
+.hb--ai .hb__icon { color: rgba(224,152,64,1); opacity: 0.32; }
+
+/* ─── Metric cards ───────────────────────────────────────────────────────── */
+.hb--metric {
+  background-color: rgba(4, 18, 9, 0.92);
+  border-color: rgba(34, 200, 120, 0.14);
+}
+
+.hb__mnum {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.6vw, 1.95rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: #e09840;
+}
+.hb__mnum small {
+  font-size: 55%;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.hb__mlbl {
+  margin: 0;
+  font-size: clamp(0.42rem, 0.7vw, 0.52rem);
+  color: rgba(240, 250, 244, 0.46);
+  font-weight: 500;
+  letter-spacing: 0.025em;
+}
+.hb__bar {
+  height: 2px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 1px;
+  overflow: hidden;
+  margin-top: clamp(0.18rem, 0.35vw, 0.28rem);
+}
+.hb__bar-fill {
+  height: 100%;
+  width: var(--w, 50%);
+  background: linear-gradient(90deg, #22c878 0%, rgba(34,200,120,0.45) 100%);
+  border-radius: 1px;
+}
+
+/* ─── Platform Core ──────────────────────────────────────────────────────── */
+.hb--platform {
+  background-color: rgba(2, 15, 9, 0.93);
+  border-color: rgba(34, 200, 120, 0.15);
+}
+.hb--platform .hb__line {
+  background: linear-gradient(90deg, transparent, rgba(34,200,120,0.82) 22%, rgba(34,200,120,0.68) 78%, transparent);
+  box-shadow: 0 0 14px rgba(34,200,120,0.46), 0 0 28px rgba(34,200,120,0.16);
+}
+.hb--platform .hb__eye  { color: rgba(106, 212, 160, 0.80); }
+.hb--platform .hb__tags span {
+  background: rgba(34,200,120,0.10);
+  border: 1px solid rgba(34,200,120,0.26);
+  color: rgba(138,234,192,0.90);
+}
+
+/* ─── Cloud Foundation ───────────────────────────────────────────────────── */
+.hb--cloud {
+  background-color: rgba(2, 8, 19, 0.91);
+  border-color: rgba(58, 159, 224, 0.15);
+}
+.hb--cloud .hb__line {
+  background: linear-gradient(90deg, transparent, rgba(58,159,224,0.75) 22%, rgba(58,159,224,0.60) 78%, transparent);
+  box-shadow: 0 0 12px rgba(58,159,224,0.42), 0 0 24px rgba(58,159,224,0.14);
+}
+.hb--cloud .hb__eye  { color: rgba(122, 184, 232, 0.80); }
+.hb--cloud .hb__tags span {
+  background: rgba(58,159,224,0.10);
+  border: 1px solid rgba(58,159,224,0.26);
+  color: rgba(158,208,240,0.90);
+}
+
+/* ─── DevSecOps ──────────────────────────────────────────────────────────── */
+.hb--devsec {
+  background-color: rgba(14, 7, 2, 0.91);
+  border-color: rgba(224, 140, 40, 0.15);
+}
+.hb--devsec .hb__line {
+  background: linear-gradient(90deg, transparent, rgba(224,140,40,0.72) 22%, rgba(224,140,40,0.58) 78%, transparent);
+  box-shadow: 0 0 12px rgba(224,140,40,0.38), 0 0 24px rgba(224,140,40,0.13);
+}
+.hb--devsec .hb__eye  { color: rgba(240, 185, 100, 0.80); }
+.hb--devsec .hb__tags span {
+  background: rgba(224,140,40,0.10);
+  border: 1px solid rgba(224,140,40,0.26);
+  color: rgba(240,200,130,0.90);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+@media (max-width: 899px) {
+  .hero-bento { transform: none; }
+}
+
+@media (max-width: 599px) {
+  .hero-bento { display: none; }
 }
 
 @keyframes chip-float-a {

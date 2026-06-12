@@ -158,69 +158,82 @@
             </ul>
           </div>
 
-          <!-- ── Right: Visual theater ── -->
+          <!-- ── Right: Capability bento ── -->
           <div class="hero__visual-theater reveal reveal--delay-1">
-            <div class="hero__visual-frame" aria-hidden="true"></div>
-            <div class="visual-theater" id="hero-scene">
-              <div class="visual-theater__glow" aria-hidden="true"></div>
-              <!-- ── CSS-only 3D platform stack – no external file, no loading risk ── -->
-              <div class="hscene" role="img" aria-label="Platform architecture: AI and Intelligence with Azure OpenAI and Databricks, Platform Core with Kubernetes ArgoCD and Terraform, Cloud Foundation with AWS Azure and GCP">
-                <div class="hscene__glow hscene__glow--cu" aria-hidden="true"></div>
-                <div class="hscene__glow hscene__glow--em" aria-hidden="true"></div>
-                <div class="hscene__dots" aria-hidden="true"></div>
+            <div class="visual-theater" id="hero-scene" aria-hidden="true">
+              <div class="hero-bento" role="img" aria-label="Irish Guru capabilities: AI and Intelligence, Platform Core, Cloud, DevSecOps, with 94% client renewal and 3.8x deploy frequency improvement">
 
-                <div class="hscene__panel hscene__panel--ai" aria-hidden="true">
-                  <div class="hscene__panel-inner">
-                    <p class="hscene__label">AI &amp; INTELLIGENCE</p>
-                    <div class="hscene__tags">
+                <!-- AI & Intelligence — large card, spans 2 rows on left -->
+                <article class="hb hb--ai">
+                  <div class="hb__line" aria-hidden="true"></div>
+                  <div class="hb__glow-inner" aria-hidden="true"></div>
+                  <div class="hb__body">
+                    <p class="hb__eye">AI &amp; INTELLIGENCE</p>
+                    <div class="hb__tags">
                       <span>Azure OpenAI</span><span>Databricks</span><span>dbt</span>
                     </div>
+                    <p class="hb__desc">Governed AI delivery<br>for enterprise</p>
                   </div>
-                </div>
+                  <div class="hb__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                      <circle cx="12" cy="12" r="9.5"/>
+                      <path d="M12 2.5v19M2.5 12h19M6.1 6.1l11.8 11.8M17.9 6.1L6.1 17.9"/>
+                      <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/>
+                    </svg>
+                  </div>
+                </article>
 
-                <div class="hscene__panel hscene__panel--platform" aria-hidden="true">
-                  <div class="hscene__panel-inner">
-                    <p class="hscene__label">PLATFORM CORE</p>
-                    <div class="hscene__tags">
-                      <span>Kubernetes</span><span>ArgoCD</span><span>Terraform</span><span>Vault</span>
+                <!-- Proof metric: Client renewal rate -->
+                <article class="hb hb--metric hb--m1">
+                  <div class="hb__body">
+                    <p class="hb__mnum" data-counter="94" data-counter-suffix="%">94<small>%</small></p>
+                    <p class="hb__mlbl">Client renewal rate</p>
+                    <div class="hb__bar" aria-hidden="true"><div class="hb__bar-fill" style="--w:94%"></div></div>
+                  </div>
+                </article>
+
+                <!-- Proof metric: Deploy frequency -->
+                <article class="hb hb--metric hb--m2">
+                  <div class="hb__body">
+                    <p class="hb__mnum" data-counter="3.8" data-counter-suffix="×" data-counter-decimals="1">3.8<small>×</small></p>
+                    <p class="hb__mlbl">Deploy frequency</p>
+                    <div class="hb__bar" aria-hidden="true"><div class="hb__bar-fill" style="--w:76%"></div></div>
+                  </div>
+                </article>
+
+                <!-- Platform Core — full width row -->
+                <article class="hb hb--platform">
+                  <div class="hb__line" aria-hidden="true"></div>
+                  <div class="hb__body hb__body--row">
+                    <p class="hb__eye">PLATFORM CORE</p>
+                    <div class="hb__tags">
+                      <span>Kubernetes</span><span>ArgoCD</span><span>Terraform</span><span>Vault</span><span>GitHub Actions</span>
                     </div>
                   </div>
-                </div>
+                </article>
 
-                <div class="hscene__panel hscene__panel--cloud" aria-hidden="true">
-                  <div class="hscene__panel-inner">
-                    <p class="hscene__label">CLOUD FOUNDATION</p>
-                    <div class="hscene__tags">
+                <!-- Cloud Foundation -->
+                <article class="hb hb--cloud">
+                  <div class="hb__line" aria-hidden="true"></div>
+                  <div class="hb__body">
+                    <p class="hb__eye">CLOUD</p>
+                    <div class="hb__tags">
                       <span>AWS</span><span>Azure</span><span>GCP</span>
                     </div>
                   </div>
-                </div>
+                </article>
 
-                <!-- Inline SVG wiring – no external load, just inline markup -->
-                <svg class="hscene__wire" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-                  <line x1="3.5" y1="26" x2="3.5" y2="41" stroke="rgba(255,255,255,0.16)" stroke-width="0.4" stroke-dasharray="3,2.5"/>
-                  <line x1="3.5" y1="57" x2="3.5" y2="71" stroke="rgba(255,255,255,0.11)" stroke-width="0.4" stroke-dasharray="3,2.5"/>
-                  <circle cx="3.5" cy="26" r="1.4" fill="#e09840" fill-opacity="0.90"/>
-                  <circle cx="3.5" cy="57" r="1.2" fill="#22c878" fill-opacity="0.80"/>
-                  <circle cx="3.5" cy="71" r="1.0" fill="#3a9fe0" fill-opacity="0.68"/>
-                </svg>
-              </div>
-              <div class="platform-chips" aria-hidden="true">
-                <div class="platform-chip platform-chip--1">
-                  <span class="platform-chip__rule"></span>
-                  <p class="platform-chip__val" data-counter="3.8" data-counter-suffix="×" data-counter-decimals="1">3.8×</p>
-                  <p class="platform-chip__lbl">Deploy frequency</p>
-                </div>
-                <div class="platform-chip platform-chip--2">
-                  <span class="platform-chip__rule"></span>
-                  <p class="platform-chip__val" data-counter="11" data-counter-suffix=" wks">11 wks</p>
-                  <p class="platform-chip__lbl">To production</p>
-                </div>
-                <div class="platform-chip platform-chip--3">
-                  <span class="platform-chip__rule"></span>
-                  <p class="platform-chip__val" data-counter="94" data-counter-suffix="%">94%</p>
-                  <p class="platform-chip__lbl">Renewal rate</p>
-                </div>
+                <!-- DevSecOps -->
+                <article class="hb hb--devsec">
+                  <div class="hb__line" aria-hidden="true"></div>
+                  <div class="hb__body">
+                    <p class="hb__eye">DEVSECOPS</p>
+                    <div class="hb__tags">
+                      <span>Snyk</span><span>Vault</span><span>ISO 27001</span>
+                    </div>
+                  </div>
+                </article>
+
               </div>
             </div>
           </div>
