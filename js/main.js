@@ -297,15 +297,12 @@
 
     const core = scene.querySelector('.visual-theater__core, .platform-scene__core');
     const chips = scene.querySelectorAll('.platform-chip');
-    const orbits = scene.querySelectorAll('.visual-theater__orbit');
     const glow = scene.querySelector('.visual-theater__glow');
     let raf = null;
     let targetX = 0;
     let targetY = 0;
     let currentX = 0;
     let currentY = 0;
-
-    if (core) core.style.animation = 'none';
 
     const onMove = (e) => {
       const rect = scene.getBoundingClientRect();
@@ -315,34 +312,25 @@
     };
 
     const update = () => {
-      currentX += (targetX - currentX) * 0.08;
-      currentY += (targetY - currentY) * 0.08;
+      currentX += (targetX - currentX) * 0.1;
+      currentY += (targetY - currentY) * 0.1;
       raf = null;
 
-      const rotY = -14 + currentX * 10;
-      const rotX = 14 - currentY * 8;
-      const shiftX = currentX * 16;
-      const shiftY = currentY * 12;
+      const shiftX = currentX * 6;
+      const shiftY = currentY * 4;
 
       if (core) {
-        core.style.transform =
-          `rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.02) translate(${shiftX}px, ${shiftY}px)`;
+        core.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
       }
 
-      orbits.forEach((orbit, i) => {
-        const depth = (i + 1) * 4;
-        orbit.style.transform =
-          `translate(calc(-50% + ${currentX * depth}px), calc(-50% + ${currentY * depth}px)) rotateX(72deg)`;
-      });
-
       if (glow) {
-        glow.style.transform =
-          `translate(${currentX * 20}px, ${currentY * 16}px) scale(${1 + Math.abs(currentX) * 0.04})`;
+        glow.style.transform = `translate(${currentX * 10}px, ${currentY * 8}px)`;
       }
 
       chips.forEach((chip, i) => {
-        const depth = (i + 1) * 5;
-        chip.style.transform = `translate3d(${currentX * depth}px, ${currentY * depth}px, 0)`;
+        const depth = (i + 1) * 3;
+        const base = chip.classList.contains('platform-chip--3') ? 'translateX(-50%) ' : '';
+        chip.style.transform = `${base}translate(${currentX * depth}px, ${currentY * depth}px)`;
       });
 
       if (Math.abs(targetX - currentX) > 0.001 || Math.abs(targetY - currentY) > 0.001) {

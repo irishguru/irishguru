@@ -262,9 +262,16 @@
 }
 
 .hero--apex .btn--secondary {
-  border-color: rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.03);
+  color: #eef1ee;
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(8px);
+}
+
+.hero--apex .btn--secondary:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .hero__trust {
@@ -290,170 +297,136 @@
   opacity: 0.7;
 }
 
-/* Visual theater — simulated 3D */
+/* Visual theater — clean, flat composition */
 .visual-theater,
 .platform-scene {
   position: relative;
   width: 100%;
-  min-height: clamp(22rem, 46vw, 32rem);
-  perspective: 1800px;
-  transform-style: preserve-3d;
+  aspect-ratio: 720 / 580;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero__visual-theater {
   position: relative;
-  padding: var(--space-4);
+  padding: clamp(1rem, 2.5vw, 1.5rem);
   border-radius: var(--radius-2xl);
-  background: linear-gradient(160deg, rgba(212, 146, 79, 0.06), transparent 40%, rgba(61, 90, 79, 0.05));
-  border: 1px solid rgba(212, 146, 79, 0.12);
+  background: linear-gradient(165deg, rgba(212, 146, 79, 0.05), transparent 50%, rgba(61, 90, 79, 0.04));
+  border: 1px solid rgba(212, 146, 79, 0.14);
   box-shadow:
-    0 40px 100px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-}
-
-.visual-theater__orbit {
-  position: absolute;
-  left: 50%;
-  top: 48%;
-  border: 1px solid rgba(212, 146, 79, 0.15);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) rotateX(72deg);
-  pointer-events: none;
-}
-
-.visual-theater__orbit--outer {
-  width: min(92%, 28rem);
-  height: min(92%, 28rem);
-  animation: orbit-spin 48s linear infinite;
-  border-style: dashed;
-  border-color: rgba(212, 146, 79, 0.12);
-}
-
-.visual-theater__orbit--inner {
-  width: min(68%, 20rem);
-  height: min(68%, 20rem);
-  animation: orbit-spin 32s linear infinite reverse;
-  border-color: rgba(61, 90, 79, 0.2);
-}
-
-@keyframes orbit-spin {
-  from { transform: translate(-50%, -50%) rotateX(72deg) rotateZ(0deg); }
-  to { transform: translate(-50%, -50%) rotateX(72deg) rotateZ(360deg); }
-}
-
-.visual-theater__pedestal {
-  position: absolute;
-  left: 50%;
-  bottom: 8%;
-  width: 72%;
-  height: 3.5rem;
-  transform: translateX(-50%) rotateX(78deg);
-  background: radial-gradient(ellipse, rgba(212, 146, 79, 0.25), transparent 70%);
-  filter: blur(20px);
-  pointer-events: none;
+    0 24px 64px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .visual-theater__glow,
 .platform-scene__glow {
   position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 70% 55% at 50% 45%, rgba(212, 146, 79, 0.28), transparent 68%);
-  filter: blur(48px);
+  inset: 10% 15%;
+  background: radial-gradient(ellipse at 50% 50%, rgba(212, 146, 79, 0.18), transparent 70%);
+  filter: blur(32px);
   pointer-events: none;
   z-index: 0;
-}
-
-.visual-theater__fog {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 35%;
-  background: linear-gradient(180deg, transparent, rgba(3, 5, 4, 0.85));
-  pointer-events: none;
-  z-index: 4;
 }
 
 .visual-theater__core,
 .platform-scene__core {
   position: relative;
-  z-index: 2;
-  width: 108%;
-  max-width: none;
-  margin-left: -4%;
+  z-index: 1;
+  width: 100%;
+  height: auto;
   display: block;
-  transform: rotateX(14deg) rotateY(-14deg) scale(1.02);
-  filter: drop-shadow(0 48px 96px rgba(0, 0, 0, 0.65)) drop-shadow(0 0 60px rgba(212, 146, 79, 0.12));
-  transition: transform 0.8s var(--ease-out);
-  animation: platform-float 9s ease-in-out infinite alternate;
-}
-
-@keyframes platform-float {
-  from { transform: rotateX(14deg) rotateY(-14deg) scale(1.02) translateY(0); }
-  to { transform: rotateX(11deg) rotateY(-10deg) scale(1.02) translateY(-14px); }
+  border-radius: var(--radius-lg);
+  filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.35));
+  transition: transform 0.6s var(--ease-out), filter 0.6s var(--ease-out);
 }
 
 .visual-theater:hover .visual-theater__core,
 .platform-scene:hover .platform-scene__core {
-  transform: rotateX(10deg) rotateY(-8deg) scale(1.03) translateY(-6px);
+  filter: drop-shadow(0 20px 48px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 32px rgba(212, 146, 79, 0.08));
+}
+
+/* Floating metric chips — glass overlay, clear of SVG corner panels */
+.platform-chips {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .platform-chip {
   position: absolute;
-  z-index: 5;
-  padding: var(--space-3) var(--space-4);
-  background: linear-gradient(145deg, rgba(14, 22, 18, 0.95), rgba(6, 10, 8, 0.88));
-  border: 1px solid rgba(212, 146, 79, 0.35);
-  border-radius: var(--radius-lg);
-  backdrop-filter: blur(20px);
+  padding: var(--space-2) var(--space-3);
+  background: rgba(8, 14, 11, 0.52);
+  border: 1px solid rgba(212, 146, 79, 0.28);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(14px) saturate(1.15);
   box-shadow:
-    0 20px 56px rgba(0, 0, 0, 0.5),
-    0 0 24px rgba(212, 146, 79, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  animation: chip-drift 6s ease-in-out infinite alternate;
+    0 8px 24px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.platform-chip:hover {
+  background: rgba(8, 14, 11, 0.72);
+  border-color: rgba(212, 146, 79, 0.45);
 }
 
 .platform-chip__val {
   font-family: var(--font-display);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   font-weight: 800;
-  color: var(--color-accent);
+  color: #f0c080;
   line-height: 1;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
 }
 
 .platform-chip__lbl {
-  font-size: 0.625rem;
+  font-size: 0.5625rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.5);
-  margin-top: 0.25rem;
+  color: rgba(255, 255, 255, 0.72);
+  margin-top: 0.2rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
-.platform-chip--1 { top: 4%; right: 0; animation-delay: 0s; }
-.platform-chip--2 { bottom: 18%; left: -2%; animation-delay: -2s; }
-.platform-chip--3 { bottom: 8%; right: 8%; animation-delay: -4s; }
+/* Side margins — between corner panels, not over Multi-zone / AI cards */
+.platform-chip--1 { top: 38%; left: 0; }
+.platform-chip--2 { top: 38%; right: 0; }
+.platform-chip--3 { bottom: 10%; left: 50%; transform: translateX(-50%); }
 
 @media (max-width: 767px) {
-  .platform-chip { display: none; }
-  .visual-theater__orbit { display: none; }
-  .visual-theater__core,
-  .platform-scene__core {
-    transform: none;
+  .visual-theater,
+  .platform-scene { aspect-ratio: auto; min-height: auto; }
+  .platform-chips {
+    position: relative;
+    inset: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    justify-content: center;
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: 1px solid rgba(212, 146, 79, 0.12);
+  }
+  .platform-chip {
+    position: relative;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+    flex: 1 1 calc(33% - var(--space-2));
+    min-width: 5.5rem;
+    text-align: center;
     animation: none;
-    width: 100%;
-    margin-left: 0;
   }
   .hero--apex,
   .hero--flagship { min-height: auto; }
   .hero__headline { font-size: clamp(2.25rem, 9vw, 3rem); }
   .hero__copy-panel { padding: var(--space-5); }
   .hero__visual-theater { padding: var(--space-3); }
-}
-
-@keyframes chip-drift {
-  from { transform: translateY(0) translateZ(20px); }
-  to { transform: translateY(-8px) translateZ(40px); }
 }
 
 .hero__metrics-bar {
@@ -1658,7 +1631,6 @@
   .hero__beam,
   .hero__orb,
   .hero__light,
-  .visual-theater__orbit,
   .visual-theater__core,
   .platform-scene__core,
   .platform-chip { animation: none; }
