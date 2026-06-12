@@ -516,20 +516,20 @@
 
 /* Chip positions — clear of SVG node labels */
 .platform-chip--1 {
-  top: 36%;
+  top: 62%;
   left: 1%;
   animation: chip-float-a 6.5s ease-in-out infinite alternate;
 }
 
 .platform-chip--2 {
-  top: 36%;
+  top: 62%;
   right: 1%;
   animation: chip-float-b 7.5s ease-in-out infinite alternate-reverse;
   animation-delay: -1.5s;
 }
 
 .platform-chip--3 {
-  bottom: 8%;
+  top: 4%;
   left: 50%;
   animation: chip-float-c 8s ease-in-out infinite alternate;
   animation-delay: -3s;
@@ -819,20 +819,20 @@
   transition: transform 0.5s var(--ease-out);
 }
 
-/* Secondary visual — indented to create layered depth effect */
+/* Secondary visual — same width, slight right offset for layered depth */
 .story-compose__secondary {
   position: relative;
   z-index: 1;
-  width: 76%;
+  width: 96%;
   margin-left: auto;
-  margin-top: -1.5rem;
+  margin-top: var(--space-4);
   transition: transform 0.5s var(--ease-out);
 }
 
 @media (min-width: 768px) {
   .story-compose__secondary {
-    width: 70%;
-    margin-top: -2.5rem;
+    width: 94%;
+    margin-top: var(--space-3);
   }
 }
 
