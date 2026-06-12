@@ -459,6 +459,14 @@
   will-change: transform;
 }
 
+/* When the theater uses the CSS hscene instead of an img, fill the container */
+.visual-theater .hscene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @keyframes hero-diagram-float {
   from { transform: translateY(0px); }
   to   { transform: translateY(-12px); }
@@ -528,29 +536,260 @@
   line-height: 1.35;
 }
 
-/* Chip positions — float around the 3-layer stack composition */
-/* Upper-left: above AI panel left anchor */
+/* Chip 1: left side, gap between AI and Platform panels */
 .platform-chip--1 {
-  top: 3%;
-  left: 2%;
+  top: 28%;
+  left: 1%;
   animation: chip-float-a 6.5s ease-in-out infinite alternate;
 }
 
-/* Right side: floats beside the AI panel's right edge */
+/* Chip 2: upper-right, beside AI panel */
 .platform-chip--2 {
-  top: 22%;
+  top: 4%;
   right: 1%;
   left: auto;
   animation: chip-float-b 7.5s ease-in-out infinite alternate-reverse;
   animation-delay: -1.5s;
 }
 
-/* Center-low: between Platform and Cloud panels */
+/* Chip 3: lower-center, below Platform / above Cloud */
 .platform-chip--3 {
-  bottom: 20%;
-  left: 40%;
+  bottom: 14%;
+  left: 44%;
   animation: chip-float-c 8s ease-in-out infinite alternate;
   animation-delay: -3s;
+}
+
+/* ─── Hero scene — CSS/HTML inline 3D panel stack ────────────────────────── */
+.hscene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  /* Unified 3D perspective context for all child panels */
+  perspective: 1100px;
+  perspective-origin: 28% 46%;
+}
+
+.hscene__glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(62px);
+}
+
+.hscene__glow--cu {
+  width: 72%;
+  aspect-ratio: 1;
+  top: -18%;
+  right: -10%;
+  background: radial-gradient(ellipse, rgba(224, 152, 64, 0.34) 0%, transparent 66%);
+  animation: glow-breathe 11s ease-in-out infinite alternate;
+}
+
+.hscene__glow--em {
+  width: 60%;
+  aspect-ratio: 1;
+  bottom: -8%;
+  left: -12%;
+  background: radial-gradient(ellipse, rgba(34, 200, 120, 0.28) 0%, transparent 66%);
+  animation: glow-breathe 14s ease-in-out infinite alternate-reverse;
+  animation-delay: -4s;
+}
+
+/* Dot grid texture */
+.hscene__dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.13) 0.65px, transparent 0.65px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Inline SVG connector wires */
+.hscene__wire {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* ─── Panel base ─────────────────────────────────────────────────────────── */
+.hscene__panel {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+/* Frosted glass reflection – top-left */
+.hscene__panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(165deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0) 45%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Glowing top edge line */
+.hscene__panel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hscene__panel-inner {
+  position: relative;
+  z-index: 3;
+  padding: clamp(0.55rem, 1.1vw, 0.82rem) clamp(0.7rem, 1.3vw, 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.28rem, 0.55vw, 0.4rem);
+}
+
+.hscene__label {
+  margin: 0;
+  font-size: clamp(0.42rem, 0.72vw, 0.52rem);
+  font-weight: 700;
+  letter-spacing: 0.20em;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  opacity: 0.75;
+}
+
+.hscene__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.18rem, 0.38vw, 0.28rem);
+}
+
+.hscene__tags span {
+  display: inline-block;
+  font-size: clamp(0.44rem, 0.76vw, 0.54rem);
+  font-weight: 500;
+  padding: 0.15rem clamp(0.28rem, 0.56vw, 0.42rem);
+  border-radius: 4px;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+/* ─── AI & Intelligence (foreground, top) ────────────────────────────────── */
+.hscene__panel--ai {
+  top: 4%;
+  background: rgba(18, 8, 2, 0.91);
+  border: 1px solid rgba(224, 152, 64, 0.22);
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.62),
+    0 0 38px rgba(224, 152, 64, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.10);
+  animation: hpanel-a 9s ease-in-out infinite alternate;
+}
+
+.hscene__panel--ai::after {
+  background: linear-gradient(90deg,
+    transparent 0%, rgba(224,152,64,0.88) 18%, rgba(224,152,64,0.72) 72%, transparent 100%);
+  box-shadow: 0 0 22px rgba(224,152,64,0.56), 0 0 44px rgba(224,152,64,0.22);
+}
+
+.hscene__panel--ai .hscene__label { color: #f5c060; }
+
+.hscene__panel--ai .hscene__tags span {
+  background: rgba(224, 152, 64, 0.14);
+  border: 1px solid rgba(224, 152, 64, 0.32);
+  color: #f5c060;
+}
+
+/* ─── Platform Core (middle) ─────────────────────────────────────────────── */
+.hscene__panel--platform {
+  top: 37%;
+  background: rgba(2, 14, 8, 0.90);
+  border: 1px solid rgba(34, 200, 120, 0.18);
+  box-shadow:
+    0 24px 65px rgba(0, 0, 0, 0.55),
+    0 0 30px rgba(34, 200, 120, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  opacity: 0.92;
+  animation: hpanel-b 12s ease-in-out infinite alternate;
+  animation-delay: -4s;
+}
+
+.hscene__panel--platform::after {
+  background: linear-gradient(90deg,
+    transparent 0%, rgba(34,200,120,0.80) 18%, rgba(34,200,120,0.62) 72%, transparent 100%);
+  box-shadow: 0 0 16px rgba(34,200,120,0.50), 0 0 34px rgba(34,200,120,0.18);
+}
+
+.hscene__panel--platform .hscene__label { color: #6ad4a0; }
+
+.hscene__panel--platform .hscene__tags span {
+  background: rgba(34, 200, 120, 0.11);
+  border: 1px solid rgba(34, 200, 120, 0.28);
+  color: #8aeac0;
+}
+
+/* ─── Cloud Foundation (background, bottom) ──────────────────────────────── */
+.hscene__panel--cloud {
+  top: 68%;
+  background: rgba(2, 8, 18, 0.88);
+  border: 1px solid rgba(58, 159, 224, 0.16);
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.50),
+    0 0 24px rgba(58, 159, 224, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  opacity: 0.80;
+  animation: hpanel-c 14s ease-in-out infinite alternate;
+  animation-delay: -8s;
+}
+
+.hscene__panel--cloud::after {
+  background: linear-gradient(90deg,
+    transparent 0%, rgba(58,159,224,0.72) 18%, rgba(58,159,224,0.56) 72%, transparent 100%);
+  box-shadow: 0 0 14px rgba(58,159,224,0.42), 0 0 28px rgba(58,159,224,0.16);
+}
+
+.hscene__panel--cloud .hscene__label { color: #7ab8e8; }
+
+.hscene__panel--cloud .hscene__tags span {
+  background: rgba(58, 159, 224, 0.10);
+  border: 1px solid rgba(58, 159, 224, 0.26);
+  color: #9ed0f0;
+}
+
+/* ─── Panel float animations ─────────────────────────────────────────────── */
+/* Each panel has a different Y-rotation to simulate receding depth */
+@keyframes hpanel-a {
+  from { transform: rotateY(-9deg)  rotateX(1deg)   translateY(0);     }
+  to   { transform: rotateY(-9deg)  rotateX(1deg)   translateY(-10px); }
+}
+@keyframes hpanel-b {
+  from { transform: rotateY(-12deg) rotateX(1.5deg) translateY(-3px);  }
+  to   { transform: rotateY(-12deg) rotateX(1.5deg) translateY(8px);   }
+}
+@keyframes hpanel-c {
+  from { transform: rotateY(-15deg) rotateX(2.5deg) translateY(2px);   }
+  to   { transform: rotateY(-15deg) rotateX(2.5deg) translateY(-7px);  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hscene__panel,
+  .hscene__glow { animation: none !important; }
+}
+
+/* On mobile the visual is hidden – copy is the hero */
+@media (max-width: 599px) {
+  .hscene { display: none; }
 }
 
 @keyframes chip-float-a {

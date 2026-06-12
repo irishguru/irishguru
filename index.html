@@ -163,7 +163,48 @@
             <div class="hero__visual-frame" aria-hidden="true"></div>
             <div class="visual-theater" id="hero-scene">
               <div class="visual-theater__glow" aria-hidden="true"></div>
-              <img class="visual-theater__core" src="images/hero-scene.svg" alt="Three-layer platform architecture: AI and Intelligence (Azure OpenAI, Databricks), Platform Core (Kubernetes, ArgoCD, Terraform), and Cloud Foundation (AWS, Azure, GCP)" width="640" height="520" loading="eager" decoding="async">
+              <!-- ── CSS-only 3D platform stack – no external file, no loading risk ── -->
+              <div class="hscene" role="img" aria-label="Platform architecture: AI and Intelligence with Azure OpenAI and Databricks, Platform Core with Kubernetes ArgoCD and Terraform, Cloud Foundation with AWS Azure and GCP">
+                <div class="hscene__glow hscene__glow--cu" aria-hidden="true"></div>
+                <div class="hscene__glow hscene__glow--em" aria-hidden="true"></div>
+                <div class="hscene__dots" aria-hidden="true"></div>
+
+                <div class="hscene__panel hscene__panel--ai" aria-hidden="true">
+                  <div class="hscene__panel-inner">
+                    <p class="hscene__label">AI &amp; INTELLIGENCE</p>
+                    <div class="hscene__tags">
+                      <span>Azure OpenAI</span><span>Databricks</span><span>dbt</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hscene__panel hscene__panel--platform" aria-hidden="true">
+                  <div class="hscene__panel-inner">
+                    <p class="hscene__label">PLATFORM CORE</p>
+                    <div class="hscene__tags">
+                      <span>Kubernetes</span><span>ArgoCD</span><span>Terraform</span><span>Vault</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hscene__panel hscene__panel--cloud" aria-hidden="true">
+                  <div class="hscene__panel-inner">
+                    <p class="hscene__label">CLOUD FOUNDATION</p>
+                    <div class="hscene__tags">
+                      <span>AWS</span><span>Azure</span><span>GCP</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Inline SVG wiring – no external load, just inline markup -->
+                <svg class="hscene__wire" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                  <line x1="3.5" y1="26" x2="3.5" y2="41" stroke="rgba(255,255,255,0.16)" stroke-width="0.4" stroke-dasharray="3,2.5"/>
+                  <line x1="3.5" y1="57" x2="3.5" y2="71" stroke="rgba(255,255,255,0.11)" stroke-width="0.4" stroke-dasharray="3,2.5"/>
+                  <circle cx="3.5" cy="26" r="1.4" fill="#e09840" fill-opacity="0.90"/>
+                  <circle cx="3.5" cy="57" r="1.2" fill="#22c878" fill-opacity="0.80"/>
+                  <circle cx="3.5" cy="71" r="1.0" fill="#3a9fe0" fill-opacity="0.68"/>
+                </svg>
+              </div>
               <div class="platform-chips" aria-hidden="true">
                 <div class="platform-chip platform-chip--1">
                   <span class="platform-chip__rule"></span>
