@@ -3,26 +3,28 @@
    ========================================================================== */
 
 :root {
-  --void: #030504;
-  --void-elevated: #09100d;
-  --void-border: rgba(224, 152, 64, 0.18);
-  --beam-copper: rgba(224, 152, 64, 0.65);
-  --beam-sage: rgba(45, 85, 69, 0.52);
+  /* Deep forest green darkness for void/hero sections */
+  --void: #031008;
+  --void-elevated: #071a10;
+  --void-border: rgba(224, 152, 64, 0.2);
+  --beam-copper: rgba(224, 152, 64, 0.7);
+  --beam-sage: rgba(26, 102, 64, 0.58);
   --section-pad-xl: clamp(5rem, 10vw, 9rem);
   --hero-copper: #e09840;
-  --hero-copper-soft: #f5b850;
-  --hero-ink: #f4f6f2;
-  --hero-muted: rgba(244, 246, 242, 0.65);
-  --hero-glass: rgba(5, 9, 7, 0.76);
-  --hero-glass-border: rgba(255, 255, 255, 0.1);
+  --hero-copper-soft: #f5c060;
+  --hero-ink: #f0faf4;
+  --hero-muted: rgba(240, 250, 244, 0.68);
+  --hero-glass: rgba(3, 14, 8, 0.78);
+  --hero-glass-border: rgba(255, 255, 255, 0.11);
 }
 
 [data-theme='dark'] {
-  --void: #010302;
-  --void-elevated: #050908;
-  --void-border: rgba(224, 152, 64, 0.2);
-  --beam-copper: rgba(224, 152, 64, 0.75);
-  --hero-glass: rgba(3, 7, 5, 0.86);
+  --void: #020c06;
+  --void-elevated: #050f09;
+  --void-border: rgba(224, 152, 64, 0.22);
+  --beam-copper: rgba(224, 152, 64, 0.78);
+  --beam-sage: rgba(26, 102, 64, 0.65);
+  --hero-glass: rgba(2, 10, 5, 0.88);
   --hero-glass-border: rgba(255, 255, 255, 0.08);
 }
 
@@ -36,13 +38,13 @@
   display: flex;
   align-items: center;
   padding-block: clamp(5.5rem, 13vw, 9rem) clamp(3.5rem, 7vw, 6rem);
-  border-bottom: 1px solid rgba(212, 146, 79, 0.1);
+  border-bottom: 1px solid rgba(224, 152, 64, 0.14);
   background:
-    radial-gradient(ellipse 72% 54% at 84% 4%, rgba(212, 146, 79, 0.24), transparent 52%),
-    radial-gradient(ellipse 60% 46% at 6% 92%, rgba(61, 90, 79, 0.19), transparent 50%),
-    radial-gradient(ellipse 42% 34% at 52% 100%, rgba(0, 0, 0, 0.65), transparent 72%),
-    radial-gradient(ellipse 28% 24% at 28% 26%, rgba(61, 90, 79, 0.09), transparent 62%),
-    linear-gradient(158deg, #010302 0%, #030706 28%, var(--void) 100%);
+    radial-gradient(ellipse 72% 54% at 84% 4%, rgba(224, 152, 64, 0.28), transparent 52%),
+    radial-gradient(ellipse 60% 46% at 6% 92%, rgba(26, 102, 64, 0.28), transparent 50%),
+    radial-gradient(ellipse 42% 34% at 52% 100%, rgba(0, 0, 0, 0.55), transparent 72%),
+    radial-gradient(ellipse 32% 28% at 28% 26%, rgba(13, 80, 40, 0.18), transparent 62%),
+    linear-gradient(158deg, #020c05 0%, #041408 28%, var(--void) 100%);
   color: var(--hero-ink);
   overflow: hidden;
   isolation: isolate;
@@ -90,8 +92,10 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 52% 42% at 64% 40%, rgba(212, 146, 79, 0.06), transparent 62%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.38) 0%, transparent 26%, transparent 70%, rgba(0, 0, 0, 0.6) 100%);
+    radial-gradient(ellipse 52% 42% at 64% 40%, rgba(224, 152, 64, 0.07), transparent 62%),
+    /* stronger left-side darkening for text legibility without glass panel */
+    radial-gradient(ellipse 55% 70% at 0% 50%, rgba(0, 0, 0, 0.38), transparent 70%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.44) 0%, transparent 22%, transparent 68%, rgba(0, 0, 0, 0.65) 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -133,8 +137,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 78% 68% at 48% 46%, transparent 18%, rgba(0, 1, 0, 0.92) 100%),
-    linear-gradient(180deg, rgba(0,1,0,0.52) 0%, transparent 18%, transparent 64%, rgba(0,1,0,0.75) 100%);
+    radial-gradient(ellipse 82% 72% at 48% 46%, transparent 16%, rgba(0, 1, 0, 0.88) 100%),
+    linear-gradient(180deg, rgba(0,1,0,0.55) 0%, transparent 16%, transparent 62%, rgba(0,1,0,0.78) 100%);
   pointer-events: none;
   z-index: 2;
 }
@@ -590,6 +594,169 @@
   .hero__headline { font-size: clamp(2.375rem, 9vw, 3.25rem); }
   .hero__copy-panel { padding: var(--space-5); }
   .hero__visual-theater { padding: var(--space-3); }
+}
+
+/* ─── Open hero modifier ─────────────────────────────────────────────────── */
+/* Widens the copy column so the headline dominates */
+@media (min-width: 1100px) {
+  .hero--open .hero__stage-layout {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    align-items: center;
+  }
+}
+
+/* Bigger headline for the wider open layout */
+.hero--open .hero__headline {
+  font-size: clamp(2.875rem, 6.2vw, 5.5rem);
+}
+
+.hero--open .hero__lede { max-width: 38rem; }
+
+/* More atmospheric, less boxy visual theater */
+.hero--open .hero__visual-theater {
+  background: rgba(2, 8, 4, 0.16);
+  border-color: rgba(224, 152, 64, 0.09);
+  box-shadow:
+    0 56px 140px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    inset 0 -36px 72px rgba(0, 0, 0, 0.22);
+}
+
+/* ─── Copy block (open — no glass panel) ────────────────────────────────── */
+.hero__copy-block {
+  position: relative;
+  padding: clamp(0.5rem, 2vw, 1rem) 0 clamp(0.5rem, 2vw, 1rem) clamp(1.75rem, 3.5vw, 2.5rem);
+}
+
+/* Vertical copper accent rail — editorial depth device */
+.hero__copy-block::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.5px;
+  height: clamp(9rem, 22vw, 18rem);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--hero-copper) 22%,
+    var(--hero-copper-soft) 50%,
+    var(--hero-copper) 78%,
+    transparent 100%
+  );
+  border-radius: 2px;
+}
+
+/* ─── Eyeline (replaces badge in hero--open) ────────────────────────────── */
+.hero__eyeline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: clamp(1.375rem, 3vw, 2.25rem);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hero__eyeline-dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--hero-copper);
+  box-shadow: 0 0 10px var(--hero-copper), 0 0 22px rgba(224, 152, 64, 0.38);
+  animation: pulse-dot 2.5s ease-in-out infinite;
+}
+
+/* ─── Service capability tags ────────────────────────────────────────────── */
+.hero__service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.875rem);
+}
+
+.hero__service-tags span {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.38);
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  transition:
+    color var(--duration-fast),
+    border-color var(--duration-fast),
+    background var(--duration-fast);
+}
+
+.hero__service-tags span:hover {
+  color: var(--hero-copper-soft);
+  border-color: rgba(224, 152, 64, 0.38);
+  background: rgba(224, 152, 64, 0.07);
+}
+
+/* ─── Ghost CTA with directional arrow ───────────────────────────────────── */
+.hero--open .btn--hero-ghost,
+.hero--apex.hero--open .btn--hero-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.hero__btn-arrow {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.btn--hero-ghost:hover .hero__btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ─── Scroll cue ─────────────────────────────────────────────────────────── */
+.hero__scroll-cue {
+  position: absolute;
+  bottom: clamp(1.75rem, 4vw, 3rem);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__scroll-cue__bar {
+  width: 1px;
+  height: 3rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, transparent 100%);
+  animation: scroll-drop 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes scroll-drop {
+  0%   { transform: scaleY(0) translateY(0); opacity: 0;   transform-origin: top; }
+  30%  { transform: scaleY(1) translateY(0); opacity: 1;   transform-origin: top; }
+  70%  { transform: scaleY(1) translateY(0); opacity: 0.5; transform-origin: top; }
+  100% { transform: scaleY(0) translateY(0); opacity: 0;   transform-origin: bottom; }
+}
+
+@media (max-width: 767px) {
+  .hero__scroll-cue { display: none; }
+  .hero__copy-block { padding-left: var(--space-4); }
+  .hero__copy-block::before { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll-cue__bar { animation: none; opacity: 0.35; }
+  .hero__eyeline-dot      { animation: none; }
 }
 
 /* ─── Metrics bar ────────────────────────────────────────────────────────── */
@@ -1181,16 +1348,16 @@
 .section--contrast {
   position: relative;
   background:
-    radial-gradient(ellipse 60% 40% at 92% 8%, rgba(192, 92, 16, 0.07), transparent 55%),
-    radial-gradient(ellipse 50% 35% at 6% 92%, rgba(13, 94, 60, 0.07), transparent 52%),
-    linear-gradient(180deg, #f0f5f2 0%, #ffffff 100%);
+    radial-gradient(ellipse 60% 40% at 92% 8%, rgba(184, 92, 20, 0.07), transparent 55%),
+    radial-gradient(ellipse 50% 35% at 6% 92%, rgba(26, 102, 64, 0.08), transparent 52%),
+    linear-gradient(180deg, #eaf4ee 0%, #ffffff 100%);
   padding-block: var(--section-pad-xl);
 }
 
 [data-theme='dark'] .section--contrast {
   background:
     radial-gradient(ellipse 60% 40% at 92% 8%, rgba(224, 152, 64, 0.11), transparent 56%),
-    radial-gradient(ellipse 50% 35% at 6% 92%, rgba(45, 85, 69, 0.1), transparent 52%),
+    radial-gradient(ellipse 50% 35% at 6% 92%, rgba(26, 102, 64, 0.12), transparent 52%),
     linear-gradient(180deg, var(--void-elevated) 0%, var(--void) 100%);
 }
 
@@ -1416,11 +1583,11 @@
 
 .industry-card:hover::before { opacity: 0.78; }
 
-.industry-card--finance::before  { background: linear-gradient(135deg, #0a1a12 0%, #183826 50%, rgba(192,92,16,0.55) 100%); }
-.industry-card--public::before   { background: linear-gradient(135deg, #0e1c2a 0%, #1a3e4a 55%, rgba(13,94,60,0.45) 100%); }
-.industry-card--health::before   { background: linear-gradient(135deg, #0d1e14 0%, #1e4834 55%, rgba(192,92,16,0.38) 100%); }
-.industry-card--telecom::before  { background: linear-gradient(135deg, #091410 0%, #0e3030 55%, rgba(26,110,240,0.28) 100%); }
-.industry-card--enterprise::before { background: linear-gradient(135deg, #1a1008 0%, #382814 55%, rgba(212,168,56,0.42) 100%); }
+.industry-card--finance::before  { background: linear-gradient(135deg, #061a0e 0%, #0d4228 50%, rgba(184,92,20,0.6) 100%); }
+.industry-card--public::before   { background: linear-gradient(135deg, #081428 0%, #0f3245 55%, rgba(26,102,64,0.5) 100%); }
+.industry-card--health::before   { background: linear-gradient(135deg, #081a0e 0%, #0d4228 55%, rgba(13,184,96,0.32) 100%); }
+.industry-card--telecom::before  { background: linear-gradient(135deg, #061214 0%, #0a2e30 55%, rgba(30,160,220,0.3) 100%); }
+.industry-card--enterprise::before { background: linear-gradient(135deg, #1a0e04 0%, #3a2810 55%, rgba(224,152,64,0.5) 100%); }
 
 .industry-card > * { position: relative; z-index: 1; color: #eef1ee; }
 
@@ -1641,12 +1808,13 @@
 .cta-band--cinematic {
   position: relative;
   padding-block: clamp(5.5rem, 11vw, 9rem);
+  /* Bold forest green CTA — the brand color owns this moment */
   background:
-    radial-gradient(ellipse 80% 60% at 50% 110%, rgba(224, 152, 64, 0.55), transparent 55%),
-    radial-gradient(ellipse 65% 55% at 0% 0%, rgba(13, 94, 60, 0.55), transparent 52%),
-    radial-gradient(ellipse 45% 38% at 100% 90%, rgba(192, 92, 16, 0.35), transparent 58%),
-    linear-gradient(160deg, #061810 0%, #030a06 60%, #0c1a08 100%);
-  border-top: 1px solid rgba(224, 152, 64, 0.22);
+    radial-gradient(ellipse 80% 55% at 50% 110%, rgba(224, 152, 64, 0.5), transparent 55%),
+    radial-gradient(ellipse 60% 50% at 0% 0%, rgba(26, 102, 64, 0.45), transparent 52%),
+    radial-gradient(ellipse 40% 32% at 100% 85%, rgba(224, 152, 64, 0.28), transparent 58%),
+    linear-gradient(160deg, #0d4228 0%, #062416 50%, #0a3020 100%);
+  border-top: 1px solid rgba(224, 152, 64, 0.25);
   overflow: hidden;
 }
 
@@ -2006,9 +2174,9 @@
 /* ─── Dark mode body ─────────────────────────────────────────────────────── */
 [data-theme='dark'] body {
   background:
-    radial-gradient(ellipse 100% 60% at 80% -10%, rgba(224, 152, 64, 0.17), transparent 50%),
-    radial-gradient(ellipse 80% 50% at 10% 50%, rgba(45, 85, 69, 0.14), transparent 45%),
-    #010302;
+    radial-gradient(ellipse 100% 60% at 80% -10%, rgba(224, 152, 64, 0.2), transparent 50%),
+    radial-gradient(ellipse 80% 50% at 10% 50%, rgba(26, 102, 64, 0.18), transparent 45%),
+    #020c06;
 }
 
 /* ─── Reduced motion ─────────────────────────────────────────────────────── */

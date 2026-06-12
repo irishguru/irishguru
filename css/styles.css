@@ -7,37 +7,40 @@
 
 /* --- Tokens --------------------------------------------------------------- */
 :root {
+  /* ── Light mode: white canvas, bold forest green, warm copper accent ── */
   --color-bg: #ffffff;
-  --color-bg-elevated: #f8f9f7;
-  --color-bg-muted: #f0f2ee;
-  --color-bg-inset: #e6ebe6;
-  --color-bg-accent: #e8f4ec;
+  --color-bg-elevated: #f4faf7;
+  --color-bg-muted: #eaf4ee;
+  --color-bg-inset: #ddefea;
+  --color-bg-accent: #d4ede0;
   --color-surface: #ffffff;
-  --color-border: #c8d0c8;
-  --color-border-subtle: #dce3dc;
+  --color-border: #b0ccba;
+  --color-border-subtle: #cce0d4;
 
-  --color-text: #080f0c;
-  --color-text-muted: #2a3530;
-  --color-text-subtle: #4a5a52;
-  --color-text-inverse: #f4f8f5;
+  --color-text: #03100a;
+  --color-text-muted: #183826;
+  --color-text-subtle: #365c48;
+  --color-text-inverse: #f0faf4;
 
-  --color-primary: #08201a;
-  --color-primary-hover: #041410;
-  --color-accent: #c05c10;
-  --color-accent-hover: #a04a08;
-  --color-accent-muted: rgba(192, 92, 16, 0.14);
-  --color-accent-line: rgba(192, 92, 16, 0.55);
-  --color-sage: #0d5e3c;
-  --color-sage-vivid: #0a9e60;
-  --color-sage-muted: rgba(13, 94, 60, 0.14);
-  --color-glow: rgba(192, 92, 16, 0.22);
-  --color-glow-sage: rgba(13, 94, 60, 0.18);
+  /* Forest green as the dominant brand color */
+  --color-primary: #0d4228;
+  --color-primary-hover: #072c18;
+  /* Copper/amber as the sharp accent */
+  --color-accent: #b85c14;
+  --color-accent-hover: #9a4a0a;
+  --color-accent-muted: rgba(184, 92, 20, 0.13);
+  --color-accent-line: rgba(184, 92, 20, 0.52);
+  --color-sage: #1a6640;
+  --color-sage-vivid: #0db860;
+  --color-sage-muted: rgba(26, 102, 64, 0.13);
+  --color-glow: rgba(184, 92, 20, 0.2);
+  --color-glow-sage: rgba(26, 102, 64, 0.2);
 
-  --glass-bg: rgba(255, 255, 255, 0.88);
-  --glass-border: rgba(8, 32, 26, 0.1);
-  --viz-surface: #f0f4f1;
+  --glass-bg: rgba(255, 255, 255, 0.9);
+  --glass-border: rgba(13, 66, 40, 0.14);
+  --viz-surface: #edf8f2;
 
-  --color-focus: #9a4a08;
+  --color-focus: #8a4210;
   --color-error: #9b2c2c;
 
   --font-display: 'Cabinet Grotesk', system-ui, sans-serif;
@@ -85,9 +88,9 @@
   --radius-xl: 1.25rem;
   --radius-2xl: 1.75rem;
 
-  --shadow-sm: 0 1px 3px rgba(8, 32, 26, 0.08);
-  --shadow-md: 0 12px 40px rgba(8, 32, 26, 0.12), 0 4px 12px rgba(8, 32, 26, 0.06);
-  --shadow-lg: 0 28px 72px rgba(8, 32, 26, 0.18), 0 8px 24px rgba(8, 32, 26, 0.08);
+  --shadow-sm: 0 1px 4px rgba(13, 66, 40, 0.1);
+  --shadow-md: 0 12px 40px rgba(13, 66, 40, 0.14), 0 4px 12px rgba(13, 66, 40, 0.07);
+  --shadow-lg: 0 28px 72px rgba(13, 66, 40, 0.2), 0 8px 24px rgba(13, 66, 40, 0.09);
   --shadow-glow: 0 0 60px var(--color-glow);
   --shadow-header: 0 1px 0 var(--color-border-subtle);
 
@@ -100,39 +103,40 @@
 }
 
 [data-theme='dark'] {
-  --color-bg: #060908;
-  --color-bg-elevated: #0e1310;
-  --color-bg-muted: #121916;
-  --color-bg-inset: #181f1b;
-  --color-bg-accent: #0f1a14;
-  --color-surface: #0e1310;
-  --color-border: #2e3832;
-  --color-border-subtle: #1e2621;
+  /* ── Dark mode: deep forest-green darkness, vivid copper accent ── */
+  --color-bg: #030e07;
+  --color-bg-elevated: #071410;
+  --color-bg-muted: #0a1c14;
+  --color-bg-inset: #0e2018;
+  --color-bg-accent: #0a1e12;
+  --color-surface: #071410;
+  --color-border: #1e3828;
+  --color-border-subtle: #142c1e;
 
-  --color-text: #eef1ee;
-  --color-text-muted: #a8b0ab;
-  --color-text-subtle: #7a8480;
-  --color-text-inverse: #060908;
+  --color-text: #eaf5ee;
+  --color-text-muted: #9abaa8;
+  --color-text-subtle: #628472;
+  --color-text-inverse: #030e07;
 
-  --color-primary: #d8e8e0;
-  --color-primary-hover: #ecf4ef;
+  --color-primary: #c8e8d4;
+  --color-primary-hover: #e0f4e8;
   --color-accent: #e09840;
-  --color-accent-hover: #f0b050;
-  --color-accent-muted: rgba(224, 152, 64, 0.22);
-  --color-accent-line: rgba(224, 152, 64, 0.6);
-  --color-sage: #4a8070;
-  --color-sage-vivid: #22b878;
-  --color-sage-muted: rgba(74, 128, 112, 0.24);
+  --color-accent-hover: #f2ac50;
+  --color-accent-muted: rgba(224, 152, 64, 0.2);
+  --color-accent-line: rgba(224, 152, 64, 0.55);
+  --color-sage: #3a8a5c;
+  --color-sage-vivid: #18d870;
+  --color-sage-muted: rgba(58, 138, 92, 0.22);
   --color-glow: rgba(224, 152, 64, 0.32);
-  --color-glow-sage: rgba(74, 128, 112, 0.28);
+  --color-glow-sage: rgba(58, 138, 92, 0.28);
 
-  --glass-bg: rgba(14, 19, 16, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --viz-surface: #0e1310;
+  --glass-bg: rgba(6, 16, 10, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.07);
+  --viz-surface: #0a1c14;
 
-  --shadow-sm: 0 1px 0 rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 16px 48px rgba(0, 0, 0, 0.45);
-  --shadow-lg: 0 32px 80px rgba(0, 0, 0, 0.55);
+  --shadow-sm: 0 1px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 32px 80px rgba(0, 0, 0, 0.6);
   --shadow-glow: 0 0 80px var(--color-glow);
   --shadow-header: 0 1px 0 var(--color-border-subtle);
 }
