@@ -21,16 +21,17 @@
   --color-text-subtle: #5c6560;
   --color-text-inverse: #f2f4f1;
 
-  --color-primary: #0f231c;
-  --color-primary-hover: #081612;
-  --color-accent: #b87333;
-  --color-accent-hover: #9a6129;
-  --color-accent-muted: rgba(184, 115, 51, 0.16);
-  --color-accent-line: rgba(184, 115, 51, 0.5);
-  --color-sage: #3d5a4f;
-  --color-sage-muted: rgba(61, 90, 79, 0.14);
-  --color-glow: rgba(184, 115, 51, 0.22);
-  --color-glow-sage: rgba(61, 90, 79, 0.18);
+  --color-primary: #0c1e17;
+  --color-primary-hover: #061210;
+  --color-accent: #c47e28;
+  --color-accent-hover: #a96a1e;
+  --color-accent-muted: rgba(196, 126, 40, 0.18);
+  --color-accent-line: rgba(196, 126, 40, 0.55);
+  --color-sage: #2d5545;
+  --color-sage-vivid: #1e9e68;
+  --color-sage-muted: rgba(45, 85, 69, 0.16);
+  --color-glow: rgba(196, 126, 40, 0.26);
+  --color-glow-sage: rgba(45, 85, 69, 0.22);
 
   --glass-bg: rgba(247, 248, 245, 0.72);
   --glass-border: rgba(255, 255, 255, 0.55);
@@ -115,14 +116,15 @@
 
   --color-primary: #d8e8e0;
   --color-primary-hover: #ecf4ef;
-  --color-accent: #d4924f;
-  --color-accent-hover: #e4a864;
-  --color-accent-muted: rgba(212, 146, 79, 0.2);
-  --color-accent-line: rgba(212, 146, 79, 0.55);
-  --color-sage: #5a7d6f;
-  --color-sage-muted: rgba(90, 125, 111, 0.22);
-  --color-glow: rgba(212, 146, 79, 0.28);
-  --color-glow-sage: rgba(90, 125, 111, 0.25);
+  --color-accent: #e09840;
+  --color-accent-hover: #f0b050;
+  --color-accent-muted: rgba(224, 152, 64, 0.22);
+  --color-accent-line: rgba(224, 152, 64, 0.6);
+  --color-sage: #4a8070;
+  --color-sage-vivid: #22b878;
+  --color-sage-muted: rgba(74, 128, 112, 0.24);
+  --color-glow: rgba(224, 152, 64, 0.32);
+  --color-glow-sage: rgba(74, 128, 112, 0.28);
 
   --glass-bg: rgba(14, 19, 16, 0.75);
   --glass-border: rgba(255, 255, 255, 0.08);
