@@ -514,22 +514,23 @@
   line-height: 1.35;
 }
 
-/* Chip positions — clear of SVG node labels */
+/* Chip positions — corners clear of SVG pentagon nodes */
 .platform-chip--1 {
-  top: 62%;
-  left: 1%;
+  top: 4%;
+  left: 2%;
   animation: chip-float-a 6.5s ease-in-out infinite alternate;
 }
 
 .platform-chip--2 {
-  top: 62%;
-  right: 1%;
+  top: 4%;
+  right: 2%;
+  left: auto;
   animation: chip-float-b 7.5s ease-in-out infinite alternate-reverse;
   animation-delay: -1.5s;
 }
 
 .platform-chip--3 {
-  top: 4%;
+  bottom: 18%;
   left: 50%;
   animation: chip-float-c 8s ease-in-out infinite alternate;
   animation-delay: -3s;

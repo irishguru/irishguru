@@ -174,42 +174,22 @@
   <text x="110" y="264" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#e8d0a8">Platform Engineering</text>
   <text x="110" y="277" font-family="system-ui, sans-serif" font-size="8.5" fill="#7a8f88">K8s · Backstage · IaC</text>
 
-  <!-- ── Floating info card 1 (top-right) ── -->
+  <!-- ── ISO tag (top-left, clear of all nodes) ── -->
   <g filter="url(#card-shadow)">
-    <rect x="556" y="82" width="146" height="80" rx="12" fill="url(#card-fill)"/>
-    <rect x="556" y="82" width="146" height="80" rx="12" stroke="#d4924f" stroke-opacity="0.3"/>
-    <rect x="556" y="82" width="146" height="2.5" rx="1.25" fill="#d4924f" fill-opacity="0.55"/>
+    <rect x="14" y="18" width="132" height="42" rx="8" fill="url(#card-fill)"/>
+    <rect x="14" y="18" width="132" height="42" rx="8" stroke="#3d5a4f" stroke-opacity="0.38"/>
   </g>
-  <text x="572" y="105" font-family="system-ui, sans-serif" font-size="9" fill="#8a9890" font-weight="600" letter-spacing="1">REGULATED CLIENTS</text>
-  <text x="572" y="130" font-family="system-ui, sans-serif" font-size="30" font-weight="800" fill="#d4924f" letter-spacing="-1">18</text>
-  <text x="572" y="150" font-family="system-ui, sans-serif" font-size="9" fill="#7a8f88">FS, Telco, Public Sector</text>
-
-  <!-- ── Floating info card 2 (lower-right) ── -->
-  <g filter="url(#card-shadow)">
-    <rect x="556" y="380" width="146" height="80" rx="12" fill="url(#card-fill)"/>
-    <rect x="556" y="380" width="146" height="80" rx="12" stroke="#3d5a4f" stroke-opacity="0.4"/>
-    <rect x="556" y="380" width="146" height="2.5" rx="1.25" fill="#3d5a4f" fill-opacity="0.75"/>
-  </g>
-  <text x="572" y="403" font-family="system-ui, sans-serif" font-size="9" fill="#8a9890" font-weight="600" letter-spacing="1">RENEWAL RATE</text>
-  <text x="572" y="428" font-family="system-ui, sans-serif" font-size="30" font-weight="800" fill="#7fbfaa" letter-spacing="-1">94%</text>
-  <text x="572" y="448" font-family="system-ui, sans-serif" font-size="9" fill="#6a8078">Contract satisfaction</text>
-
-  <!-- ── Floating tag (left side, near Platform node) ── -->
-  <g filter="url(#card-shadow)">
-    <rect x="12" y="178" width="130" height="42" rx="8" fill="url(#card-fill)"/>
-    <rect x="12" y="178" width="130" height="42" rx="8" stroke="#3d5a4f" stroke-opacity="0.35"/>
-  </g>
-  <circle cx="28" cy="199" r="3.5" fill="#4caf8a"/>
-  <text x="40" y="195" font-family="system-ui, sans-serif" font-size="8.5" fill="#eef1ee" font-weight="600">ISO 27001-aligned</text>
-  <text x="40" y="208" font-family="system-ui, sans-serif" font-size="8" fill="#7a8f88">Governance built in</text>
+  <circle cx="30" cy="39" r="3.5" fill="#4caf8a"/>
+  <text x="42" y="35" font-family="system-ui, sans-serif" font-size="8.5" fill="#eef1ee" font-weight="600">ISO 27001-aligned</text>
+  <text x="42" y="49" font-family="system-ui, sans-serif" font-size="8" fill="#7a8f88">Governance built in</text>
 
   <!-- ── Bottom floating tag ── -->
   <g filter="url(#card-shadow)">
-    <rect x="204" y="492" width="272" height="42" rx="8" fill="url(#card-fill)"/>
-    <rect x="204" y="492" width="272" height="42" rx="8" stroke="#d4924f" stroke-opacity="0.28"/>
+    <rect x="180" y="494" width="300" height="42" rx="8" fill="url(#card-fill)"/>
+    <rect x="180" y="494" width="300" height="42" rx="8" stroke="#d4924f" stroke-opacity="0.28"/>
   </g>
-  <circle cx="222" cy="513" r="3.5" fill="#d4924f"/>
-  <text x="234" y="509" font-family="system-ui, sans-serif" font-size="8.5" fill="#eef1ee" font-weight="600">Senior-led delivery — architects who ship</text>
-  <text x="234" y="522" font-family="system-ui, sans-serif" font-size="8" fill="#7a8f88">Dublin HQ · Ireland and UK regulated delivery</text>
+  <circle cx="198" cy="515" r="3.5" fill="#d4924f"/>
+  <text x="210" y="511" font-family="system-ui, sans-serif" font-size="8.5" fill="#eef1ee" font-weight="600">Senior-led delivery — architects who ship</text>
+  <text x="210" y="524" font-family="system-ui, sans-serif" font-size="8" fill="#7a8f88">Dublin HQ · Ireland and UK regulated delivery</text>
 
 </svg>
