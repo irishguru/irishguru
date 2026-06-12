@@ -156,8 +156,8 @@
 
 @media (min-width: 1100px) {
   .hero__stage-layout {
-    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-    gap: clamp(2rem, 3.5vw, 3rem);
+    grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
     align-items: center;
   }
 }
@@ -390,7 +390,7 @@
 .platform-scene {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 5 / 4;
 }
 
 .hero__visual-theater {
@@ -832,7 +832,17 @@
     0 10px 36px rgba(0, 0, 0, 0.48),
     0 2px 8px rgba(0, 0, 0, 0.32),
     inset 0 1px 0 rgba(255, 255, 255, 0.07);
-  transition: box-shadow 0.35s ease;
+  transition: box-shadow 0.35s ease, transform 0.35s ease, border-color 0.35s ease;
+}
+
+@media (hover: hover) {
+  .hb:hover {
+    transform: translateY(-2px) scale(1.008);
+    box-shadow:
+      0 18px 52px rgba(0, 0, 0, 0.58),
+      0 4px 12px rgba(0, 0, 0, 0.38),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
 }
 
 /* Frosted glass top-corner highlight */
@@ -882,41 +892,73 @@
 .hb__body--row {
   flex-direction: row;
   align-items: center;
-  gap: clamp(0.5rem, 0.9vw, 0.75rem);
+  gap: clamp(0.5rem, 1.1vw, 0.9rem);
   flex-wrap: nowrap;
+}
+
+.hb__body--row .hb__tags {
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 /* Eyebrow label */
 .hb__eye {
   margin: 0;
-  font-size: clamp(0.38rem, 0.65vw, 0.48rem);
+  font-size: clamp(0.5rem, 0.68vw, 0.6rem);
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   font-family: var(--font-mono, 'JetBrains Mono', monospace);
-  opacity: 0.65;
+  opacity: 0.72;
   white-space: nowrap;
 }
 
-/* Descriptor text (AI card) */
+/* AI card title — larger, prominent */
+.hb__title {
+  margin: 0;
+  font-size: clamp(0.7rem, 1.05vw, 0.92rem);
+  font-weight: 600;
+  line-height: 1.45;
+  color: rgba(245, 237, 222, 0.88);
+  letter-spacing: -0.012em;
+}
+
+/* Descriptor text (platform / cloud / devsec cards) */
 .hb__desc {
   margin: 0;
-  font-size: clamp(0.42rem, 0.7vw, 0.52rem);
+  font-size: clamp(0.6rem, 0.82vw, 0.72rem);
   line-height: 1.5;
-  color: rgba(240, 250, 244, 0.42);
+  color: rgba(240, 250, 244, 0.52);
+  font-weight: 400;
+}
+
+/* Metric sub-label */
+.hb__msub {
+  margin: 0;
+  font-size: clamp(0.48rem, 0.65vw, 0.58rem);
+  color: rgba(240, 250, 244, 0.35);
+  letter-spacing: 0.01em;
+}
+
+/* Platform card body-left wrapper */
+.hb__body-left {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.12rem, 0.25vw, 0.2rem);
 }
 
 /* Tech tag pills */
 .hb__tags {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(0.14rem, 0.28vw, 0.22rem);
+  gap: clamp(0.14rem, 0.3vw, 0.24rem);
 }
 
 .hb__tags span {
   display: inline-block;
-  font-size: clamp(0.38rem, 0.62vw, 0.48rem);
+  font-size: clamp(0.48rem, 0.65vw, 0.58rem);
   font-weight: 500;
-  padding: 0.1rem clamp(0.22rem, 0.45vw, 0.35rem);
+  padding: clamp(0.1rem, 0.18vw, 0.14rem) clamp(0.24rem, 0.48vw, 0.38rem);
   border-radius: 3px;
   white-space: nowrap;
   letter-spacing: 0.01em;
@@ -975,10 +1017,10 @@
 }
 .hb__mlbl {
   margin: 0;
-  font-size: clamp(0.42rem, 0.7vw, 0.52rem);
-  color: rgba(240, 250, 244, 0.46);
+  font-size: clamp(0.52rem, 0.72vw, 0.62rem);
+  color: rgba(240, 250, 244, 0.52);
   font-weight: 500;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.02em;
 }
 .hb__bar {
   height: 2px;
@@ -992,6 +1034,9 @@
   width: var(--w, 50%);
   background: linear-gradient(90deg, #22c878 0%, rgba(34,200,120,0.45) 100%);
   border-radius: 1px;
+}
+.hb__bar-fill--amber {
+  background: linear-gradient(90deg, #e09840 0%, rgba(224,152,64,0.45) 100%);
 }
 
 /* ─── Platform Core ──────────────────────────────────────────────────────── */
