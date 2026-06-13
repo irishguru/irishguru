@@ -3,51 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07070a" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#f9f9fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07070a">
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&f[]=cabinet-grotesk@800,700,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <title>Irish Guru — Technology Consulting &amp; Delivery</title>
-  <meta name="description" content="Irish Guru embeds senior engineers and architects with Irish and UK organisations to deliver AI, platform engineering, cloud enablement, and secure DevSecOps.">
+  <meta name="description" content="Irish Guru embeds senior engineers with Irish and UK organisations to deliver AI, cloud enablement, DevSecOps, and platform engineering — from architecture to production handover.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://irishguru.com/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Irish Guru">
   <meta property="og:title" content="Irish Guru — Technology Consulting &amp; Delivery">
-  <meta property="og:description" content="Senior-led engineering and consulting delivering cloud, platforms, and AI for mid-market and enterprise organisations in Ireland and the UK.">
+  <meta property="og:description" content="Senior-led engineering for cloud, AI, and platform programmes across Ireland and the UK.">
   <meta property="og:url" content="https://irishguru.com/">
   <meta property="og:image" content="https://irishguru.com/favicon.svg">
-  <meta property="og:locale" content="en_IE">
-  
   <script>
-    (function(){var t=localStorage.getItem('irishguru-theme');if(!t)t='dark';document.documentElement.setAttribute('data-theme',t);})();
+    (function(){
+      var t=localStorage.getItem('irishguru-theme');
+      if(!t)t='dark';
+      document.documentElement.setAttribute('data-theme',t);
+    })();
   </script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- --- Header / Navbar ---------------------------------------------------- -->
+  <!-- NAV -->
   <header class="site-header" role="banner">
     <div class="container site-header__inner">
       <a href="./" class="logo" aria-label="Irish Guru — Home">
-        <!-- Custom Abstract Celtic Knot / Cybernetic Golden Logo mark -->
         <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
-          <rect x="1" y="1" width="38" height="38" rx="9" stroke="var(--color-border)" stroke-width="1.5"/>
-          <path d="M12 12H20C24.4183 12 28 15.5817 28 20V20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2.5" stroke-linejoin="round"/>
-          <path d="M20 20H28" stroke="var(--color-accent)" stroke-width="2.5"/>
-          <circle cx="20" cy="20" r="4" fill="var(--color-primary)"/>
+          <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="var(--color-border)" stroke-width="1.5"/>
+          <path d="M12 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2" stroke-linejoin="round" fill="none"/>
+          <path d="M20 20H28" stroke="var(--color-accent)" stroke-width="2"/>
+          <circle cx="20" cy="20" r="3.5" fill="var(--color-primary)"/>
           <circle cx="28" cy="12" r="2.5" fill="var(--color-sage)"/>
         </svg>
         <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav" aria-label="Primary">
         <a href="./" class="nav__link" data-nav="home">Home</a>
         <a href="about/" class="nav__link" data-nav="about">About</a>
         <a href="services/" class="nav__link" data-nav="services">Services</a>
@@ -56,15 +55,19 @@
         <a href="contact/" class="nav__link" data-nav="contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode">
           <svg class="theme-toggle__icon--light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <svg class="theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="contact/" class="btn btn--primary btn--sm header-cta">Book a Consultation</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span class="menu-toggle__bar"></span></button>
+        <a href="contact/" class="btn btn--primary btn--sm">Book a Consultation</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
       </div>
     </div>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" aria-hidden="true">
       <ul class="mobile-nav__list">
         <li><a href="./" class="mobile-nav__link" data-nav="home">Home</a></li>
         <li><a href="about/" class="mobile-nav__link" data-nav="about">About</a></li>
@@ -75,704 +78,823 @@
       </ul>
       <div class="mobile-nav__cta">
         <a href="contact/" class="btn btn--primary btn--lg btn--block">Book a Consultation</a>
-        <a href="services/" class="btn btn--secondary btn--lg btn--block">Explore Services</a>
+        <a href="services/" class="btn btn--ghost btn--lg btn--block">Explore Services</a>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <!-- --- Premium Cinematic Hero --------------------------------------------- -->
-    <section class="hero hero--apex" aria-labelledby="hero-title">
-      <div class="hero__atmosphere" aria-hidden="true">
-        <div class="hero__light hero__light--key"></div>
-        <div class="hero__light hero__light--fill"></div>
-        <div class="hero__grid-lines"></div>
-        <div class="hero__grain"></div>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__glow hero__glow--a"></div>
+        <div class="hero__glow hero__glow--b"></div>
+        <div class="hero__grid"></div>
       </div>
 
       <div class="container container--wide">
-        <div class="hero__stage-layout">
+        <div class="hero__layout">
 
-          <!-- Left column copy -->
-          <div class="hero__copy-block reveal">
-            <p class="hero__eyeline">
-              <span class="hero__eyeline-dot" aria-hidden="true"></span>
-              Ireland &amp; UK Enterprise Delivery
+          <!-- COPY -->
+          <div class="hero__copy reveal">
+            <p class="hero__overline">
+              <span class="hero__overline-dot" aria-hidden="true"></span>
+              Dublin · London · Belfast
             </p>
-            <h1 id="hero-title" class="hero__headline">
-              <span class="hero__headline-line">Technology that</span>
-              <span class="hero__headline-line">moves from strategy</span>
-              <span class="hero__headline-line hero__headline-line--accent">to production.</span>
+            <h1 id="hero-title" class="hero__h1">
+              <span>Engineering that</span>
+              <span>ships, not slides.</span>
+              <em>Senior delivery.</em>
             </h1>
-            <div class="hero__service-tags" aria-label="Consulting focus areas">
-              <span>AI</span>
-              <span>Cloud</span>
-              <span>Platform Eng</span>
-              <span>DevSecOps</span>
-              <span>Strategy</span>
-            </div>
-            <p class="hero__lede">We embed senior practitioners on the ground to architect modern environments, run complex migrations, and deploy secure AI. No delivery theatre, just working systems.</p>
-            <div class="hero__actions">
-              <a href="contact/" class="btn btn--lg btn--hero-primary">Book a Consultation</a>
-              <a href="services/" class="btn btn--lg btn--hero-ghost">
+            <p class="hero__sub">We embed veteran architects and engineers inside your organisation — writing real code, clearing compliance gates, and handing over systems your teams can operate without us.</p>
+            <div class="hero__ctas">
+              <a href="contact/" class="btn btn--primary btn--lg">Book a Consultation</a>
+              <a href="services/" class="btn btn--ghost btn--lg">
                 Explore Services
-                <svg class="hero__btn-arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
               </a>
             </div>
-            <ul class="hero__trust">
-              <li>Dublin HQ &amp; UK on-site</li>
-              <li>ISO 27001 compliant Change</li>
+            <ul class="hero__proof">
+              <li>Dublin HQ · UK on-site</li>
+              <li>NCSC &amp; ISO 27001 delivery</li>
               <li>Outcome-linked pricing</li>
             </ul>
           </div>
 
-          <!-- Right column: Premium 3D Bento Grid -->
-          <div class="hero__visual-theater reveal reveal--delay-1">
-            <div class="visual-theater" id="hero-scene" aria-hidden="true">
-              <div class="hero-bento" role="img" aria-label="Irish Guru Capability bento layout showing AI, platform, cloud, security, client renewal, and deployment frequency stats">
-
-                <!-- Card 1: AI & Intelligence -->
-                <article class="hb hb--ai">
-                  <div class="hb__line" aria-hidden="true"></div>
-                  <div class="hb__glow-inner" aria-hidden="true"></div>
-                  <div class="hb__body">
-                    <p class="hb__eye">AI &amp; INTELLIGENCE</p>
-                    <p class="hb__title">LLM orchestration, ML pipelines &amp; predictive analytics for enterprise.</p>
-                    <div class="hb__tags">
-                      <span>Azure OpenAI</span><span>Databricks</span><span>LangChain</span><span>MLflow</span><span>dbt</span>
-                    </div>
-                  </div>
-                  <div class="hb__icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
-                      <circle cx="12" cy="12" r="9.5"/>
-                      <path d="M12 2.5v19M2.5 12h19M6.1 6.1l11.8 11.8M17.9 6.1L6.1 17.9"/>
-                      <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/>
-                    </svg>
-                  </div>
-                </article>
-
-                <!-- Card 2: Metric client renewal -->
-                <article class="hb hb--metric hb--m1">
-                  <div class="hb__body">
-                    <p class="hb__mnum" data-counter="94" data-counter-suffix="%">94<small>%</small></p>
-                    <p class="hb__mlbl">Client renewal rate</p>
-                    <div class="hb__bar" aria-hidden="true"><div class="hb__bar-fill" style="--w:94%"></div></div>
-                  </div>
-                </article>
-
-                <!-- Card 3: Metric deploy frequency -->
-                <article class="hb hb--metric hb--m2">
-                  <div class="hb__body">
-                    <p class="hb__mnum" data-counter="3.8" data-counter-suffix="×" data-counter-decimals="1">3.8<small>×</small></p>
-                    <p class="hb__mlbl">Deploy frequency increase</p>
-                    <p class="hb__msub">vs industry average</p>
-                    <div class="hb__bar" aria-hidden="true"><div class="hb__bar-fill hb__bar-fill--amber" style="--w:76%"></div></div>
-                  </div>
-                </article>
-
-                <!-- Card 4: Platform Core -->
-                <article class="hb hb--platform">
-                  <div class="hb__line" aria-hidden="true"></div>
-                  <div class="hb__body hb__body--row">
-                    <div class="hb__body-left">
-                      <p class="hb__eye">PLATFORM ENGINEERING</p>
-                      <p class="hb__desc">Kubernetes, GitOps &amp; developer portals.</p>
-                    </div>
-                    <div class="hb__tags">
-                      <span>Kubernetes</span><span>ArgoCD</span><span>Backstage</span><span>Terraform</span>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Card 5: Cloud Foundation -->
-                <article class="hb hb--cloud">
-                  <div class="hb__line" aria-hidden="true"></div>
-                  <div class="hb__body">
-                    <p class="hb__eye">CLOUD ENABLEMENT</p>
-                    <p class="hb__desc">AWS, Azure &amp; GCP multi-tenant baselines.</p>
-                    <div class="hb__tags">
-                      <span>AWS</span><span>Azure</span><span>GCP</span><span>FinOps</span>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Card 6: DevSecOps -->
-                <article class="hb hb--devsec">
-                  <div class="hb__line" aria-hidden="true"></div>
-                  <div class="hb__body">
-                    <p class="hb__eye">DEVSECOPS</p>
-                    <p class="hb__desc">Security-first SDLC compliance gates.</p>
-                    <div class="hb__tags">
-                      <span>Snyk</span><span>Vault</span><span>ISO 27001</span>
-                    </div>
-                  </div>
-                </article>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Subtle bottom scrollcue -->
-      <div class="hero__scroll-cue" aria-hidden="true">
-        <div class="hero__scroll-cue__bar"></div>
-      </div>
-    </section>
-
-    <!-- --- Who We Are (Editorial Focus) -------------------------------------- -->
-    <section class="intro-editorial" aria-label="Our core promise">
-      <div class="container intro-editorial__inner reveal">
-        <p class="intro-editorial__label">The Practitioner Difference</p>
-        <p class="intro-editorial__text">We are a senior-only advisory and engineering group for CTOs and IT leaders in Ireland and the UK. Our team embeds directly within your department to ship working architecture, clear compliance gates, and handover fully documented platforms your engineers are excited to own.</p>
-      </div>
-    </section>
-
-    <!-- --- Transformation Metrics Ribbon ------------------------------------ -->
-    <section class="section section--compact" aria-label="Commercial Proof Points">
-      <div class="container">
-        <div class="kpi-ribbon reveal">
-          <div class="kpi-cell">
-            <p class="kpi-cell__val" data-counter="120" data-counter-suffix="+">120+</p>
-            <p class="kpi-cell__lbl">Production releases shipped</p>
-          </div>
-          <div class="kpi-cell">
-            <p class="kpi-cell__val" data-counter="18" data-counter-suffix="">18</p>
-            <p class="kpi-cell__lbl">Regulated-sector clients</p>
-          </div>
-          <div class="kpi-cell">
-            <p class="kpi-cell__val" data-counter="30" data-counter-suffix="%">30%</p>
-            <p class="kpi-cell__lbl">Median cloud run-cost reduction</p>
-          </div>
-          <div class="kpi-cell">
-            <p class="kpi-cell__val" data-counter="11" data-counter-suffix=" wks">11 wks</p>
-            <p class="kpi-cell__lbl">Average time to first live release</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- --- Services Overview -------------------------------------------------- -->
-    <section class="section" id="services" aria-labelledby="services-title">
-      <div class="container container--wide">
-        <header class="section__header section__header--wide reveal">
-          <div class="section__rule" aria-hidden="true"></div>
-          <span class="section__eyebrow">Our Practices</span>
-          <h2 id="services-title" class="section__title">From architecture design to delivery acceleration</h2>
-          <p class="section__desc">Each engagement is scoped around a production outcome, led by a principal consultant who writes code alongside your engineers, rather than lecturing from slide decks.</p>
-        </header>
-
-        <div class="bento reveal">
-          <!-- AI & Intelligence Card -->
-          <article class="bento-card bento-card--featured">
-            <div class="bento-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
-            </div>
-            <span class="bento-card__num">01</span>
-            <h3 class="bento-card__title"><a href="services/#ai">Artificial Intelligence</a></h3>
-            <p class="bento-card__desc">Data readying, deployment pipelines, LLM fine-tuning, and robust safety guardrails. We focus on putting compliant model systems into production with automated human-in-the-loop triggers.</p>
-            <p class="bento-card__outcome">Outcome: Governed models live in 14 weeks</p>
-            <a href="services/#ai" class="link-arrow bento-card__link">Explore AI Consulting <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-          </article>
-
-          <!-- Cloud Enablement -->
-          <article class="bento-card bento-card--tall">
-            <div class="bento-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z"/>
-              </svg>
-            </div>
-            <span class="bento-card__num">02</span>
-            <h3 class="bento-card__title"><a href="services/#cloud">Cloud Enablement</a></h3>
-            <p class="bento-card__desc">Compliant cloud landing zones, legacy migration execution, and data-residency configuration tailored to Irish and UK regulators.</p>
-            <p class="bento-card__outcome">Outcome: 25–35% infrastructure savings</p>
-          </article>
-
-          <!-- DevOps & DevSecOps -->
-          <article class="bento-card bento-card--half">
-            <div class="bento-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-            </div>
-            <span class="bento-card__num">03</span>
-            <h3 class="bento-card__title"><a href="services/#devops">DevOps &amp; DevSecOps</a></h3>
-            <p class="bento-card__desc">CI/CD pipelines, Infrastructure as Code, and automated security scanning built directly into release workflows.</p>
-            <p class="bento-card__outcome">Outcome: 48hr vulnerability patches</p>
-          </article>
-
-          <!-- Platform Engineering -->
-          <article class="bento-card bento-card--half">
-            <div class="bento-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="7" height="9" rx="1"/>
-                <rect x="14" y="3" width="7" height="5" rx="1"/>
-                <rect x="14" y="12" width="7" height="9" rx="1"/>
-                <rect x="3" y="16" width="7" height="5" rx="1"/>
-              </svg>
-            </div>
-            <span class="bento-card__num">04</span>
-            <h3 class="bento-card__title"><a href="services/#platform">Platform Engineering</a></h3>
-            <p class="bento-card__desc">Internal developer portals, golden path templates, and standardised cloud observability that helps developers deploy independently.</p>
-            <p class="bento-card__outcome">Outcome: Developer onboarding cut by 65%</p>
-          </article>
-
-          <!-- Data & Analytics -->
-          <article class="bento-card bento-card--third">
-            <span class="bento-card__num">05</span>
-            <h3 class="bento-card__title"><a href="services/#data">Data &amp; Analytics</a></h3>
-            <p class="bento-card__desc">Lakehouse setup, secure streaming architectures, data governance, and lineage mappings.</p>
-          </article>
-
-          <!-- Technology Strategy -->
-          <article class="bento-card bento-card--third">
-            <span class="bento-card__num">06</span>
-            <h3 class="bento-card__title"><a href="services/#strategy">Technology Strategy</a></h3>
-            <p class="bento-card__desc">Engineering roadmaps and migration plans built on real deployment experience.</p>
-          </article>
-
-          <!-- Full Catalog Card -->
-          <article class="bento-card bento-card--third">
-            <h3 class="bento-card__title"><a href="services/">View All Work</a></h3>
-            <p class="bento-card__desc">Automated testing, containerization, legacy modernization, and engineering culture programs.</p>
-            <a href="services/" class="link-arrow bento-card__link">Explore Catalog <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- --- Why Us / Transformation Lifecycle ---------------------------------- -->
-    <section class="story-spotlight story-spotlight--void" id="why" aria-labelledby="why-title">
-      <div class="container container--wide">
-        <div class="story-spotlight__grid story-spotlight__grid--reverse">
-          
-          <!-- Visual Column: GORGEOUS Custom Inline SVG Diagrams -->
-          <div class="story-spotlight__visual">
-            <div class="story-visual reveal">
-              <!-- Custom Inline SVG: Delivery Lifecycle Diagram -->
-              <svg class="diagram-stage" viewBox="0 0 560 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Transformation delivery lifecycle showing 4 steps from discovery to handover">
-                <!-- Background grid patterns -->
+          <!-- VISUAL: Custom Architectural Capability Network -->
+          <div class="hero__visual reveal reveal--delay-1" aria-hidden="true">
+            <div class="cap-network">
+              <svg class="cap-network__svg" viewBox="0 0 520 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Irish Guru capability services network diagram">
                 <defs>
-                  <pattern id="dot-grid" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
-                    <circle cx="2" cy="2" r="1" fill="var(--color-border)" opacity="0.3"/>
+                  <!-- Glow filter -->
+                  <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                  <filter id="glow-sage" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2" result="blur"/>
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                  <!-- Gradient for connector lines -->
+                  <linearGradient id="conn-a" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#cfa276" stop-opacity="0.5"/>
+                    <stop offset="100%" stop-color="#cfa276" stop-opacity="0.08"/>
+                  </linearGradient>
+                  <linearGradient id="conn-b" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#0da174" stop-opacity="0.12"/>
+                    <stop offset="100%" stop-color="#0da174" stop-opacity="0.5"/>
+                  </linearGradient>
+                  <linearGradient id="conn-c" x1="0" y1="1" x2="0" y2="0">
+                    <stop offset="0%" stop-color="#cfa276" stop-opacity="0.1"/>
+                    <stop offset="100%" stop-color="#cfa276" stop-opacity="0.4"/>
+                  </linearGradient>
+                  <!-- Background pattern -->
+                  <pattern id="hero-dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <circle cx="1.5" cy="1.5" r="1" fill="#1a1b26" opacity="0.8"/>
                   </pattern>
                 </defs>
-                <rect width="100%" height="100%" fill="url(#dot-grid)" rx="12" opacity="0.5"/>
-                
-                <!-- Connector Arrow Lines -->
-                <path d="M125 150 H180" stroke="var(--color-border)" stroke-width="2" stroke-dasharray="4 4"/>
-                <path d="M255 150 H310" stroke="var(--color-border)" stroke-width="2" stroke-dasharray="4 4"/>
-                <path d="M385 150 H440" stroke="var(--color-border)" stroke-width="2" stroke-dasharray="4 4"/>
 
-                <!-- Stage 1 Nodes -->
-                <g class="diagram-node" data-tip-id="tip-discover">
-                  <rect x="40" y="110" width="85" height="80" rx="8" fill="var(--color-bg-elevated)" stroke="var(--color-accent-line)" stroke-width="1.5"/>
-                  <text x="82" y="145" fill="var(--color-accent)" font-family="var(--font-mono)" font-size="10" font-weight="700" text-anchor="middle">STAGE 01</text>
-                  <text x="82" y="165" fill="var(--color-primary)" font-family="var(--font-display)" font-size="12" font-weight="600" text-anchor="middle">Discover</text>
+                <!-- Background -->
+                <rect width="520" height="420" rx="20" fill="#0a0a0f"/>
+                <rect width="520" height="420" rx="20" fill="url(#hero-dots)" opacity="0.7"/>
+
+                <!-- Subtle ambient glow rings -->
+                <circle cx="260" cy="210" r="140" stroke="#cfa276" stroke-width="1" stroke-dasharray="4 8" opacity="0.06"/>
+                <circle cx="260" cy="210" r="190" stroke="#0da174" stroke-width="1" stroke-dasharray="2 12" opacity="0.04"/>
+
+                <!-- ── CONNECTOR LINES ── -->
+                <!-- Center → AI -->
+                <path d="M260 210 L160 110" stroke="url(#conn-a)" stroke-width="1.5"/>
+                <!-- Center → Cloud -->
+                <path d="M260 210 L390 110" stroke="url(#conn-a)" stroke-width="1.5"/>
+                <!-- Center → Platform -->
+                <path d="M260 210 L130 210" stroke="url(#conn-c)" stroke-width="1.5"/>
+                <!-- Center → DevSecOps -->
+                <path d="M260 210 L390 210" stroke="url(#conn-b)" stroke-width="1.5"/>
+                <!-- Center → Data -->
+                <path d="M260 210 L160 320" stroke="url(#conn-b)" stroke-width="1.5"/>
+                <!-- Center → Strategy -->
+                <path d="M260 210 L390 320" stroke="url(#conn-b)" stroke-width="1.5"/>
+
+                <!-- Small data-flow dots on lines -->
+                <circle cx="210" cy="160" r="2" fill="#cfa276" opacity="0.5"/>
+                <circle cx="325" cy="160" r="2" fill="#cfa276" opacity="0.4"/>
+                <circle cx="195" cy="210" r="2" fill="#cfa276" opacity="0.3"/>
+                <circle cx="325" cy="265" r="2" fill="#0da174" opacity="0.4"/>
+
+                <!-- ── CENTRAL NODE: Irish Guru ── -->
+                <circle cx="260" cy="210" r="48" fill="#0d0d14" stroke="#cfa276" stroke-width="2" filter="url(#glow-gold)"/>
+                <circle cx="260" cy="210" r="44" fill="none" stroke="#cfa276" stroke-width="0.5" opacity="0.3"/>
+                <!-- IG monogram -->
+                <text x="260" y="200" text-anchor="middle" fill="#cfa276" font-family="'Cabinet Grotesk', sans-serif" font-size="13" font-weight="800" letter-spacing="-0.5">IRISH</text>
+                <text x="260" y="216" text-anchor="middle" fill="#f4f4f7" font-family="'Cabinet Grotesk', sans-serif" font-size="13" font-weight="800" letter-spacing="-0.5">GURU</text>
+                <text x="260" y="232" text-anchor="middle" fill="#6a6c7d" font-family="monospace" font-size="7" letter-spacing="2">DELIVERY</text>
+
+                <!-- ── SATELLITE NODES ── -->
+
+                <!-- AI & Intelligence (top-left) -->
+                <g>
+                  <rect x="90" y="68" width="140" height="80" rx="10" fill="#0d0d14" stroke="#cfa276" stroke-width="1.5" filter="url(#glow-gold)" opacity="0.9"/>
+                  <rect x="90" y="68" width="4" height="80" rx="2" fill="#cfa276"/>
+                  <text x="106" y="98" fill="#cfa276" font-family="monospace" font-size="8" font-weight="700" letter-spacing="1">AI &amp; INTEL</text>
+                  <text x="106" y="114" fill="#f4f4f7" font-family="'Cabinet Grotesk', sans-serif" font-size="12" font-weight="600">Artificial Intelligence</text>
+                  <text x="106" y="130" fill="#6a6c7d" font-family="monospace" font-size="7">LLM · MLOps · Governance</text>
                 </g>
 
-                <!-- Stage 2 Nodes -->
-                <g class="diagram-node" data-tip-id="tip-architect">
-                  <rect x="180" y="110" width="85" height="80" rx="8" fill="var(--color-bg-elevated)" stroke="var(--color-border)" stroke-width="1.5"/>
-                  <text x="222" y="145" fill="var(--color-text-subtle)" font-family="var(--font-mono)" font-size="10" font-weight="700" text-anchor="middle">STAGE 02</text>
-                  <text x="222" y="165" fill="var(--color-primary)" font-family="var(--font-display)" font-size="12" font-weight="600" text-anchor="middle">Architect</text>
+                <!-- Cloud Enablement (top-right) -->
+                <g>
+                  <rect x="290" y="68" width="150" height="80" rx="10" fill="#0d0d14" stroke="#1a1b26" stroke-width="1.5"/>
+                  <rect x="290" y="68" width="4" height="80" rx="2" fill="#0da174"/>
+                  <text x="306" y="98" fill="#0da174" font-family="monospace" font-size="8" font-weight="700" letter-spacing="1">CLOUD</text>
+                  <text x="306" y="114" fill="#f4f4f7" font-family="'Cabinet Grotesk', sans-serif" font-size="12" font-weight="600">Cloud Enablement</text>
+                  <text x="306" y="130" fill="#6a6c7d" font-family="monospace" font-size="7">AWS · Azure · GCP · FinOps</text>
                 </g>
 
-                <!-- Stage 3 Nodes (Active / Highlighted) -->
-                <g class="diagram-node" data-tip-id="tip-deliver">
-                  <rect x="310" y="105" width="85" height="90" rx="8" fill="var(--color-bg-accent)" stroke="var(--color-accent)" stroke-width="2"/>
-                  <text x="352" y="140" fill="var(--color-accent)" font-family="var(--font-mono)" font-size="10" font-weight="700" text-anchor="middle">STAGE 03</text>
-                  <text x="352" y="160" fill="var(--color-primary)" font-family="var(--font-display)" font-size="13" font-weight="700" text-anchor="middle">Deliver</text>
-                  <text x="352" y="175" fill="var(--color-sage)" font-family="var(--font-mono)" font-size="8" font-weight="600" text-anchor="middle">ACTIVE</text>
+                <!-- Platform Engineering (left) -->
+                <g>
+                  <rect x="16" y="170" width="100" height="78" rx="10" fill="#0d0d14" stroke="#1a1b26" stroke-width="1.5"/>
+                  <rect x="16" y="170" width="4" height="78" rx="2" fill="#cfa276" opacity="0.6"/>
+                  <text x="30" y="198" fill="#a0a2b0" font-family="monospace" font-size="7" font-weight="700" letter-spacing="1">PLATFORM</text>
+                  <text x="30" y="214" fill="#f4f4f7" font-family="'Cabinet Grotesk', sans-serif" font-size="11" font-weight="600">Platform Eng</text>
+                  <text x="30" y="230" fill="#6a6c7d" font-family="monospace" font-size="7">k8s · ArgoCD</text>
                 </g>
 
-                <!-- Stage 4 Nodes -->
-                <g class="diagram-node" data-tip-id="tip-handover">
-                  <rect x="440" y="110" width="85" height="80" rx="8" fill="var(--color-bg-elevated)" stroke="var(--color-border)" stroke-width="1.5"/>
-                  <text x="482" y="145" fill="var(--color-text-subtle)" font-family="var(--font-mono)" font-size="10" font-weight="700" text-anchor="middle">STAGE 04</text>
-                  <text x="482" y="165" fill="var(--color-primary)" font-family="var(--font-display)" font-size="12" font-weight="600" text-anchor="middle">Handover</text>
+                <!-- DevSecOps (right) -->
+                <g>
+                  <rect x="404" y="170" width="100" height="78" rx="10" fill="#0d0d14" stroke="#1a1b26" stroke-width="1.5"/>
+                  <rect x="404" y="170" width="4" height="78" rx="2" fill="#0da174"/>
+                  <text x="418" y="198" fill="#0da174" font-family="monospace" font-size="7" font-weight="700" letter-spacing="1">SECURITY</text>
+                  <text x="418" y="214" fill="#f4f4f7" font-family="'Cabinet Grotesk', sans-serif" font-size="11" font-weight="600">DevSecOps</text>
+                  <text x="418" y="230" fill="#6a6c7d" font-family="monospace" font-size="7">Snyk · Vault</text>
                 </g>
+
+                <!-- Data & Analytics (bottom-left) -->
+                <g>
+                  <rect x="72" y="275" width="130" height="78" rx="10" fill="#0d0d14" stroke="#1a1b26" stroke-width="1.5"/>
+                  <rect x="72" y="275" width="4" height="78" rx="2" fill="#cfa276" opacity="0.5"/>
+                  <text x="88" y="303" fill="#a0a2b0" font-family="monospace" font-size="7" font-weight="700" letter-spacing="1">DATA</text>
+                  <text x="88" y="319" fill="#f4f4f7" font-family="'Cabinet Grotesk', sans-serif" font-size="11" font-weight="600">Data &amp; Analytics</text>
+                  <text x="88" y="335" fill="#6a6c7d" font-family="monospace" font-size="7">dbt · Databricks · Kafka</text>
+                </g>
+
+                <!-- Strategy (bottom-right) -->
+                <g>
+                  <rect x="316" y="275" width="130" height="78" rx="10" fill="#0d0d14" stroke="#1a1b26" stroke-width="1.5"/>
+                  <rect x="316" y="275" width="4" height="78" rx="2" fill="#6a6c7d"/>
+                  <text x="332" y="303" fill="#6a6c7d" font-family="monospace" font-size="7" font-weight="700" letter-spacing="1">STRATEGY</text>
+                  <text x="332" y="319" fill="#f4f4f7" font-family="'Cabinet Grotesk', sans-serif" font-size="11" font-weight="600">Tech Strategy</text>
+                  <text x="332" y="335" fill="#6a6c7d" font-family="monospace" font-size="7">Roadmap · Advisory</text>
+                </g>
+
+                <!-- Live status badge -->
+                <circle cx="284" cy="170" r="5" fill="#0da174" opacity="0.9"/>
+                <circle cx="284" cy="170" r="8" stroke="#0da174" stroke-width="1" opacity="0.3">
+                  <animate attributeName="r" values="6;10;6" dur="2s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <text x="294" y="174" fill="#0da174" font-family="monospace" font-size="8" font-weight="700">LIVE ENGAGEMENTS</text>
+
               </svg>
-              <span class="story-visual__caption">Delivery Lifecycle Framework</span>
-            </div>
-          </div>
-
-          <!-- Copy Column -->
-          <div class="reveal reveal--delay-1 story-spotlight__copy">
-            <div class="section__rule" aria-hidden="true"></div>
-            <span class="section__eyebrow">The Engagement Model</span>
-            <h2 id="why-title" class="section__title story-spotlight__title">Completed milestones — not hours billed</h2>
-            <blockquote class="editorial-quote">Integrators sell consulting capacity. We sell completed production objectives — regulatory architectures signed off, migrations finished, and pipelines hardened.</blockquote>
-            <p class="story-spotlight__lede">Our engagement maturity framework ensures that we stay in lock-step with your commercial priorities. We integrate directly into your daily routines, write the real codebase, and secure everything before exiting.</p>
-
-            <div class="maturity-ladder" aria-label="Maturity step process">
-              <div class="maturity-ladder__step">
-                <span class="maturity-ladder__num">1</span>
-                <span class="maturity-ladder__label">Map existing dependencies &amp; identify bottlenecks</span>
-                <span class="maturity-ladder__badge">Discover</span>
-              </div>
-              <div class="maturity-ladder__step">
-                <span class="maturity-ladder__num">2</span>
-                <span class="maturity-ladder__label">Build the target blueprint &amp; regulatory baseline</span>
-                <span class="maturity-ladder__badge">Design</span>
-              </div>
-              <div class="maturity-ladder__step maturity-ladder__step--active">
-                <span class="maturity-ladder__num">3</span>
-                <span class="maturity-ladder__label">Deploy production systems &amp; co-pilot migration</span>
-                <span class="maturity-ladder__badge">Implement</span>
-              </div>
-              <div class="maturity-ladder__step">
-                <span class="maturity-ladder__num">4</span>
-                <span class="maturity-ladder__label">Handover operations, runbooks &amp; exit cleanly</span>
-                <span class="maturity-ladder__badge">Operate</span>
-              </div>
-            </div>
-
-            <div class="diff-stack story-spotlight__diff">
-              <article class="diff-card">
-                <p class="diff-card__label">Pricing Strategy</p>
-                <h3 class="diff-card__title">Outcome-defined fees</h3>
-                <p class="diff-card__desc"> engagements are scoped around clear technical goals, such as delivery frequency, platform onboarding times, or security patch targets.</p>
-              </article>
-              <article class="diff-card">
-                <p class="diff-card__label">Compliance</p>
-                <h3 class="diff-card__title">Regulated Sector Muscle</h3>
-                <p class="diff-card__desc">Central Bank of Ireland, FCA, NHS, and NCSC baselines are woven directly into our architectures from day one.</p>
-              </article>
             </div>
           </div>
 
         </div>
       </div>
+
+      <div class="hero__scroll" aria-hidden="true"><div class="hero__scroll-bar"></div></div>
     </section>
 
-    <!-- --- Tech Stack & Capabilities ------------------------------------------ -->
-    <section class="section section--muted" id="capabilities" aria-labelledby="tech-title">
+    <!-- ═══════════════════════════════════════════
+         INTRO EDITORIAL POSITIONING
+    ═══════════════════════════════════════════ -->
+    <section class="intro-band" aria-label="Positioning statement">
+      <div class="container reveal">
+        <p class="intro-band__eyebrow">The Practitioner Difference</p>
+        <p class="intro-band__pull">We are not an advisory firm. We write the Terraform, lead the architecture reviews, build the CI/CD gates, and hand over systems your engineers can own — without us in the room.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PROOF STRIP
+    ═══════════════════════════════════════════ -->
+    <section class="section section--compact" aria-label="Delivery track record">
+      <div class="container">
+        <div class="proof-strip reveal">
+          <div class="proof-strip__cell">
+            <span class="proof-strip__val" data-counter="120" data-counter-suffix="+">120+</span>
+            <span class="proof-strip__lbl">Production releases</span>
+          </div>
+          <div class="proof-strip__cell">
+            <span class="proof-strip__val" data-counter="18" data-counter-suffix="">18</span>
+            <span class="proof-strip__lbl">Regulated-sector clients</span>
+          </div>
+          <div class="proof-strip__cell">
+            <span class="proof-strip__val" data-counter="30" data-counter-suffix="%">30%</span>
+            <span class="proof-strip__lbl">Avg cloud cost reduction</span>
+          </div>
+          <div class="proof-strip__cell">
+            <span class="proof-strip__val" data-counter="11" data-counter-suffix=" wks">11 wks</span>
+            <span class="proof-strip__lbl">Median time to production</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SERVICES OVERVIEW
+    ═══════════════════════════════════════════ -->
+    <section class="section" id="services" aria-labelledby="services-heading">
       <div class="container container--wide">
-        <header class="section__header reveal">
-          <span class="section__eyebrow">Our Engine</span>
-          <h2 id="tech-title" class="section__title">Technologies we deploy in client environments</h2>
-          <p class="section__desc">We are completely vendor-agnostic. Tooling is selected based on your compliance, budget, and skills footprint, not generic reseller commissions.</p>
+        <header class="section-hd reveal">
+          <div class="section-hd__rule" aria-hidden="true"></div>
+          <p class="section-hd__eye">Practice Areas</p>
+          <h2 id="services-heading" class="section-hd__title">Architecture to delivery — nothing in between</h2>
+          <p class="section-hd__sub">Every engagement is led by a principal consultant who implements alongside your team, not one who delegates to a junior bench.</p>
         </header>
 
-        <!-- Dynamic Inline SVG KPI Dashboard -->
-        <div class="proof-stage reveal">
-          <div class="proof-dashboard">
-            <div class="proof-dashboard__main" aria-label="Operational metrics dashboard visual">
-              <svg viewBox="0 0 520 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Visual KPI indicators showing typical client improvements">
-                <rect width="100%" height="100%" fill="var(--color-bg-inset)" rx="16"/>
-                <rect x="1" y="1" width="518" height="298" rx="15" stroke="var(--color-border)" opacity="0.5"/>
-                <!-- Chart grid lines -->
-                <line x1="40" y1="50" x2="480" y2="50" stroke="var(--color-border-subtle)" stroke-width="1"/>
-                <line x1="40" y1="110" x2="480" y2="110" stroke="var(--color-border-subtle)" stroke-width="1"/>
-                <line x1="40" y1="170" x2="480" y2="170" stroke="var(--color-border-subtle)" stroke-width="1"/>
-                <line x1="40" y1="230" x2="480" y2="230" stroke="var(--color-border-subtle)" stroke-width="1"/>
+        <!-- ASYMMETRIC SERVICES LAYOUT -->
+        <div class="services-mosaic reveal">
 
-                <!-- Live progress graphics representing deployment frequency trend -->
-                <path d="M40 230 L120 200 L200 130 L280 140 L360 80 L440 60" stroke="var(--color-accent)" stroke-width="3" stroke-linecap="round"/>
-                <path d="M40 230 L120 200 L200 130 L280 140 L360 80 L440 60 L440 250 L40 250 Z" fill="url(#chart-gradient)" opacity="0.1"/>
+          <!-- Featured: AI -->
+          <article class="svc-card svc-card--featured" id="ai-preview">
+            <div class="svc-card__accent" aria-hidden="true"></div>
+            <span class="svc-card__num">01</span>
+            <div class="svc-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M16 4L28 10.5V21.5L16 28L4 21.5V10.5L16 4Z"/>
+                <circle cx="16" cy="16" r="4"/>
+                <path d="M16 4v8M28 10.5l-8 3.5M28 21.5L20 18M16 28v-8M4 21.5l8-3.5M4 10.5l8 3.5"/>
+              </svg>
+            </div>
+            <h3 class="svc-card__title"><a href="services/#ai">Artificial Intelligence</a></h3>
+            <p class="svc-card__desc">From initial use-case scoping to governed production pipelines. We build ML systems with human-in-the-loop controls that satisfy Central Bank, FCA, and EU AI Act requirements from day one.</p>
+            <p class="svc-card__metric">First governed model in production: 14 weeks</p>
+            <a href="services/#ai" class="svc-card__link">
+              Explore AI Consulting
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+            </a>
+          </article>
 
+          <!-- Cloud -->
+          <article class="svc-card svc-card--tall">
+            <span class="svc-card__num">02</span>
+            <div class="svc-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M8 22Q5 22 5 18Q5 12 11 12Q12 6 17 6Q22 6 23 12Q29 12 29 18Q29 22 25 22Z"/>
+                <path d="M12 28V22M20 22V28M10 28h12"/>
+              </svg>
+            </div>
+            <h3 class="svc-card__title"><a href="services/#cloud">Cloud Enablement</a></h3>
+            <p class="svc-card__desc">Multi-cloud landing zones, data-residency baselines, and FinOps programmes on AWS, Azure, and GCP — built for Irish and UK governance frameworks.</p>
+            <p class="svc-card__metric">25–35% cost reduction in two quarters</p>
+          </article>
+
+          <!-- DevOps + DevSecOps -->
+          <article class="svc-card">
+            <span class="svc-card__num">03</span>
+            <div class="svc-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M16 4l-3 7H6l6 4.5-2 8L16 20l6 3.5-2-8L26 11h-7L16 4Z"/>
+              </svg>
+            </div>
+            <h3 class="svc-card__title"><a href="services/#devops">DevOps &amp; DevSecOps</a></h3>
+            <p class="svc-card__desc">CI/CD pipelines, IaC, and automated security scanning wired into your existing toolchain — no six-month runway before value arrives.</p>
+            <p class="svc-card__metric">CVE patches under 48 hours</p>
+          </article>
+
+          <!-- Platform -->
+          <article class="svc-card">
+            <span class="svc-card__num">04</span>
+            <div class="svc-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <rect x="4" y="6" width="24" height="7" rx="2"/>
+                <rect x="4" y="15" width="24" height="7" rx="2"/>
+                <circle cx="9" cy="9.5" r="1.5" fill="currentColor" stroke="none"/>
+                <circle cx="9" cy="18.5" r="1.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <h3 class="svc-card__title"><a href="services/#platform">Platform Engineering</a></h3>
+            <p class="svc-card__desc">Internal developer portals, golden-path templates, and Kubernetes-based self-service environments that eliminate infrastructure tickets.</p>
+            <p class="svc-card__metric">Developer onboarding: weeks → hours</p>
+          </article>
+
+          <!-- Data -->
+          <article class="svc-card svc-card--half">
+            <span class="svc-card__num">05</span>
+            <h3 class="svc-card__title"><a href="services/#data">Data &amp; Analytics</a></h3>
+            <p class="svc-card__desc">Lakehouse foundations, streaming pipelines, and governance scaffolding that supports both operational reporting and AI workloads.</p>
+          </article>
+
+          <!-- Strategy -->
+          <article class="svc-card svc-card--half">
+            <span class="svc-card__num">06</span>
+            <h3 class="svc-card__title"><a href="services/#strategy">Technology Strategy</a></h3>
+            <p class="svc-card__desc">Roadmaps and investment cases produced by architects who will execute them — not hand them to a separate delivery team.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         WHY IRISH GURU + DELIVERY LIFECYCLE
+    ═══════════════════════════════════════════ -->
+    <section class="section section--alt" id="why" aria-labelledby="why-heading">
+      <div class="container container--wide">
+        <div class="why-layout">
+
+          <!-- Diagram column -->
+          <div class="why-layout__diagram reveal">
+            <!-- PREMIUM DELIVERY LIFECYCLE DIAGRAM -->
+            <div class="lifecycle-diagram">
+              <p class="lifecycle-diagram__label">Delivery Lifecycle — Four Stages to Handover</p>
+              <svg class="lifecycle-svg" viewBox="0 0 480 340" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Four-stage delivery lifecycle: Discover, Architect, Deliver, Handover">
                 <defs>
-                  <linearGradient id="chart-gradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="var(--color-accent)"/>
-                    <stop offset="100%" stop-color="var(--color-accent)" stop-opacity="0"/>
+                  <linearGradient id="pipe" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#cfa276" stop-opacity="0.1"/>
+                    <stop offset="40%" stop-color="#cfa276" stop-opacity="0.6"/>
+                    <stop offset="60%" stop-color="#cfa276" stop-opacity="0.9"/>
+                    <stop offset="100%" stop-color="#0da174" stop-opacity="0.5"/>
                   </linearGradient>
+                  <filter id="node-glow">
+                    <feGaussianBlur stdDeviation="4" result="blur"/>
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
                 </defs>
 
-                <!-- Data nodes -->
-                <circle cx="120" cy="200" r="4" fill="var(--color-accent)"/>
-                <circle cx="200" cy="130" r="4" fill="var(--color-accent)"/>
-                <circle cx="360" cy="80" r="4" fill="var(--color-accent)"/>
-                <circle cx="440" cy="60" r="5" fill="var(--color-accent)"/>
-                
-                <!-- Axis Labels -->
-                <text x="40" y="270" fill="var(--color-text-subtle)" font-family="var(--font-mono)" font-size="9">WEEK 01</text>
-                <text x="220" y="270" fill="var(--color-text-subtle)" font-family="var(--font-mono)" font-size="9">WEEK 06</text>
-                <text x="440" y="270" fill="var(--color-text-subtle)" font-family="var(--font-mono)" font-size="9" text-anchor="end">WEEK 12</text>
+                <!-- Background -->
+                <rect width="480" height="340" rx="16" fill="#0a0a0f"/>
+
+                <!-- Stage numbers row (top) -->
+                <text x="60" y="36" text-anchor="middle" fill="#2a2b38" font-family="monospace" font-size="28" font-weight="800">01</text>
+                <text x="180" y="36" text-anchor="middle" fill="#2a2b38" font-family="monospace" font-size="28" font-weight="800">02</text>
+                <text x="300" y="36" text-anchor="middle" fill="#cfa276" font-family="monospace" font-size="28" font-weight="800">03</text>
+                <text x="420" y="36" text-anchor="middle" fill="#2a2b38" font-family="monospace" font-size="28" font-weight="800">04</text>
+
+                <!-- Pipeline track -->
+                <rect x="30" y="100" width="420" height="4" rx="2" fill="#1a1b26"/>
+                <rect x="30" y="100" width="295" height="4" rx="2" fill="url(#pipe)"/>
+
+                <!-- STAGE 1: Discover -->
+                <g>
+                  <circle cx="60" cy="102" r="20" fill="#0d0d14" stroke="#2a2b38" stroke-width="1.5"/>
+                  <path d="M51 102 Q60 93 69 102 Q60 111 51 102Z" stroke="#6a6c7d" stroke-width="1.5" fill="none"/>
+                  <circle cx="60" cy="102" r="4" fill="#6a6c7d"/>
+                  <text x="60" y="140" text-anchor="middle" fill="#a0a2b0" font-family="'Cabinet Grotesk', sans-serif" font-size="12" font-weight="700">Discover</text>
+                  <!-- Checklist items -->
+                  <rect x="12" y="160" width="96" height="156" rx="8" fill="#0d0d14" stroke="#1a1b26" stroke-width="1"/>
+                  <text x="22" y="180" fill="#6a6c7d" font-family="monospace" font-size="7" font-weight="600">OUTPUTS</text>
+                  <text x="22" y="198" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Architecture audit</text>
+                  <text x="22" y="212" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Gap assessment</text>
+                  <text x="22" y="226" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Risk register</text>
+                  <text x="22" y="240" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Scope agreed</text>
+                  <text x="22" y="260" fill="#6a6c7d" font-family="monospace" font-size="7">DURATION</text>
+                  <text x="22" y="275" fill="#a0a2b0" font-family="monospace" font-size="8" font-weight="600">2–3 weeks</text>
+                </g>
+
+                <!-- STAGE 2: Architect -->
+                <g>
+                  <circle cx="180" cy="102" r="20" fill="#0d0d14" stroke="#2a2b38" stroke-width="1.5"/>
+                  <rect x="171" y="93" width="18" height="18" rx="2" stroke="#6a6c7d" stroke-width="1.5"/>
+                  <path d="M175 99h10M175 103h7M175 107h10" stroke="#6a6c7d" stroke-width="1"/>
+                  <text x="180" y="140" text-anchor="middle" fill="#a0a2b0" font-family="'Cabinet Grotesk', sans-serif" font-size="12" font-weight="700">Architect</text>
+                  <rect x="132" y="160" width="96" height="156" rx="8" fill="#0d0d14" stroke="#1a1b26" stroke-width="1"/>
+                  <text x="142" y="180" fill="#6a6c7d" font-family="monospace" font-size="7" font-weight="600">OUTPUTS</text>
+                  <text x="142" y="198" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Target blueprint</text>
+                  <text x="142" y="212" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Tech selections</text>
+                  <text x="142" y="226" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Compliance map</text>
+                  <text x="142" y="240" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Migration plan</text>
+                  <text x="142" y="260" fill="#6a6c7d" font-family="monospace" font-size="7">DURATION</text>
+                  <text x="142" y="275" fill="#a0a2b0" font-family="monospace" font-size="8" font-weight="600">3–4 weeks</text>
+                </g>
+
+                <!-- STAGE 3: Deliver (ACTIVE / FEATURED) -->
+                <g filter="url(#node-glow)">
+                  <circle cx="300" cy="102" r="24" fill="#0f101a" stroke="#cfa276" stroke-width="2"/>
+                  <circle cx="300" cy="102" r="28" stroke="#cfa276" stroke-width="1" stroke-dasharray="3 3" opacity="0.3">
+                    <animateTransform attributeName="transform" type="rotate" from="0 300 102" to="360 300 102" dur="12s" repeatCount="indefinite"/>
+                  </circle>
+                  <path d="M293 96l10 6-10 6V96Z" fill="#cfa276"/>
+                  <text x="300" y="140" text-anchor="middle" fill="#cfa276" font-family="'Cabinet Grotesk', sans-serif" font-size="12" font-weight="700">Deliver</text>
+                </g>
+                <rect x="252" y="160" width="96" height="156" rx="8" fill="#0f101a" stroke="#cfa276" stroke-width="1.5"/>
+                <text x="262" y="180" fill="#cfa276" font-family="monospace" font-size="7" font-weight="700">ACTIVE STAGE</text>
+                <text x="262" y="198" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Live coding</text>
+                <text x="262" y="212" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Sprint delivery</text>
+                <text x="262" y="226" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Security gates</text>
+                <text x="262" y="240" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Weekly reviews</text>
+                <text x="262" y="260" fill="#6a6c7d" font-family="monospace" font-size="7">DURATION</text>
+                <text x="262" y="275" fill="#cfa276" font-family="monospace" font-size="8" font-weight="700">8–16 weeks</text>
+
+                <!-- STAGE 4: Handover -->
+                <g>
+                  <circle cx="420" cy="102" r="20" fill="#0d0d14" stroke="#2a2b38" stroke-width="1.5"/>
+                  <path d="M412 98h8M420 98v8M420 102l6-6" stroke="#6a6c7d" stroke-width="1.5" stroke-linecap="round"/>
+                  <text x="420" y="140" text-anchor="middle" fill="#a0a2b0" font-family="'Cabinet Grotesk', sans-serif" font-size="12" font-weight="700">Handover</text>
+                  <rect x="372" y="160" width="96" height="156" rx="8" fill="#0d0d14" stroke="#1a1b26" stroke-width="1"/>
+                  <text x="382" y="180" fill="#6a6c7d" font-family="monospace" font-size="7" font-weight="600">OUTPUTS</text>
+                  <text x="382" y="198" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Runbooks</text>
+                  <text x="382" y="212" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Training done</text>
+                  <text x="382" y="226" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Docs accepted</text>
+                  <text x="382" y="240" fill="#a0a2b0" font-family="monospace" font-size="7">✓ Clean exit</text>
+                  <text x="382" y="260" fill="#6a6c7d" font-family="monospace" font-size="7">DURATION</text>
+                  <text x="382" y="275" fill="#a0a2b0" font-family="monospace" font-size="8" font-weight="600">2–4 weeks</text>
+                </g>
+
               </svg>
             </div>
+          </div>
 
-            <div class="proof-dashboard__side">
-              <div class="metric-tile">
-                <p class="metric-tile__value" data-counter="3.8" data-counter-suffix="×" data-counter-decimals="1">3.8×</p>
-                <p class="metric-tile__label">Median deployment frequency increase post DevSecOps implementation</p>
+          <!-- Copy column -->
+          <div class="why-layout__copy reveal reveal--delay-1">
+            <div class="section-hd__rule" aria-hidden="true"></div>
+            <p class="section-hd__eye">Why Irish Guru</p>
+            <h2 id="why-heading" class="section-hd__title">Milestones delivered.<br>Not hours billed.</h2>
+            <blockquote class="pull-quote">Large integrators sell consulting capacity. We sell completed production milestones — architecture signed off, migration waves finished, pipelines in production.</blockquote>
+            <p class="why-lede">Our model suits organisations burned by advisory-only engagements. We sit in your stand-ups, write the Terraform, and stay through go-live. No backfill, no junior substitutes.</p>
+            <div class="diff-grid">
+              <div class="diff-cell">
+                <p class="diff-cell__eye">Outcome-first</p>
+                <h3 class="diff-cell__h">Fees tied to delivery</h3>
+                <p class="diff-cell__p">Deployment frequency increases, migration waves completed, audit findings closed — reviewed weekly with your sponsor.</p>
               </div>
-              <div class="metric-tile">
-                <p class="metric-tile__value" data-counter="30" data-counter-suffix="%">30%</p>
-                <p class="metric-tile__label">Typical infrastructure run-cost savings unlocked in under 180 days</p>
-              </div>
-              <div class="metric-tile">
-                <p class="metric-tile__value" data-counter="65" data-counter-suffix="%">65%</p>
-                <p class="metric-tile__label">Reduction in engineering onboarding delays on Developer Platforms</p>
+              <div class="diff-cell">
+                <p class="diff-cell__eye">Regulated sectors</p>
+                <h3 class="diff-cell__h">Compliance built in</h3>
+                <p class="diff-cell__p">Central Bank, FCA, NCSC, OGP, NHS DSPT — compliance embedded from sprint one, not bolted on before audit.</p>
               </div>
             </div>
+            <a href="about/" class="btn btn--ghost btn--lg" style="margin-top:var(--space-8); align-self:flex-start;">
+              About the team
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+            </a>
           </div>
+
         </div>
+      </div>
+    </section>
 
-        <!-- Capability Matrix Cards -->
-        <div class="cap-grid reveal">
-          <div class="cap-group">
-            <h3 class="cap-group__title">Cloud &amp; Platform</h3>
-            <div class="cap-tags">
-              <span class="cap-tag">AWS</span><span class="cap-tag">Azure</span><span class="cap-tag">GCP</span>
-              <span class="cap-tag">Terraform</span><span class="cap-tag">Kubernetes</span><span class="cap-tag">ArgoCD</span>
+    <!-- ═══════════════════════════════════════════
+         TECH STACK / CAPABILITY ARCHITECTURE
+    ═══════════════════════════════════════════ -->
+    <section class="section" id="capabilities" aria-labelledby="cap-heading">
+      <div class="container container--wide">
+        <header class="section-hd reveal">
+          <p class="section-hd__eye">Our Engine</p>
+          <h2 id="cap-heading" class="section-hd__title">Technologies we deploy in client environments</h2>
+          <p class="section-hd__sub">Tooling selected for your constraints — existing licences, team skills, regulatory preferences — not our vendor relationships.</p>
+        </header>
+
+        <div class="cap-arch reveal">
+          <!-- LAYERED ARCHITECTURE STACK SVG -->
+          <svg class="cap-arch__svg" viewBox="0 0 680 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Irish Guru technology capability stack from security foundation through cloud to AI intelligence layer">
+            <defs>
+              <linearGradient id="layer-ai" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#cfa276" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#cfa276" stop-opacity="0.03"/>
+              </linearGradient>
+              <linearGradient id="layer-platform" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#0da174" stop-opacity="0.12"/>
+                <stop offset="100%" stop-color="#0da174" stop-opacity="0.02"/>
+              </linearGradient>
+              <linearGradient id="layer-cloud" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#4a7c6f" stop-opacity="0.1"/>
+                <stop offset="100%" stop-color="#4a7c6f" stop-opacity="0.02"/>
+              </linearGradient>
+              <linearGradient id="layer-sec" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#2a3a60" stop-opacity="0.15"/>
+                <stop offset="100%" stop-color="#2a3a60" stop-opacity="0.03"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Base surface -->
+            <rect width="680" height="320" rx="16" fill="#0a0a0f"/>
+
+            <!-- Layer 4: Security (bottom) -->
+            <rect x="20" y="252" width="640" height="52" rx="8" fill="url(#layer-sec)" stroke="#1a1b26" stroke-width="1"/>
+            <rect x="20" y="252" width="5" height="52" rx="2.5" fill="#3a4a7a"/>
+            <text x="36" y="272" fill="#6a8ab0" font-family="monospace" font-size="8" font-weight="700" letter-spacing="1.5">SECURITY &amp; COMPLIANCE</text>
+            <g fill="none" stroke="#4a5a8a" stroke-width="1">
+              <text x="36" y="291" fill="#5a7090" font-family="monospace" font-size="9">Snyk  ·  Vault  ·  SonarQube  ·  ISO 27001  ·  FCA  ·  NCSC  ·  Central Bank  ·  OGP  ·  NHS DSPT  ·  DORA</text>
+            </g>
+
+            <!-- Layer 3: Cloud Foundation -->
+            <rect x="20" y="188" width="640" height="56" rx="8" fill="url(#layer-cloud)" stroke="#1a1b26" stroke-width="1"/>
+            <rect x="20" y="188" width="5" height="56" rx="2.5" fill="#4a7c6f"/>
+            <text x="36" y="208" fill="#4a9c8a" font-family="monospace" font-size="8" font-weight="700" letter-spacing="1.5">CLOUD FOUNDATION</text>
+            <text x="36" y="227" fill="#5a8a80" font-family="monospace" font-size="9">AWS  ·  Azure  ·  GCP  ·  Terraform  ·  Pulumi  ·  OpenShift  ·  FinOps  ·  Landing Zones  ·  DR  ·  Multi-region</text>
+
+            <!-- Layer 2: Platform & DevOps -->
+            <rect x="20" y="116" width="640" height="64" rx="8" fill="url(#layer-platform)" stroke="#1a1b26" stroke-width="1"/>
+            <rect x="20" y="116" width="5" height="64" rx="2.5" fill="#0da174"/>
+            <text x="36" y="136" fill="#0da174" font-family="monospace" font-size="8" font-weight="700" letter-spacing="1.5">PLATFORM &amp; DEVOPS</text>
+            <text x="36" y="155" fill="#5a9a88" font-family="monospace" font-size="9">Kubernetes  ·  ArgoCD  ·  Backstage  ·  GitHub Actions  ·  GitLab CI  ·  Azure DevOps  ·  Helm  ·  Istio  ·  Prometheus</text>
+            <text x="36" y="171" fill="#4a7a68" font-family="monospace" font-size="9">Grafana  ·  Datadog  ·  Kafka  ·  Feature Flags  ·  Canary Deployments  ·  SLIs &amp; SLOs  ·  SRE Practice</text>
+
+            <!-- Layer 1: AI & Intelligence (top, featured) -->
+            <rect x="20" y="20" width="640" height="88" rx="8" fill="url(#layer-ai)" stroke="#cfa276" stroke-width="1.5"/>
+            <rect x="20" y="20" width="5" height="88" rx="2.5" fill="#cfa276"/>
+            <text x="36" y="44" fill="#cfa276" font-family="monospace" font-size="8" font-weight="700" letter-spacing="1.5">AI &amp; INTELLIGENCE</text>
+            <text x="36" y="63" fill="#b09070" font-family="monospace" font-size="9">Azure OpenAI  ·  LangChain  ·  LlamaIndex  ·  Databricks  ·  MLflow  ·  Snowflake  ·  dbt  ·  Apache Airflow</text>
+            <text x="36" y="79" fill="#907060" font-family="monospace" font-size="9">Hugging Face  ·  Pinecone  ·  pgvector  ·  RLHF Pipelines  ·  Human-in-the-Loop  ·  EU AI Act  ·  Model Governance</text>
+            <!-- OUTCOME badge -->
+            <rect x="570" y="28" width="80" height="22" rx="4" fill="rgba(207,162,118,0.12)" stroke="#cfa276" stroke-width="1"/>
+            <text x="610" y="43" text-anchor="middle" fill="#cfa276" font-family="monospace" font-size="8" font-weight="700">PRODUCTION</text>
+
+            <!-- Vertical connector arrows between layers -->
+            <path d="M50 108 L50 116" stroke="#2a2b38" stroke-width="1.5" marker-end="url(#arr)"/>
+            <path d="M50 180 L50 188" stroke="#2a2b38" stroke-width="1.5"/>
+            <path d="M50 244 L50 252" stroke="#2a2b38" stroke-width="1.5"/>
+          </svg>
+
+          <!-- Side metrics -->
+          <div class="cap-arch__metrics">
+            <div class="cap-metric">
+              <span class="cap-metric__val" data-counter="3.8" data-counter-suffix="×" data-counter-decimals="1">3.8×</span>
+              <span class="cap-metric__lbl">Median deployment frequency increase post DevSecOps</span>
             </div>
-          </div>
-          <div class="cap-group">
-            <h3 class="cap-group__title">AI &amp; Intelligence</h3>
-            <div class="cap-tags">
-              <span class="cap-tag">Azure OpenAI</span><span class="cap-tag">Databricks</span><span class="cap-tag">Snowflake</span>
-              <span class="cap-tag">LangChain</span><span class="cap-tag">dbt</span><span class="cap-tag">Kafka</span>
+            <div class="cap-metric">
+              <span class="cap-metric__val" data-counter="30" data-counter-suffix="%">30%</span>
+              <span class="cap-metric__lbl">Infrastructure run-cost reduction within six months</span>
             </div>
-          </div>
-          <div class="cap-group">
-            <h3 class="cap-group__title">Security &amp; Delivery</h3>
-            <div class="cap-tags">
-              <span class="cap-tag">GitHub Actions</span><span class="cap-tag">Snyk</span><span class="cap-tag">Vault</span>
-              <span class="cap-tag">SonarQube</span><span class="cap-tag">ISO 27001</span><span class="cap-tag">Backstage</span>
-            </div>
-          </div>
-          <div class="cap-group">
-            <h3 class="cap-group__title">Application Stack</h3>
-            <div class="cap-tags">
-              <span class="cap-tag">Java / Spring</span><span class="cap-tag">.NET Core</span><span class="cap-tag">Python</span>
-              <span class="cap-tag">Node.js</span><span class="cap-tag">React</span>
+            <div class="cap-metric">
+              <span class="cap-metric__val" data-counter="65" data-counter-suffix="%">65%</span>
+              <span class="cap-metric__lbl">Developer onboarding time saved on platform programmes</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- --- Industries --------------------------------------------------------- -->
-    <section class="section" id="industries" aria-labelledby="industries-title">
+    <!-- ═══════════════════════════════════════════
+         INDUSTRIES
+    ═══════════════════════════════════════════ -->
+    <section class="section section--alt" id="industries" aria-labelledby="ind-heading">
       <div class="container container--wide">
-        <header class="section__header reveal">
-          <div class="section__rule" aria-hidden="true"></div>
-          <span class="section__eyebrow">Industries</span>
-          <h2 id="industries-title" class="section__title">Sectors we support in Ireland &amp; the UK</h2>
-          <p class="section__desc">We understand the regulatory bodies, audit expectations, and supply frameworks specific to your industry, eliminating typical consultancy onboarding drag.</p>
+        <header class="section-hd reveal">
+          <div class="section-hd__rule" aria-hidden="true"></div>
+          <p class="section-hd__eye">Sectors</p>
+          <h2 id="ind-heading" class="section-hd__title">Deep regulatory context. Zero ramp-up drag.</h2>
+          <p class="section-hd__sub">We already operate inside your compliance frameworks — Central Bank, FCA, NCSC, NHS — which means our teams are production-ready without a three-month context-building phase.</p>
         </header>
 
-        <div class="industry-bento reveal">
-          <!-- Financial Services (Featured) -->
-          <article class="industry-card industry-card--lead">
-            <p class="industry-card__region">Ireland &amp; UK</p>
-            <h3 class="industry-card__title"><a href="industries/#financial-services">Financial Services</a></h3>
-            <p class="industry-card__desc">Core banking modernization, payment rails, secure cloud hosting, and AI classification pipelines built for strict compliance oversight.</p>
-            <p class="industry-card__context">Central Bank of Ireland · FCA · PCI-DSS · PSD2 · DORA-ready change protocols</p>
+        <div class="sector-grid reveal">
+          <article class="sector-card sector-card--lead">
+            <p class="sector-card__region">Ireland &amp; UK</p>
+            <h3 class="sector-card__title"><a href="industries/#financial-services">Financial Services</a></h3>
+            <p class="sector-card__desc">Core banking modernisation, payment infrastructure, AI-assisted compliance operations, and regulatory reporting automation for banks, insurers, and regulated fintechs.</p>
+            <p class="sector-card__reg">Central Bank of Ireland · FCA · PCI-DSS · PSD2 · DORA-ready change control</p>
           </article>
-
-          <!-- Government -->
-          <article class="industry-card industry-card--public">
-            <p class="industry-card__region">Public Sector</p>
-            <h3 class="industry-card__title"><a href="industries/#public-sector">Government &amp; Authorities</a></h3>
-            <p class="industry-card__desc">Secure, containerized platform migrations and automated DevSecOps pipelines aligned with G-Cloud guidelines.</p>
-            <p class="industry-card__context">OGP · CCS G-Cloud · NCSC Cloud Principles</p>
+          <article class="sector-card">
+            <p class="sector-card__region">Public Sector</p>
+            <h3 class="sector-card__title"><a href="industries/#public-sector">Government</a></h3>
+            <p class="sector-card__desc">Containerised workload migrations and DevSecOps pipelines for departments and agencies under CCS G-Cloud and OGP procurement.</p>
+            <p class="sector-card__reg">OGP · CCS G-Cloud · NCSC Cloud Principles</p>
           </article>
-
-          <!-- Healthcare -->
-          <article class="industry-card industry-card--health">
-            <p class="industry-card__region">Healthcare</p>
-            <h3 class="industry-card__title"><a href="industries/#healthcare">Health &amp; Life Sciences</a></h3>
-            <p class="industry-card__desc">Interoperable, secure clinical data stores and automated HIPAA/GDPR auditing structures.</p>
-            <p class="industry-card__context">HSE · NHS · HL7 FHIR · NHS DSPT</p>
+          <article class="sector-card">
+            <p class="sector-card__region">Healthcare</p>
+            <h3 class="sector-card__title"><a href="industries/#healthcare">Health &amp; Life Sciences</a></h3>
+            <p class="sector-card__desc">Interoperable clinical data stores and compliant cloud platforms for HSE, NHS, and private health networks.</p>
+            <p class="sector-card__reg">HSE · NHS · HL7 FHIR · NHS DSPT</p>
           </article>
-
-          <!-- Telecoms -->
-          <article class="industry-card industry-card--telecom">
-            <p class="industry-card__region">Telecoms</p>
-            <h3 class="industry-card__title"><a href="industries/#telecom">Telecommunications</a></h3>
-            <p class="industry-card__desc">Billing storage migration, legacy file transition, and 99.999% high-availability platform deployments.</p>
-            <p class="industry-card__context">ComReg · Ofcom · 24/7/365 SRE Runbooks</p>
+          <article class="sector-card">
+            <p class="sector-card__region">Telecom</p>
+            <h3 class="sector-card__title"><a href="industries/#telecom">Telecommunications</a></h3>
+            <p class="sector-card__desc">Billing archive migrations, legacy decomissions, and 99.999% availability platform engineering for national operators.</p>
+            <p class="sector-card__reg">ComReg · Ofcom · 24/7 SRE</p>
           </article>
-
-          <!-- Enterprise -->
-          <article class="industry-card industry-card--enterprise">
-            <p class="industry-card__region">Enterprise</p>
-            <h3 class="industry-card__title"><a href="industries/#enterprise">Corporate Services</a></h3>
-            <p class="industry-card__desc">Consolidated multi-tenant platforms, FinOps operating frameworks, and accelerated release schedules.</p>
-            <p class="industry-card__context">Multi-Entity IAM · SAP/Oracle Integration</p>
+          <article class="sector-card">
+            <p class="sector-card__region">Enterprise</p>
+            <h3 class="sector-card__title"><a href="industries/#enterprise">Corporate</a></h3>
+            <p class="sector-card__desc">Shared-service consolidation, engineering culture programmes, and cross-entity FinOps governance at scale.</p>
+            <p class="sector-card__reg">Multi-entity IAM · SAP/Oracle · FinOps</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- --- Immersive Case Study Feature -------------------------------------- -->
-    <section class="section section--muted" id="case-study" aria-labelledby="case-title">
+    <!-- ═══════════════════════════════════════════
+         CASE STUDY FEATURE
+    ═══════════════════════════════════════════ -->
+    <section class="section" id="case-study" aria-labelledby="cs-heading">
       <div class="container container--wide">
-        <header class="section__header reveal">
-          <span class="section__eyebrow">Case Study</span>
-          <h2 id="case-title" class="section__title">Proven Production Outcomes</h2>
-          <p class="section__desc">Real-world delivery records from complex, regulated environments — not hypothetical projection slide decks.</p>
+        <header class="section-hd reveal">
+          <p class="section-hd__eye">Proof in Production</p>
+          <h2 id="cs-heading" class="section-hd__title">Real outcomes. Real environments.</h2>
+          <p class="section-hd__sub">Selected records from live programmes in regulated Irish and UK sectors. Not hypothetical ROI projections.</p>
         </header>
 
-        <article class="case-immersive reveal">
-          <!-- Visual Column: Gorgeous Custom Inline SVG Transfer Path -->
-          <div class="case-immersive__visual">
-            <svg viewBox="0 0 500 250" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Diagram of billing data migration: legacy warehouse to secure Azure cloud">
-              <!-- Grid background pattern -->
-              <rect width="100%" height="100%" fill="var(--color-bg-inset)" rx="12"/>
-              <line x1="50" y1="125" x2="450" y2="125" stroke="var(--color-border)" stroke-width="2" stroke-dasharray="6 6"/>
-              
-              <!-- Legacy Warehouse Node -->
-              <rect x="50" y="85" width="100" height="80" rx="8" fill="var(--color-bg-elevated)" stroke="var(--color-border)" stroke-width="1.5"/>
-              <text x="100" y="115" fill="var(--color-text-subtle)" font-family="var(--font-mono)" font-size="9" text-anchor="middle">LEGACY</text>
-              <text x="100" y="135" fill="var(--color-primary)" font-family="var(--font-display)" font-size="11" font-weight="600" text-anchor="middle">22Yr Archive</text>
-              <text x="100" y="150" fill="var(--color-error)" font-family="var(--font-mono)" font-size="8" text-anchor="middle">PROPRIETARY</text>
+        <article class="case-feature reveal" aria-label="Case study: Telecom billing archive migration">
+          <!-- Visual column -->
+          <div class="case-feature__visual">
+            <svg viewBox="0 0 480 260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Migration path from 22-year legacy billing archive to Azure cloud, showing three validation stages and zero compliance incidents">
+              <rect width="480" height="260" rx="16" fill="#0a0a0f"/>
 
-              <!-- Secure Stream Node -->
-              <circle cx="250" cy="125" r="35" fill="var(--color-accent-muted)" stroke="var(--color-accent)" stroke-width="2"/>
-              <text x="250" y="122" fill="var(--color-accent)" font-family="var(--font-mono)" font-size="10" font-weight="700" text-anchor="middle">STREAM</text>
-              <text x="250" y="135" fill="var(--color-primary)" font-family="var(--font-display)" font-size="10" font-weight="600" text-anchor="middle">Validation</text>
+              <!-- Legacy Block -->
+              <rect x="24" y="80" width="110" height="100" rx="10" fill="#0d0d14" stroke="#2a2b38" stroke-width="1.5"/>
+              <text x="79" y="114" text-anchor="middle" fill="#6a6c7d" font-family="monospace" font-size="9" font-weight="700">LEGACY</text>
+              <text x="79" y="130" text-anchor="middle" fill="#a0a2b0" font-family="'Cabinet Grotesk', sans-serif" font-size="11" font-weight="600">22yr Archive</text>
+              <text x="79" y="146" text-anchor="middle" fill="#e5484d" font-family="monospace" font-size="8">EOL Hardware</text>
+              <!-- Data lines flowing from it -->
+              <path d="M134 110 L165 110" stroke="#2a2b38" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M134 130 L165 130" stroke="#2a2b38" stroke-width="1.5" stroke-dasharray="4 3"/>
+              <path d="M134 150 L165 150" stroke="#2a2b38" stroke-width="1.5" stroke-dasharray="4 3"/>
 
-              <!-- Azure Target Node -->
-              <rect x="350" y="85" width="100" height="80" rx="8" fill="var(--color-bg-elevated)" stroke="var(--color-sage)" stroke-width="2"/>
-              <text x="400" y="115" fill="var(--color-sage)" font-family="var(--font-mono)" font-size="9" text-anchor="middle">AZURE CLOUD</text>
-              <text x="400" y="135" fill="var(--color-primary)" font-family="var(--font-display)" font-size="11" font-weight="600" text-anchor="middle">Target Blob</text>
-              <text x="400" y="150" fill="var(--color-sage)" font-family="var(--font-mono)" font-size="8" text-anchor="middle">SECURE &amp; READ</text>
+              <!-- Validation stage 1 -->
+              <circle cx="185" cy="130" r="22" fill="#0d0d14" stroke="#1a1b26" stroke-width="1.5"/>
+              <text x="185" y="125" text-anchor="middle" fill="#6a6c7d" font-family="monospace" font-size="7">EXTRACT</text>
+              <text x="185" y="138" text-anchor="middle" fill="#a0a2b0" font-family="monospace" font-size="8">& PARSE</text>
+
+              <!-- Arrow -->
+              <path d="M207 130 L235 130" stroke="#cfa276" stroke-width="1.5"/>
+              <polygon points="235,126 243,130 235,134" fill="#cfa276"/>
+
+              <!-- Validation stage 2 -->
+              <circle cx="258" cy="130" r="22" fill="#0d0d14" stroke="#cfa276" stroke-width="1.5"/>
+              <text x="258" y="125" text-anchor="middle" fill="#cfa276" font-family="monospace" font-size="7">VALIDATE</text>
+              <text x="258" y="138" text-anchor="middle" fill="#cfa276" font-family="monospace" font-size="8">&amp; SIGN</text>
+
+              <!-- Arrow -->
+              <path d="M280 130 L308 130" stroke="#0da174" stroke-width="1.5"/>
+              <polygon points="308,126 316,130 308,134" fill="#0da174"/>
+
+              <!-- Validation stage 3 -->
+              <circle cx="332" cy="130" r="22" fill="#0d0d14" stroke="#0da174" stroke-width="1.5"/>
+              <text x="332" y="125" text-anchor="middle" fill="#0da174" font-family="monospace" font-size="7">SECURE</text>
+              <text x="332" y="138" text-anchor="middle" fill="#0da174" font-family="monospace" font-size="8">LOAD</text>
+
+              <!-- Arrow -->
+              <path d="M354 130 L378 130" stroke="#0da174" stroke-width="1.5"/>
+              <polygon points="378,126 386,130 378,134" fill="#0da174"/>
+
+              <!-- Azure target -->
+              <rect x="346" y="80" width="110" height="100" rx="10" fill="#0d0d14" stroke="#0da174" stroke-width="2"/>
+              <text x="401" y="114" text-anchor="middle" fill="#0da174" font-family="monospace" font-size="9" font-weight="700">AZURE</text>
+              <text x="401" y="130" text-anchor="middle" fill="#a0a2b0" font-family="'Cabinet Grotesk', sans-serif" font-size="11" font-weight="600">Cloud Storage</text>
+              <text x="401" y="146" text-anchor="middle" fill="#0da174" font-family="monospace" font-size="8">ISO + GDPR</text>
+
+              <!-- Stage labels underneath -->
+              <text x="185" y="175" text-anchor="middle" fill="#3a3b48" font-family="monospace" font-size="8">Stage 1</text>
+              <text x="258" y="175" text-anchor="middle" fill="#5a4a30" font-family="monospace" font-size="8">Stage 2</text>
+              <text x="332" y="175" text-anchor="middle" fill="#2a5a48" font-family="monospace" font-size="8">Stage 3</text>
+
+              <!-- Header text -->
+              <text x="24" y="44" fill="#6a6c7d" font-family="monospace" font-size="10" font-weight="700" letter-spacing="1">BILLING ARCHIVE MIGRATION · NATIONAL TELECOM · IRELAND</text>
+              <text x="24" y="60" fill="#3a3b48" font-family="monospace" font-size="8">1.4 billion records · zero compliance downtime · 13 weeks discovery to cutover</text>
             </svg>
           </div>
 
-          <div class="case-immersive__body">
-            <p class="hero__eyeline" style="margin-bottom:0.5rem;">Telecom · Ireland</p>
-            <h3 class="section__title" style="font-size:var(--text-2xl);margin-bottom:1rem;">Billing archive migration for a national operator</h3>
-            <p class="section__desc" style="font-size:var(--text-sm);margin-bottom:1.5rem;">A tier-one telecom operator needed to decommission a legacy 22-year-old billing repository running on obsolete proprietary hardware. Continuous data extraction, validation, and zero compliance downtime were strict regulatory parameters throughout the execution.</p>
-            <p class="section__desc" style="font-size:var(--text-sm);">We designed a zero-downtime, validated cloud ingestion pipeline, migrated over 1.4 billion complex database records, and established ISO-compliant identity schemas to protect historical records.</p>
-            
-            <dl class="case-immersive__metrics">
+          <!-- Metrics column -->
+          <div class="case-feature__body">
+            <p class="case-feature__tag">Telecom · Ireland</p>
+            <h3 class="case-feature__h">Billing archive migration for a national operator</h3>
+            <p class="case-feature__p">A tier-one operator needed to retire a 22-year billing repository on proprietary end-of-life hardware. Legal discovery, customer service, and regulator access required zero interruption throughout migration.</p>
+            <p class="case-feature__p">Irish Guru designed a zero-downtime validation pipeline, migrated 1.4 billion records with full audit trails, and established ISO-compliant access schemas across the decommissioned estate.</p>
+            <dl class="case-feature__metrics">
               <div>
-                <dt class="case-immersive__metric-val" data-counter="13" data-counter-suffix=" wks">13 wks</dt>
-                <dd class="case-immersive__metric-lbl">Kick-off to final cutover</dd>
+                <dt class="case-feature__metric-val" data-counter="13" data-counter-suffix=" wks">13 wks</dt>
+                <dd class="case-feature__metric-lbl">Kickoff to final cutover</dd>
               </div>
               <div>
-                <dt class="case-immersive__metric-val" data-counter="58" data-counter-suffix="%">58%</dt>
-                <dd class="case-immersive__metric-lbl">Faster audit response times</dd>
+                <dt class="case-feature__metric-val" data-counter="58" data-counter-suffix="%">58%</dt>
+                <dd class="case-feature__metric-lbl">Faster compliance queries</dd>
               </div>
               <div>
-                <dt class="case-immersive__metric-val">€980K</dt>
-                <dd class="case-immersive__metric-lbl">Annual operational savings</dd>
+                <dt class="case-feature__metric-val">€980K</dt>
+                <dd class="case-feature__metric-lbl">Annual operational saving</dd>
               </div>
               <div>
-                <dt class="case-immersive__metric-val" data-counter="0" data-counter-suffix="">0</dt>
-                <dd class="case-immersive__metric-lbl">Compliance downtime events</dd>
+                <dt class="case-feature__metric-val" data-counter="0">0</dt>
+                <dd class="case-feature__metric-lbl">Compliance incidents</dd>
               </div>
             </dl>
+            <a href="case-studies/" class="btn btn--ghost btn--lg" style="margin-top:var(--space-6);">
+              View all case studies
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+            </a>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- --- Quick FAQ Section -------------------------------------------------- -->
-    <section class="section" id="faq" aria-labelledby="faq-title">
-      <div class="container">
-        <header class="section__header reveal" style="text-align: center; margin-inline: auto;">
-          <div class="section__rule" style="margin-inline: auto;" aria-hidden="true"></div>
-          <span class="section__eyebrow">FAQ</span>
-          <h2 id="faq-title" class="section__title">Common consultation topics</h2>
+    <!-- ═══════════════════════════════════════════
+         FAQ
+    ═══════════════════════════════════════════ -->
+    <section class="section section--alt" id="faq" aria-labelledby="faq-heading">
+      <div class="container" style="max-width:52rem;">
+        <header class="section-hd section-hd--center reveal">
+          <p class="section-hd__eye">FAQ</p>
+          <h2 id="faq-heading" class="section-hd__title">Common questions from CTO calls</h2>
         </header>
-
         <div class="faq-list reveal">
           <div class="faq-item">
             <button class="faq-item__trigger" type="button" aria-expanded="false">
-              <span>Do you only offer advice, or do you write code?</span>
-              <svg class="faq-item__icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m-8-8h16"/></svg>
+              <span>Do you advise, or do you actually write code?</span>
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
             </button>
-            <div class="faq-item__content" aria-hidden="true">
-              <p>We are engineers first. Every principal consultant we assign will spend their time building your architecture, provisioning infrastructure, securing gates, and training your team — not creating generic roadmap slides.</p>
+            <div class="faq-item__body">
+              <p>We are engineers first. Every principal we place spends their time in your codebase — building infrastructure, writing pipelines, hardening security gates, and training your team. We do not produce roadmap decks and hand off to a junior bench.</p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-item__trigger" type="button" aria-expanded="false">
               <span>How are engagements scoped and priced?</span>
-              <svg class="faq-item__icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m-8-8h16"/></svg>
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
             </button>
-            <div class="faq-item__content" aria-hidden="true">
-              <p>Engagements are linked directly to defined operational outcomes (such as migration waves completed or cloud costs minimized) rather than open-ended daily billing cycles.</p>
+            <div class="faq-item__body">
+              <p>We scope each engagement against production outcomes — migration waves completed, deployment frequency targets, security audit closures. Fees are reviewed weekly against agreed milestones, not open-ended daily billing cycles.</p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-item__trigger" type="button" aria-expanded="false">
-              <span>Do you support UK-based projects?</span>
-              <svg class="faq-item__icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m-8-8h16"/></svg>
+              <span>Can you work with our UK-based teams?</span>
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg>
             </button>
-            <div class="faq-item__content" aria-hidden="true">
-              <p>Yes. Our headquarters are in Dublin, but our team regularly travels to operate on-site with engineering departments across England, Scotland, Wales, and Northern Ireland.</p>
+            <div class="faq-item__body">
+              <p>Yes. We are headquartered in Dublin but regularly embed on-site with teams in London, Manchester, Edinburgh, Belfast, and Cardiff. Travel is included in our standard engagement structure for critical delivery phases.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- --- Final CTA Block ---------------------------------------------------- -->
-    <section class="section section--inset" id="contact" aria-label="Get in touch">
-      <div class="container reveal" style="text-align: center; max-width: 38rem;">
-        <span class="section__eyebrow">Begin Your Transition</span>
-        <h2 class="section__title" style="font-size:var(--text-4xl);margin-bottom:var(--space-4);">Let's discuss your delivery priority</h2>
-        <p class="section__desc" style="margin-bottom:var(--space-8);">Arrange a 45-minute discovery briefing directly with a senior consultant. No sales pitch, just real technical assessment of your scope.</p>
-        <div style="display:flex; justify-content:center; gap:var(--space-4); flex-wrap:wrap;">
-          <a href="contact/" class="btn btn--lg btn--primary">Book a Consultation</a>
-          <a href="services/" class="btn btn--lg btn--secondary">Explore Capabilities</a>
+    <!-- ═══════════════════════════════════════════
+         CLOSING CTA
+    ═══════════════════════════════════════════ -->
+    <section class="section cta-section" aria-label="Book a consultation">
+      <div class="container">
+        <div class="cta-block reveal">
+          <div class="cta-block__copy">
+            <p class="section-hd__eye">Begin the Programme</p>
+            <h2 class="cta-block__h">Let's assess your delivery priority</h2>
+            <p class="cta-block__p">45 minutes with a senior Irish Guru consultant. No pitch deck, no sales rep — a real technical assessment of your programme scope and options.</p>
+          </div>
+          <div class="cta-block__actions">
+            <a href="contact/" class="btn btn--primary btn--xl">Book a Consultation</a>
+            <a href="services/" class="btn btn--ghost btn--xl">Explore Services</a>
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- --- Footer ------------------------------------------------------------- -->
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="./" class="logo" aria-label="Irish Guru — Home">
-          <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
-            <path d="M12 12H20C24.4183 12 28 15.5817 28 20V20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="20" cy="20" r="4" fill="var(--color-primary)"/>
-          </svg>
-          <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
-        </a>
-        <p class="footer-brand__desc">Senior-led technology consulting and compliant delivery for organisations in Ireland and the United Kingdom.</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="./" class="logo" aria-label="Irish Guru — Home">
+            <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
+              <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="var(--color-border)" stroke-width="1.5"/>
+              <path d="M12 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+              <circle cx="20" cy="20" r="3.5" fill="var(--color-primary)"/>
+            </svg>
+            <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
+          </a>
+          <p class="footer-brand__desc">Senior-led technology consulting and delivery for mid-market and enterprise organisations in Ireland and the United Kingdom.</p>
+          <p class="footer-brand__address">Lower Baggot Street, Dublin 2<br>info.irishguru@gmail.com</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <p class="footer-col__head">Consulting</p>
+            <a href="services/#ai" class="footer-col__link">Artificial Intelligence</a>
+            <a href="services/#cloud" class="footer-col__link">Cloud Enablement</a>
+            <a href="services/#platform" class="footer-col__link">Platform Engineering</a>
+            <a href="services/#devops" class="footer-col__link">DevOps &amp; DevSecOps</a>
+            <a href="services/#data" class="footer-col__link">Data &amp; Analytics</a>
+            <a href="services/#strategy" class="footer-col__link">Technology Strategy</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__head">Company</p>
+            <a href="about/" class="footer-col__link">About Us</a>
+            <a href="industries/" class="footer-col__link">Industries</a>
+            <a href="case-studies/" class="footer-col__link">Case Studies</a>
+            <a href="contact/" class="footer-col__link">Contact</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__head">Sectors</p>
+            <a href="industries/#financial-services" class="footer-col__link">Financial Services</a>
+            <a href="industries/#public-sector" class="footer-col__link">Government</a>
+            <a href="industries/#healthcare" class="footer-col__link">Healthcare</a>
+            <a href="industries/#telecom" class="footer-col__link">Telecommunications</a>
+          </div>
+        </nav>
       </div>
 
-      <div class="footer-col">
-        <h3 class="footer-col__title">Consulting</h3>
-        <ul class="footer-links">
-          <li><a href="services/#ai" class="footer-link">Artificial Intelligence</a></li>
-          <li><a href="services/#cloud" class="footer-link">Cloud Enablement</a></li>
-          <li><a href="services/#platform" class="footer-link">Platform Engineering</a></li>
-          <li><a href="services/#devops" class="footer-link">DevOps &amp; DevSecOps</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Company</h3>
-        <ul class="footer-links">
-          <li><a href="about/" class="footer-link">About Us</a></li>
-          <li><a href="industries/" class="footer-link">Industries</a></li>
-          <li><a href="case-studies/" class="footer-link">Case Studies</a></li>
-          <li><a href="contact/" class="footer-link">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Dublin HQ</h3>
-        <p class="footer-col__desc" style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:var(--leading-normal);">
-          Irish Guru Ltd.<br>
-          Lower Baggot Street,<br>
-          Dublin 2, Ireland<br>
-          <strong>info.irishguru@gmail.com</strong>
-        </p>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Irish Guru Ltd. All rights reserved. Registered in Ireland (No. Placeholder).</p>
-      <div class="footer-meta-links">
-        <a href="#privacy">Privacy Statement</a>
-        <a href="#terms">Terms of Engagement</a>
+      <div class="footer-base">
+        <p>&copy; 2026 Irish Guru Ltd. All rights reserved. Registered in Ireland.</p>
+        <div class="footer-base__links">
+          <a href="#privacy">Privacy</a>
+          <a href="#terms">Terms</a>
+        </div>
       </div>
     </div>
   </footer>

@@ -3,50 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07070a" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#f9f9fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07070a">
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&f[]=cabinet-grotesk@800,700,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <title>Industries — Irish Guru Technology Consulting</title>
-  <meta name="description" content="Technology consulting tailored to regulatory and operational environments in Ireland and the UK — finance, government, health, and enterprise.">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Irish Guru delivers regulated-sector technology programmes for financial services, government, healthcare, and telecom organisations across Ireland and the UK.">
   <link rel="canonical" href="https://irishguru.com/industries/">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Irish Guru">
-  <meta property="og:title" content="Industries — Irish Guru Technology Consulting">
-  <meta property="og:description" content="Our industry expertise, regulatory baselines, and public procurement details.">
-  <meta property="og:url" content="https://irishguru.com/industries/">
-  <meta property="og:image" content="https://irishguru.com/favicon.svg">
-  <meta property="og:locale" content="en_IE">
-
-  <script>
-    (function(){var t=localStorage.getItem('irishguru-theme');if(!t)t='dark';document.documentElement.setAttribute('data-theme',t);})();
-  </script>
+  <script>(function(){var t=localStorage.getItem('irishguru-theme');document.documentElement.setAttribute('data-theme',t||'dark');})();</script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-
-  <!-- --- Header / Navbar ---------------------------------------------------- -->
   <header class="site-header" role="banner">
     <div class="container site-header__inner">
       <a href="../" class="logo" aria-label="Irish Guru — Home">
-        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
           <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
-          <rect x="1" y="1" width="38" height="38" rx="9" stroke="var(--color-border)" stroke-width="1.5"/>
-          <path d="M12 12H20C24.4183 12 28 15.5817 28 20V20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2.5" stroke-linejoin="round"/>
-          <path d="M20 20H28" stroke="var(--color-accent)" stroke-width="2.5"/>
-          <circle cx="20" cy="20" r="4" fill="var(--color-primary)"/>
+          <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="var(--color-border)" stroke-width="1.5"/>
+          <path d="M12 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+          <circle cx="20" cy="20" r="3.5" fill="var(--color-primary)"/>
           <circle cx="28" cy="12" r="2.5" fill="var(--color-sage)"/>
         </svg>
         <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav" aria-label="Primary">
         <a href="../" class="nav__link" data-nav="home">Home</a>
         <a href="../about/" class="nav__link" data-nav="about">About</a>
         <a href="../services/" class="nav__link" data-nav="services">Services</a>
@@ -55,15 +39,17 @@
         <a href="../contact/" class="nav__link" data-nav="contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode">
           <svg class="theme-toggle__icon--light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <svg class="theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="../contact/" class="btn btn--primary btn--sm header-cta">Book a Consultation</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span class="menu-toggle__bar"></span></button>
+        <a href="../contact/" class="btn btn--primary btn--sm">Book a Consultation</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span>
+        </button>
       </div>
     </div>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" aria-hidden="true">
       <ul class="mobile-nav__list">
         <li><a href="../" class="mobile-nav__link" data-nav="home">Home</a></li>
         <li><a href="../about/" class="mobile-nav__link" data-nav="about">About</a></li>
@@ -74,148 +60,181 @@
       </ul>
       <div class="mobile-nav__cta">
         <a href="../contact/" class="btn btn--primary btn--lg btn--block">Book a Consultation</a>
-        <a href="../services/" class="btn btn--secondary btn--lg btn--block">Explore Services</a>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <!-- --- Industries Hero ---------------------------------------------------- -->
-    <section class="page-hero">
+    <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="../">Home</a><span class="breadcrumb__sep" aria-hidden="true">/</span><span aria-current="page">Industries</span>
+          <a href="../">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">›</span>
+          <span aria-current="page">Industries</span>
         </nav>
-        <h1 class="page-hero__title">Tailored sector context for Irish and UK markets</h1>
-        <p class="page-hero__desc">We remove consulting onboarding delays because we already operate inside your regulator, procurement, and risk frameworks.</p>
+        <h1 id="page-title" class="page-hero__title">Regulatory context built in, not retrofitted.</h1>
+        <p class="page-hero__desc">We operate inside your compliance framework from sprint one — Central Bank, FCA, NCSC, NHS, OGP. That eliminates the multi-month ramp that burns through budgets before delivery starts.</p>
       </div>
     </section>
 
-    <!-- --- Industry Cards detail ---------------------------------------------- -->
-    <section class="section">
+    <section class="section" aria-label="Sector detail">
       <div class="container">
-        <div style="display:grid; gap:var(--space-8); grid-template-columns:1fr;">
-          
-          <!-- FS Detail -->
-          <article class="service-detail reveal" id="financial-services">
-            <div>
-              <p class="service-detail__label">Sector 01</p>
-              <h2 class="service-detail__title">Financial Services</h2>
-              <p class="service-detail__intro">Core platform modernization, robust payment processing, secure multitenancy setups, and automated compliance records for banks, fintech startups, and insurers.</p>
-            </div>
-            <div>
-              <ul class="service-detail__list">
-                <li>Regulatory alignment: Central Bank of Ireland, FCA, and PCI-DSS baselines.</li>
-                <li>Audit-ready change tracking, IAM policies, and encrypted ledger archives.</li>
-                <li>DORA-compliant cloud architectures, disaster plans, and redundancy testing.</li>
-              </ul>
-            </div>
-          </article>
 
-          <!-- Public Sector -->
-          <article class="service-detail reveal" id="public-sector">
-            <div>
-              <p class="service-detail__label">Sector 02</p>
-              <h2 class="service-detail__title">Government &amp; Public Sector</h2>
-              <p class="service-detail__intro">Secure, sovereign cloud transitions, Kubernetes container management, and automated release gates built for state agency departments.</p>
+        <div class="service-detail reveal" id="financial-services">
+          <div class="service-detail__left">
+            <p class="service-detail__label">Sector 01 · Ireland &amp; UK</p>
+            <h2 class="service-detail__title">Financial Services</h2>
+            <p class="service-detail__intro">Banks, insurers, and regulated fintechs require technology delivery partners who understand change-control, model risk, and data residency before the first sprint. We carry that context by default.</p>
+          </div>
+          <div class="service-detail__right">
+            <ul class="service-detail__list">
+              <li>Core banking modernisation and system decomposition</li>
+              <li>Payment infrastructure design and PSD2 compliance engineering</li>
+              <li>AI-assisted AML, KYC, and fraud detection pipelines</li>
+              <li>Regulatory reporting automation (EBA, CBI, FCA, Solvency II)</li>
+              <li>DORA-aligned operational resilience and change-control frameworks</li>
+              <li>Cloud migration under CBI and FCA data residency requirements</li>
+              <li>API banking and open finance integration delivery</li>
+            </ul>
+            <div class="service-detail__outcome">
+              <p class="service-detail__outcome-title">Compliance Frameworks</p>
+              <p>Central Bank of Ireland · FCA · PCI-DSS · PSD2 · Solvency II · DORA · GDPR · EBA Guidelines</p>
             </div>
-            <div>
-              <ul class="service-detail__list">
-                <li>Compliance with OGP frameworks, CCS G-Cloud rules, and secure hosting directives.</li>
-                <li>NCSC cyber principles integrated directly into landing zones.</li>
-                <li>Clean developer templates designed for quick knowledge transfer.</li>
-              </ul>
-            </div>
-          </article>
+          </div>
+        </div>
 
-          <!-- Healthcare -->
-          <article class="service-detail reveal" id="healthcare">
-            <div>
-              <p class="service-detail__label">Sector 03</p>
-              <h2 class="service-detail__title">Health &amp; Life Sciences</h2>
-              <p class="service-detail__intro">Interoperable data stores, secure clinical streaming integrations, and compliant cloud architectures for major health systems and research centers.</p>
+        <div class="service-detail reveal" id="public-sector">
+          <div class="service-detail__left">
+            <p class="service-detail__label">Sector 02 · Ireland &amp; UK</p>
+            <h2 class="service-detail__title">Government &amp; Public Sector</h2>
+            <p class="service-detail__intro">Government agencies and departments face unique constraints — procurement rules, legacy dependencies, security clearance requirements, and public scrutiny of every technical decision. We operate within these parameters as standard.</p>
+          </div>
+          <div class="service-detail__right">
+            <ul class="service-detail__list">
+              <li>Containerised workload migration under OGP and CCS G-Cloud frameworks</li>
+              <li>Legacy system decommissioning and digital service platform delivery</li>
+              <li>DevSecOps pipeline implementation aligned to NCSC Cloud Security Principles</li>
+              <li>AI-assisted case management and document automation</li>
+              <li>Inter-agency data sharing platform design</li>
+              <li>Security baseline and penetration testing programme delivery</li>
+              <li>Open-source technology strategy for cost reduction</li>
+            </ul>
+            <div class="service-detail__outcome">
+              <p class="service-detail__outcome-title">Compliance Frameworks</p>
+              <p>OGP · CCS G-Cloud · NCSC Cloud Security Principles · Cyber Essentials · GDPR · DPIA</p>
             </div>
-            <div>
-              <ul class="service-detail__list">
-                <li>Data protection parameters mapping to HSE, NHS, and HL7 FHIR standards.</li>
-                <li>Secure patient access tracking, encrypted stores, and DSPT compliance.</li>
-                <li>Audited cloud data pipelines designed for predictive analytics.</li>
-              </ul>
-            </div>
-          </article>
+          </div>
+        </div>
 
-          <!-- Telecoms -->
-          <article class="service-detail reveal" id="telecom">
-            <div>
-              <p class="service-detail__label">Sector 04</p>
-              <h2 class="service-detail__title">Telecommunications</h2>
-              <p class="service-detail__intro">Billing warehouse migrations, high-availability platform clustering, and automated incident recovery structures built for high-throughput networks.</p>
+        <div class="service-detail reveal" id="healthcare">
+          <div class="service-detail__left">
+            <p class="service-detail__label">Sector 03 · Ireland &amp; UK</p>
+            <h2 class="service-detail__title">Health &amp; Life Sciences</h2>
+            <p class="service-detail__intro">Health data requires a level of security, governance, and interoperability discipline that eliminates most delivery partners. We design and deliver FHIR-compliant clinical data platforms for HSE, NHS, and private health networks.</p>
+          </div>
+          <div class="service-detail__right">
+            <ul class="service-detail__list">
+              <li>HL7 FHIR R4 data layer design and EHR integration</li>
+              <li>NHS DSPT-compliant cloud platform design and implementation</li>
+              <li>Clinical analytics and population health data platform delivery</li>
+              <li>AI-assisted diagnostic support pipeline governance</li>
+              <li>Patient data anonymisation and consent management frameworks</li>
+              <li>Medical device software regulatory documentation support</li>
+              <li>Interoperability design for shared care record programmes</li>
+            </ul>
+            <div class="service-detail__outcome">
+              <p class="service-detail__outcome-title">Compliance Frameworks</p>
+              <p>HSE · NHS · NHS DSPT · HL7 FHIR R4 · ISO 13485 · GDPR · Data Security Standards</p>
             </div>
-            <div>
-              <ul class="service-detail__list">
-                <li>System availability architectures exceeding 99.999% SLA targets.</li>
-                <li>Phased billing archive transitions without legal discovery interruptions.</li>
-                <li>Dedicated SRE response plans and telemetry standards.</li>
-              </ul>
-            </div>
-          </article>
+          </div>
+        </div>
 
+        <div class="service-detail reveal" id="telecom">
+          <div class="service-detail__left">
+            <p class="service-detail__label">Sector 04 · Ireland &amp; UK</p>
+            <h2 class="service-detail__title">Telecommunications</h2>
+            <p class="service-detail__intro">National operators cannot afford unplanned outages. Our telecom programmes are designed around 99.999% availability requirements, zero-downtime migration methodology, and 24/7 SRE practices from day one.</p>
+          </div>
+          <div class="service-detail__right">
+            <ul class="service-detail__list">
+              <li>Legacy BSS/OSS decommissioning and archive migration</li>
+              <li>Billing platform re-platforming on cloud-native infrastructure</li>
+              <li>Real-time event streaming platform delivery for network analytics</li>
+              <li>Zero-downtime migration methodology for production systems</li>
+              <li>24/7 SRE framework and on-call runbook establishment</li>
+              <li>Network function virtualisation and 5G-era platform engineering</li>
+              <li>Regulatory reporting automation for ComReg and Ofcom</li>
+            </ul>
+            <div class="service-detail__outcome">
+              <p class="service-detail__outcome-title">Compliance Frameworks</p>
+              <p>ComReg · Ofcom · NIS Directive · GDPR · ISO 27001 · Carrier-grade SLA frameworks</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section cta-section" aria-label="Book a consultation">
+      <div class="container">
+        <div class="cta-block reveal">
+          <div class="cta-block__copy">
+            <p class="section-hd__eye">Regulated sector delivery</p>
+            <h2 class="cta-block__h">Ready to discuss your programme?</h2>
+            <p class="cta-block__p">45 minutes with a senior principal who already understands your regulatory context. No qualification process, no pre-proposal requirement.</p>
+          </div>
+          <div class="cta-block__actions">
+            <a href="../contact/" class="btn btn--primary btn--xl">Book a Consultation</a>
+            <a href="../services/" class="btn btn--ghost btn--xl">Our Services</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- --- Footer ------------------------------------------------------------- -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="../" class="logo" aria-label="Irish Guru — Home">
-          <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
-            <path d="M12 12H20C24.4183 12 28 15.5817 28 20V20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="20" cy="20" r="4" fill="var(--color-primary)"/>
-          </svg>
-          <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
-        </a>
-        <p class="footer-brand__desc">Senior-led technology consulting and compliant delivery for organisations in Ireland and the United Kingdom.</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="../" class="logo" aria-label="Irish Guru — Home">
+            <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
+              <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="var(--color-border)" stroke-width="1.5"/>
+              <path d="M12 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+              <circle cx="20" cy="20" r="3.5" fill="var(--color-primary)"/>
+            </svg>
+            <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
+          </a>
+          <p class="footer-brand__desc">Senior-led technology consulting and delivery for Irish and UK organisations.</p>
+          <p class="footer-brand__address">Lower Baggot Street, Dublin 2<br>info.irishguru@gmail.com</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <p class="footer-col__head">Consulting</p>
+            <a href="../services/#ai" class="footer-col__link">Artificial Intelligence</a>
+            <a href="../services/#cloud" class="footer-col__link">Cloud Enablement</a>
+            <a href="../services/#platform" class="footer-col__link">Platform Engineering</a>
+            <a href="../services/#devops" class="footer-col__link">DevOps &amp; DevSecOps</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__head">Company</p>
+            <a href="../about/" class="footer-col__link">About Us</a>
+            <a href="../industries/" class="footer-col__link">Industries</a>
+            <a href="../case-studies/" class="footer-col__link">Case Studies</a>
+            <a href="../contact/" class="footer-col__link">Contact</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__head">Sectors</p>
+            <a href="#financial-services" class="footer-col__link">Financial Services</a>
+            <a href="#public-sector" class="footer-col__link">Government</a>
+            <a href="#healthcare" class="footer-col__link">Healthcare</a>
+            <a href="#telecom" class="footer-col__link">Telecoms</a>
+          </div>
+        </nav>
       </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Consulting</h3>
-        <ul class="footer-links">
-          <li><a href="../services/#ai" class="footer-link">Artificial Intelligence</a></li>
-          <li><a href="../services/#cloud" class="footer-link">Cloud Enablement</a></li>
-          <li><a href="../services/#platform" class="footer-link">Platform Engineering</a></li>
-          <li><a href="../services/#devops" class="footer-link">DevOps &amp; DevSecOps</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Company</h3>
-        <ul class="footer-links">
-          <li><a href="../about/" class="footer-link">About Us</a></li>
-          <li><a href="../industries/" class="footer-link">Industries</a></li>
-          <li><a href="../case-studies/" class="footer-link">Case Studies</a></li>
-          <li><a href="../contact/" class="footer-link">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Dublin HQ</h3>
-        <p class="footer-col__desc" style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:var(--leading-normal);">
-          Irish Guru Ltd.<br>
-          Lower Baggot Street,<br>
-          Dublin 2, Ireland<br>
-          <strong>info.irishguru@gmail.com</strong>
-        </p>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Irish Guru Ltd. All rights reserved. Registered in Ireland (No. Placeholder).</p>
-      <div class="footer-meta-links">
-        <a href="#privacy">Privacy Statement</a>
-        <a href="#terms">Terms of Engagement</a>
+      <div class="footer-base">
+        <p>&copy; 2026 Irish Guru Ltd. All rights reserved. Registered in Ireland.</p>
+        <div class="footer-base__links"><a href="#privacy">Privacy</a><a href="#terms">Terms</a></div>
       </div>
     </div>
   </footer>

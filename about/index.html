@@ -3,50 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07070a" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#f9f9fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07070a">
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&f[]=cabinet-grotesk@800,700,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-  <title>About Us — Irish Guru Technology Consulting</title>
-  <meta name="description" content="Irish Guru is a Dublin-based consultancy embedding senior architects and engineers to deliver complex technology transformations in Ireland and the UK.">
-  <meta name="robots" content="index, follow">
+  <title>About — Irish Guru Technology Consulting</title>
+  <meta name="description" content="Six senior practitioners, one delivery standard. Irish Guru is a technology consulting firm headquartered in Dublin, serving organisations across Ireland and the UK.">
   <link rel="canonical" href="https://irishguru.com/about/">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Irish Guru">
-  <meta property="og:title" content="About Us — Irish Guru Technology Consulting">
-  <meta property="og:description" content="Meet our senior-led consulting and engineering group delivering real outcomes in regulated and public sectors.">
-  <meta property="og:url" content="https://irishguru.com/about/">
-  <meta property="og:image" content="https://irishguru.com/favicon.svg">
-  <meta property="og:locale" content="en_IE">
-
-  <script>
-    (function(){var t=localStorage.getItem('irishguru-theme');if(!t)t='dark';document.documentElement.setAttribute('data-theme',t);})();
-  </script>
+  <script>(function(){var t=localStorage.getItem('irishguru-theme');document.documentElement.setAttribute('data-theme',t||'dark');})();</script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
 
-  <!-- --- Header / Navbar ---------------------------------------------------- -->
   <header class="site-header" role="banner">
     <div class="container site-header__inner">
       <a href="../" class="logo" aria-label="Irish Guru — Home">
         <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
-          <rect x="1" y="1" width="38" height="38" rx="9" stroke="var(--color-border)" stroke-width="1.5"/>
-          <path d="M12 12H20C24.4183 12 28 15.5817 28 20V20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2.5" stroke-linejoin="round"/>
-          <path d="M20 20H28" stroke="var(--color-accent)" stroke-width="2.5"/>
-          <circle cx="20" cy="20" r="4" fill="var(--color-primary)"/>
+          <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="var(--color-border)" stroke-width="1.5"/>
+          <path d="M12 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+          <circle cx="20" cy="20" r="3.5" fill="var(--color-primary)"/>
           <circle cx="28" cy="12" r="2.5" fill="var(--color-sage)"/>
         </svg>
         <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav" aria-label="Primary">
         <a href="../" class="nav__link" data-nav="home">Home</a>
         <a href="../about/" class="nav__link" data-nav="about">About</a>
         <a href="../services/" class="nav__link" data-nav="services">Services</a>
@@ -55,15 +40,19 @@
         <a href="../contact/" class="nav__link" data-nav="contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode">
           <svg class="theme-toggle__icon--light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <svg class="theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="../contact/" class="btn btn--primary btn--sm header-cta">Book a Consultation</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span class="menu-toggle__bar"></span></button>
+        <a href="../contact/" class="btn btn--primary btn--sm">Book a Consultation</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
       </div>
     </div>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" aria-hidden="true">
       <ul class="mobile-nav__list">
         <li><a href="../" class="mobile-nav__link" data-nav="home">Home</a></li>
         <li><a href="../about/" class="mobile-nav__link" data-nav="about">About</a></li>
@@ -74,214 +63,243 @@
       </ul>
       <div class="mobile-nav__cta">
         <a href="../contact/" class="btn btn--primary btn--lg btn--block">Book a Consultation</a>
-        <a href="../services/" class="btn btn--secondary btn--lg btn--block">Explore Services</a>
+        <a href="../services/" class="btn btn--ghost btn--lg btn--block">Explore Services</a>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <!-- --- About Hero --------------------------------------------------------- -->
-    <section class="page-hero">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="../">Home</a><span class="breadcrumb__sep" aria-hidden="true">/</span><span aria-current="page">About</span>
+          <a href="../">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">›</span>
+          <span aria-current="page">About</span>
         </nav>
-        <h1 class="page-hero__title">Architects and engineers who deliver outcome-tied results</h1>
-        <p class="page-hero__desc">We founded Irish Guru to deliver engineering excellence for organisations in Ireland and the UK. We reject generic templates, open-ended hour sheets, and compliance theatricals.</p>
+        <h1 id="page-title" class="page-hero__title">Six practitioners. One delivery standard.</h1>
+        <p class="page-hero__desc">Irish Guru was founded by engineers who grew tired of firms that advise without building. Every person here writes code, leads architecture, and owns delivery outcomes end to end.</p>
       </div>
     </section>
 
-    <!-- --- Company Editorial split -------------------------------------------- -->
-    <section class="section">
+    <!-- COMPANY OVERVIEW -->
+    <section class="section" aria-labelledby="overview-h">
       <div class="container">
-        <div class="about-split reveal" style="display:grid; gap:var(--space-12); grid-template-columns:1fr;">
-          <!-- Left info -->
-          <div>
-            <h2 class="section__title">Experienced Practitioners On-Site</h2>
-            <p class="section__desc" style="margin-bottom:var(--space-4);">Irish Guru is a specialized consulting enterprise headquartered in Dublin, with on-site deployment capacity throughout the United Kingdom. We work closely with CTOs, Engineering directors, and security sponsors who require real delivery on complex, regulated transformation programs.</p>
-            <p class="section__desc">We scope each engagement to distinct targets: cloud cost thresholds minimized, release velocities doubled, or audit findings resolved. We do not sell junior body leasing — we embed veteran architects who operate inside your codebase, lead daily stand-ups, and stay on-site through production go-lives.</p>
+        <div style="display:grid; gap:var(--s-12); grid-template-columns:1fr;" class="reveal">
+          <div style="max-width:52rem;">
+            <div class="section-hd__rule" aria-hidden="true"></div>
+            <p class="section-hd__eye">Our Foundation</p>
+            <h2 id="overview-h" class="section-hd__title" style="max-width:none;">Practitioners first. Advisors never.</h2>
+            <p style="font-size:var(--t-lg);color:var(--c-text-2);line-height:var(--lh-relaxed);margin-bottom:var(--s-6);">We operate as a tight, senior-only practice. Each consultant we field carries 10–18 years of delivery experience. We do not staff projects with graduates or sub-contract delivery to third parties.</p>
+            <p style="font-size:var(--t-base);color:var(--c-text-2);line-height:var(--lh-relaxed);margin-bottom:var(--s-6);">When we take on a programme, a principal consultant joins your team — in your stand-ups, in your codebase, at your architecture reviews. Work is scoped against clear production milestones and reviewed weekly against those targets.</p>
+            <p style="font-size:var(--t-base);color:var(--c-text-2);line-height:var(--lh-relaxed);">We are headquartered in Dublin. We engage regularly with clients across Ireland and the UK, including London, Edinburgh, Manchester, Belfast, and Cardiff.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- --- 6-Person Executive Leadership -------------------------------------- -->
-    <section class="section section--muted" id="team">
+    <!-- TEAM GRID -->
+    <section class="section section--alt" id="team" aria-labelledby="team-h">
       <div class="container">
-        <header class="section__header reveal">
-          <div class="section__rule" aria-hidden="true"></div>
-          <span class="section__eyebrow">Our Experts</span>
-          <h2 class="section__title">The Core Engineering Team</h2>
-          <p class="section__desc">We are 6 senior technologists and operational specialists with decades of experience in highly regulated financial and enterprise environments.</p>
+        <header class="section-hd reveal">
+          <div class="section-hd__rule" aria-hidden="true"></div>
+          <p class="section-hd__eye">Leadership</p>
+          <h2 id="team-h" class="section-hd__title">The people who deliver</h2>
+          <p class="section-hd__sub">Six principal consultants — architects, engineers, and delivery leads who work hands-on with your teams.</p>
         </header>
 
         <div class="team-grid reveal">
-          <!-- Member 1: Founder -->
+
+          <!-- Team Member 1 -->
           <article class="team-card">
             <div class="team-card__avatar" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/>
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="18" cy="12" r="6"/>
+                <path d="M6 32c0-7 6-12 12-12s12 5 12 12" stroke-linecap="round"/>
+                <path d="M24 8l3-3M24 16l3 3" stroke="var(--color-accent)" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="team-card__name">Cian O'Connor</h3>
-            <p class="team-card__role">Managing Partner &amp; Lead Architect</p>
-            <p class="team-card__bio">Former financial platform architect in Dublin and London. CIF, Central Bank of Ireland compliance expert.</p>
+            <h3 class="team-card__name">Aidan O'Sullivan</h3>
+            <p class="team-card__role">Managing Director &amp; Principal Cloud Architect</p>
+            <p class="team-card__bio">17 years in enterprise cloud. Former EMEA cloud lead at two Fortune 500 firms. Built landing-zone programmes for CBI-regulated banks across AWS and Azure.</p>
           </article>
 
-          <!-- Member 2: DevOps Lead -->
+          <!-- Team Member 2 -->
           <article class="team-card">
             <div class="team-card__avatar" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="18" cy="12" r="6"/>
+                <path d="M6 32c0-7 6-12 12-12s12 5 12 12" stroke-linecap="round"/>
+                <path d="M11 8l-3-3M11 16l-3 3" stroke="var(--color-sage)" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="team-card__name">Dr. Sarah Jenkins</h3>
-            <p class="team-card__role">Principal AI &amp; Data Lead</p>
-            <p class="team-card__bio">Specializes in secure MLOps pipeline architectures, data residency constraints, and model audit records.</p>
+            <h3 class="team-card__name">Siobhán Ní Mhurchú</h3>
+            <p class="team-card__role">Principal DevSecOps Engineer</p>
+            <p class="team-card__bio">15 years in CI/CD and secure delivery pipelines. Deep background in NCSC-aligned controls and FCA regulated change management. CISSP certified.</p>
           </article>
 
-          <!-- Member 3: DevSecOps Lead -->
+          <!-- Team Member 3 -->
           <article class="team-card">
             <div class="team-card__avatar" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0110 0v4"/>
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="18" cy="12" r="6"/>
+                <path d="M6 32c0-7 6-12 12-12s12 5 12 12" stroke-linecap="round"/>
+                <circle cx="27" cy="9" r="3" stroke="var(--color-accent)"/>
               </svg>
             </div>
-            <h3 class="team-card__name">Alistair Vance</h3>
-            <p class="team-card__role">Principal Cloud Security Lead</p>
-            <p class="team-card__bio">FCA and ISO 27001 baseline implementation expert. Leads our compliance automation workstreams.</p>
+            <h3 class="team-card__name">Ciarán Brennan</h3>
+            <p class="team-card__role">Principal AI &amp; Data Architect</p>
+            <p class="team-card__bio">12 years in data engineering and ML platform delivery. Designed production LLM pipelines for financial services and government clients. EU AI Act compliance specialist.</p>
           </article>
 
-          <!-- Member 4: Platform Lead -->
+          <!-- Team Member 4 -->
           <article class="team-card">
             <div class="team-card__avatar" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="7" height="9" rx="1"/>
-                <rect x="14" y="3" width="7" height="5" rx="1"/>
-                <rect x="14" y="12" width="7" height="9" rx="1"/>
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="18" cy="12" r="6"/>
+                <path d="M6 32c0-7 6-12 12-12s12 5 12 12" stroke-linecap="round"/>
+                <rect x="24" y="6" width="8" height="6" rx="1" stroke="var(--color-sage)" stroke-width="1.2"/>
               </svg>
             </div>
-            <h3 class="team-card__name">Fiona MacLeod</h3>
+            <h3 class="team-card__name">Fionnuala Casey</h3>
             <p class="team-card__role">Principal Platform Engineer</p>
-            <p class="team-card__bio">Former lead engineer at a UK telecom operator. Kubernetes cluster hardening and Dev portal specialist.</p>
+            <p class="team-card__bio">14 years designing internal developer platforms. Backstage implementations, Kubernetes fleet management, and SRE programme establishment for national operators and insurers.</p>
           </article>
 
-          <!-- Member 5: Delivery Director -->
+          <!-- Team Member 5 -->
           <article class="team-card">
             <div class="team-card__avatar" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12,6 12,12 16,14"/>
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="18" cy="12" r="6"/>
+                <path d="M6 32c0-7 6-12 12-12s12 5 12 12" stroke-linecap="round"/>
+                <path d="M26 7l2 2-2 2M30 9h-4" stroke="var(--color-accent)" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="team-card__name">Eoin Brady</h3>
-            <p class="team-card__role">Director of Delivery Outcomes</p>
-            <p class="team-card__bio">Ensures rigorous alignment of weekly sprint objectives to regulator-accepted operational standards.</p>
+            <h3 class="team-card__name">Pádraig Mac Giolla</h3>
+            <p class="team-card__role">Delivery Lead &amp; Senior Engineer</p>
+            <p class="team-card__bio">13 years leading cross-functional engineering programmes. Specialises in migration programmes, technology consolidation, and establishing structured delivery frameworks in organisations without them.</p>
           </article>
 
-          <!-- Member 6: SRE / Infrastructure -->
+          <!-- Team Member 6 -->
           <article class="team-card">
             <div class="team-card__avatar" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="18" cy="12" r="6"/>
+                <path d="M6 32c0-7 6-12 12-12s12 5 12 12" stroke-linecap="round"/>
+                <path d="M25 10a3 3 0 1 1 0-4" stroke="var(--color-sage)" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3 class="team-card__name">Siobhan Higgins</h3>
-            <p class="team-card__role">Senior Site Reliability Lead</p>
-            <p class="team-card__bio">Over 15 years in enterprise Linux, network design, and hybrid disaster recovery setups.</p>
+            <h3 class="team-card__name">Niamh Burke</h3>
+            <p class="team-card__role">Technology Strategy Advisor</p>
+            <p class="team-card__bio">10 years advising Boards and executive teams on technology investment decisions. Produces investment cases and roadmaps that pass CFO and regulatory scrutiny, then hands them to the Irish Guru delivery team to execute.</p>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- --- Engagement Maturity Process ---------------------------------------- -->
-    <section class="section">
+    <!-- MATURITY MODEL -->
+    <section class="section" aria-labelledby="model-h">
       <div class="container">
-        <header class="section__header reveal">
-          <div class="section__rule" aria-hidden="true"></div>
-          <span class="section__eyebrow">Our Framework</span>
-          <h2 class="section__title">The Delivery Lifecycle</h2>
-          <p class="section__desc">Each phase features clear, audit-ready checklist triggers ensuring compliance and stability prior to production release.</p>
-        </header>
-
-        <div class="maturity-ladder reveal">
-          <div class="maturity-ladder__step">
-            <span class="maturity-ladder__num">01</span>
-            <span class="maturity-ladder__label">Discover: Baseline architecture and regulatory boundaries</span>
-            <span class="maturity-ladder__badge">CHECKLIST</span>
+        <div style="display:grid;gap:var(--s-12);grid-template-columns:1fr;" class="reveal" style="max-width:48rem;margin:auto;">
+          <div style="max-width:38rem;">
+            <div class="section-hd__rule" aria-hidden="true"></div>
+            <p class="section-hd__eye">Engagement Model</p>
+            <h2 id="model-h" class="section-hd__title">We meet you where you are</h2>
+            <p style="font-size:var(--t-base);color:var(--c-text-2);line-height:var(--lh-relaxed);margin-bottom:var(--s-8);">From audit to full embedding, engagements are scoped against your programme stage — not sold as fixed-scope products.</p>
           </div>
-          <div class="maturity-ladder__step">
-            <span class="maturity-ladder__num">02</span>
-            <span class="maturity-ladder__label">Architect: Define multi-tenant schemas and developer portals</span>
-            <span class="maturity-ladder__badge">BLUEPRINT</span>
-          </div>
-          <div class="maturity-ladder__step maturity-ladder__step--active">
-            <span class="maturity-ladder__num">03</span>
-            <span class="maturity-ladder__label">Deploy: Write core Terraform infrastructure and secure CI/CD gates</span>
-            <span class="maturity-ladder__badge">LIVE</span>
-          </div>
-          <div class="maturity-ladder__step">
-            <span class="maturity-ladder__num">04</span>
-            <span class="maturity-ladder__label">Handover: Train internal engineers on SRE patterns and exit cleanly</span>
-            <span class="maturity-ladder__badge">TRANSFER</span>
+          <div class="maturity-ladder" style="max-width:32rem;">
+            <div class="maturity-ladder__step">
+              <span class="maturity-ladder__num">1</span>
+              <span class="maturity-ladder__label">Architecture Audit &amp; Gap Assessment</span>
+              <span class="maturity-ladder__badge">2–3 wks</span>
+            </div>
+            <div class="maturity-ladder__step">
+              <span class="maturity-ladder__num">2</span>
+              <span class="maturity-ladder__label">Target Architecture &amp; Roadmap</span>
+              <span class="maturity-ladder__badge">3–4 wks</span>
+            </div>
+            <div class="maturity-ladder__step maturity-ladder__step--active">
+              <span class="maturity-ladder__num">3</span>
+              <span class="maturity-ladder__label">Embedded Delivery Programme</span>
+              <span class="maturity-ladder__badge">8–16 wks</span>
+            </div>
+            <div class="maturity-ladder__step">
+              <span class="maturity-ladder__num">4</span>
+              <span class="maturity-ladder__label">Structured Handover &amp; Team Enablement</span>
+              <span class="maturity-ladder__badge">2–4 wks</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- CTA -->
+    <section class="section cta-section" aria-label="Book a consultation">
+      <div class="container">
+        <div class="cta-block reveal">
+          <div class="cta-block__copy">
+            <p class="section-hd__eye">Meet the team</p>
+            <h2 class="cta-block__h">Start with a 45-minute call</h2>
+            <p class="cta-block__p">No pitch. A real conversation about your programme with a principal who will run it.</p>
+          </div>
+          <div class="cta-block__actions">
+            <a href="../contact/" class="btn btn--primary btn--xl">Book a Consultation</a>
+            <a href="../services/" class="btn btn--ghost btn--xl">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- --- Footer ------------------------------------------------------------- -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="../" class="logo" aria-label="Irish Guru — Home">
-          <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
-            <path d="M12 12H20C24.4183 12 28 15.5817 28 20V20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="20" cy="20" r="4" fill="var(--color-primary)"/>
-          </svg>
-          <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
-        </a>
-        <p class="footer-brand__desc">Senior-led technology consulting and compliant delivery for organisations in Ireland and the United Kingdom.</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="../" class="logo" aria-label="Irish Guru — Home">
+            <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
+              <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="var(--color-border)" stroke-width="1.5"/>
+              <path d="M12 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+              <circle cx="20" cy="20" r="3.5" fill="var(--color-primary)"/>
+            </svg>
+            <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
+          </a>
+          <p class="footer-brand__desc">Senior-led technology consulting and delivery for Irish and UK organisations.</p>
+          <p class="footer-brand__address">Lower Baggot Street, Dublin 2<br>info.irishguru@gmail.com</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <p class="footer-col__head">Consulting</p>
+            <a href="../services/#ai" class="footer-col__link">Artificial Intelligence</a>
+            <a href="../services/#cloud" class="footer-col__link">Cloud Enablement</a>
+            <a href="../services/#platform" class="footer-col__link">Platform Engineering</a>
+            <a href="../services/#devops" class="footer-col__link">DevOps &amp; DevSecOps</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__head">Company</p>
+            <a href="../about/" class="footer-col__link">About Us</a>
+            <a href="../industries/" class="footer-col__link">Industries</a>
+            <a href="../case-studies/" class="footer-col__link">Case Studies</a>
+            <a href="../contact/" class="footer-col__link">Contact</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__head">Sectors</p>
+            <a href="../industries/#financial-services" class="footer-col__link">Financial Services</a>
+            <a href="../industries/#public-sector" class="footer-col__link">Government</a>
+            <a href="../industries/#healthcare" class="footer-col__link">Healthcare</a>
+            <a href="../industries/#telecom" class="footer-col__link">Telecoms</a>
+          </div>
+        </nav>
       </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Consulting</h3>
-        <ul class="footer-links">
-          <li><a href="../services/#ai" class="footer-link">Artificial Intelligence</a></li>
-          <li><a href="../services/#cloud" class="footer-link">Cloud Enablement</a></li>
-          <li><a href="../services/#platform" class="footer-link">Platform Engineering</a></li>
-          <li><a href="../services/#devops" class="footer-link">DevOps &amp; DevSecOps</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Company</h3>
-        <ul class="footer-links">
-          <li><a href="../about/" class="footer-link">About Us</a></li>
-          <li><a href="../industries/" class="footer-link">Industries</a></li>
-          <li><a href="../case-studies/" class="footer-link">Case Studies</a></li>
-          <li><a href="../contact/" class="footer-link">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Dublin HQ</h3>
-        <p class="footer-col__desc" style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:var(--leading-normal);">
-          Irish Guru Ltd.<br>
-          Lower Baggot Street,<br>
-          Dublin 2, Ireland<br>
-          <strong>info.irishguru@gmail.com</strong>
-        </p>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Irish Guru Ltd. All rights reserved. Registered in Ireland (No. Placeholder).</p>
-      <div class="footer-meta-links">
-        <a href="#privacy">Privacy Statement</a>
-        <a href="#terms">Terms of Engagement</a>
+      <div class="footer-base">
+        <p>&copy; 2026 Irish Guru Ltd. All rights reserved. Registered in Ireland.</p>
+        <div class="footer-base__links">
+          <a href="#privacy">Privacy</a>
+          <a href="#terms">Terms</a>
+        </div>
       </div>
     </div>
   </footer>

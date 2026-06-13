@@ -3,50 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07070a" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#f9f9fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07070a">
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&f[]=cabinet-grotesk@800,700,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <title>Case Studies — Irish Guru Technology Consulting</title>
-  <meta name="description" content="Measurable technology consulting outcomes from complex, highly regulated Irish and UK enterprise environments.">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Production-verified delivery records from Irish Guru technology programmes in financial services, government, and telecommunications across Ireland and the UK.">
   <link rel="canonical" href="https://irishguru.com/case-studies/">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Irish Guru">
-  <meta property="og:title" content="Case Studies — Irish Guru Technology Consulting">
-  <meta property="og:description" content="Read real outcomes: migrations, platform engineering, and AI deployments.">
-  <meta property="og:url" content="https://irishguru.com/case-studies/">
-  <meta property="og:image" content="https://irishguru.com/favicon.svg">
-  <meta property="og:locale" content="en_IE">
-
-  <script>
-    (function(){var t=localStorage.getItem('irishguru-theme');if(!t)t='dark';document.documentElement.setAttribute('data-theme',t);})();
-  </script>
+  <script>(function(){var t=localStorage.getItem('irishguru-theme');document.documentElement.setAttribute('data-theme',t||'dark');})();</script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-
-  <!-- --- Header / Navbar ---------------------------------------------------- -->
   <header class="site-header" role="banner">
     <div class="container site-header__inner">
       <a href="../" class="logo" aria-label="Irish Guru — Home">
-        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
           <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
-          <rect x="1" y="1" width="38" height="38" rx="9" stroke="var(--color-border)" stroke-width="1.5"/>
-          <path d="M12 12H20C24.4183 12 28 15.5817 28 20V20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2.5" stroke-linejoin="round"/>
-          <path d="M20 20H28" stroke="var(--color-accent)" stroke-width="2.5"/>
-          <circle cx="20" cy="20" r="4" fill="var(--color-primary)"/>
+          <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="var(--color-border)" stroke-width="1.5"/>
+          <path d="M12 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+          <circle cx="20" cy="20" r="3.5" fill="var(--color-primary)"/>
           <circle cx="28" cy="12" r="2.5" fill="var(--color-sage)"/>
         </svg>
         <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav" aria-label="Primary">
         <a href="../" class="nav__link" data-nav="home">Home</a>
         <a href="../about/" class="nav__link" data-nav="about">About</a>
         <a href="../services/" class="nav__link" data-nav="services">Services</a>
@@ -55,15 +39,17 @@
         <a href="../contact/" class="nav__link" data-nav="contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode">
           <svg class="theme-toggle__icon--light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <svg class="theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="../contact/" class="btn btn--primary btn--sm header-cta">Book a Consultation</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span class="menu-toggle__bar"></span></button>
+        <a href="../contact/" class="btn btn--primary btn--sm">Book a Consultation</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span>
+        </button>
       </div>
     </div>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" aria-hidden="true">
       <ul class="mobile-nav__list">
         <li><a href="../" class="mobile-nav__link" data-nav="home">Home</a></li>
         <li><a href="../about/" class="mobile-nav__link" data-nav="about">About</a></li>
@@ -74,156 +60,163 @@
       </ul>
       <div class="mobile-nav__cta">
         <a href="../contact/" class="btn btn--primary btn--lg btn--block">Book a Consultation</a>
-        <a href="../services/" class="btn btn--secondary btn--lg btn--block">Explore Services</a>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <!-- --- Case Studies Hero -------------------------------------------------- -->
-    <section class="page-hero">
+    <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="../">Home</a><span class="breadcrumb__sep" aria-hidden="true">/</span><span aria-current="page">Case Studies</span>
+          <a href="../">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">›</span>
+          <span aria-current="page">Case Studies</span>
         </nav>
-        <h1 class="page-hero__title">Outcomes measured in production pipelines</h1>
-        <p class="page-hero__desc">Selected records of how Irish Guru works with mid-market and enterprise organisations to decommission legacy systems, automate compliance, and launch AI with confidence.</p>
+        <h1 id="page-title" class="page-hero__title">Outcomes in production. Not in a deck.</h1>
+        <p class="page-hero__desc">Selected delivery records from live programmes in regulated Irish and UK sectors. Results are measured against the production milestones agreed at engagement start.</p>
       </div>
     </section>
 
-    <!-- --- Case Studies List -------------------------------------------------- -->
-    <section class="section">
+    <section class="section" aria-label="Case study list">
       <div class="container">
         <div class="cases-list">
 
-          <!-- Case 1 -->
-          <article class="case-study reveal">
-            <header class="case-study__header">
-              <p class="case-study__meta">Financial Services · Ireland</p>
-              <h2 class="case-study__title">AI regulatory document extraction for an Irish bank</h2>
-            </header>
+          <!-- CASE 1 -->
+          <article class="case-study reveal" aria-labelledby="cs1-title">
+            <div class="case-study__header">
+              <p class="case-study__meta">Telecommunications · Ireland · Cloud Migration</p>
+              <h2 id="cs1-title" class="case-study__title">22-year billing archive migrated to Azure with zero compliance downtime</h2>
+            </div>
             <div class="case-study__body">
               <div class="case-study__block">
                 <strong>The challenge</strong>
-                <p>The bank's compliance division manually classified over 12,000 regulatory files each quarter. Processing averaged 19 business days per batch, running backlog risk and tying highly-compensated risk analysts to repetitive file sorting tasks.</p>
+                <p>A tier-one national operator needed to retire a 22-year billing repository on proprietary end-of-life hardware. Legal discovery, customer service, and ComReg access required zero interruption during the migration. The system held 1.4 billion records with no documented schema.</p>
               </div>
               <div class="case-study__block">
                 <strong>Our approach</strong>
-                <p>Irish Guru designed and deployed an automated classification, parsing, and extract pipeline integrated directly with the bank's case records. We designed Human-in-the-Loop exception triggers, configured audit trail telemetry, and wrote model documentation approved by internal risk review.</p>
+                <p>Irish Guru reverse-engineered the undocumented schema, designed a three-stage validation pipeline (extract, validate, secure load), and ran parallel systems for 8 weeks before final cutover. All 1.4 billion records were migrated with full audit trails and ISO-compliant access schemas established across the decommissioned estate.</p>
               </div>
-              <dl class="case-study__results">
+              <div class="case-study__results">
                 <div>
-                  <dt class="case-study__metric-value">72%</dt>
-                  <dd class="case-study__metric-label">Reduction in manual audit volumes</dd>
+                  <p class="case-study__metric-value">13 wks</p>
+                  <p class="case-study__metric-label">Kickoff to final production cutover</p>
                 </div>
                 <div>
-                  <dt class="case-study__metric-value">4.5 days</dt>
-                  <dd class="case-study__metric-label">Average batch processing time</dd>
+                  <p class="case-study__metric-value">58%</p>
+                  <p class="case-study__metric-label">Faster regulatory query response time</p>
                 </div>
                 <div>
-                  <dt class="case-study__metric-value">18 weeks</dt>
-                  <dd class="case-study__metric-label">Kickoff to full production deployment</dd>
+                  <p class="case-study__metric-value">€980K</p>
+                  <p class="case-study__metric-label">Annual operational cost saving</p>
                 </div>
                 <div>
-                  <dt class="case-study__metric-value">€385K</dt>
-                  <dd class="case-study__metric-label">Annual run-cost saving</dd>
+                  <p class="case-study__metric-value">0</p>
+                  <p class="case-study__metric-label">Compliance or legal incidents during migration</p>
                 </div>
-              </dl>
+              </div>
             </div>
           </article>
 
-          <!-- Case 2 -->
-          <article class="case-study reveal">
-            <header class="case-study__header">
-              <p class="case-study__meta">Public Sector · United Kingdom</p>
-              <h2 class="case-study__title">Multi-application cloud migration for a UK agency</h2>
-            </header>
+          <!-- CASE 2 -->
+          <article class="case-study reveal" aria-labelledby="cs2-title">
+            <div class="case-study__header">
+              <p class="case-study__meta">Financial Services · Ireland · DevSecOps</p>
+              <h2 id="cs2-title" class="case-study__title">CI/CD pipeline overhaul delivered 4× deployment frequency for a regulated bank</h2>
+            </div>
             <div class="case-study__body">
               <div class="case-study__block">
                 <strong>The challenge</strong>
-                <p>A UK agency managed over 100 applications across three end-of-life datacentres. Leadership required a migration path that guaranteed continuous service delivery and met strict NCSC security baselines throughout transition.</p>
+                <p>A mid-tier Irish retail bank was releasing to production once every three weeks due to manual change-approval processes, inconsistent test coverage, and an absence of automated security scanning. CBI and DORA readiness requirements were pushing the urgency of a delivery transformation.</p>
               </div>
               <div class="case-study__block">
                 <strong>Our approach</strong>
-                <p>We designed an Azure landing zone, migrated 83 workloads using clean containerized designs, and trained local operators on continuous integration systems. We established FinOps cost-monitoring and threshold alert protocols from week one.</p>
+                <p>Irish Guru embedded a principal DevSecOps engineer for 16 weeks. We rebuilt the release pipeline on Azure DevOps, integrated Snyk and SonarQube into automated gates, established a secrets management layer with HashiCorp Vault, and worked with the bank's change board to reform the approval process without losing compliance controls.</p>
               </div>
-              <dl class="case-study__results">
+              <div class="case-study__results">
                 <div>
-                  <dt class="case-study__metric-value">83 apps</dt>
-                  <dd class="case-study__metric-label">Successfully migrated in 16 months</dd>
+                  <p class="case-study__metric-value">4×</p>
+                  <p class="case-study__metric-label">Deployment frequency increase</p>
                 </div>
                 <div>
-                  <dt class="case-study__metric-value">29%</dt>
-                  <dd class="case-study__metric-label">Sustained cloud infrastructure savings</dd>
+                  <p class="case-study__metric-value">48 hrs</p>
+                  <p class="case-study__metric-label">CVE patch to production time</p>
                 </div>
                 <div>
-                  <dt class="case-study__metric-value">99.98%</dt>
-                  <dd class="case-study__metric-label">Uptime maintained during cutovers</dd>
+                  <p class="case-study__metric-value">94%</p>
+                  <p class="case-study__metric-label">Automated test coverage on core journeys</p>
                 </div>
                 <div>
-                  <dt class="case-study__metric-value">Zero</dt>
-                  <dd class="case-study__metric-label">Security or compliance incidents</dd>
+                  <p class="case-study__metric-value">0</p>
+                  <p class="case-study__metric-label">Failed change management audits in first year</p>
                 </div>
-              </dl>
+              </div>
             </div>
           </article>
 
         </div>
       </div>
     </section>
+
+    <section class="section cta-section" aria-label="Book a consultation">
+      <div class="container">
+        <div class="cta-block reveal">
+          <div class="cta-block__copy">
+            <p class="section-hd__eye">Your programme next</p>
+            <h2 class="cta-block__h">Every engagement starts with an honest assessment</h2>
+            <p class="cta-block__p">We will tell you what we can deliver, in what time, at what cost — before we sign anything. No optimistic proposals that disappoint at delivery.</p>
+          </div>
+          <div class="cta-block__actions">
+            <a href="../contact/" class="btn btn--primary btn--xl">Book a Consultation</a>
+            <a href="../about/" class="btn btn--ghost btn--xl">Meet the Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- --- Footer ------------------------------------------------------------- -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="../" class="logo" aria-label="Irish Guru — Home">
-          <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
-            <path d="M12 12H20C24.4183 12 28 15.5817 28 20V20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="20" cy="20" r="4" fill="var(--color-primary)"/>
-          </svg>
-          <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
-        </a>
-        <p class="footer-brand__desc">Senior-led technology consulting and compliant delivery for organisations in Ireland and the United Kingdom.</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="../" class="logo" aria-label="Irish Guru — Home">
+            <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
+              <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="var(--color-border)" stroke-width="1.5"/>
+              <path d="M12 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+              <circle cx="20" cy="20" r="3.5" fill="var(--color-primary)"/>
+            </svg>
+            <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
+          </a>
+          <p class="footer-brand__desc">Senior-led technology consulting and delivery for Irish and UK organisations.</p>
+          <p class="footer-brand__address">Lower Baggot Street, Dublin 2<br>info.irishguru@gmail.com</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <p class="footer-col__head">Consulting</p>
+            <a href="../services/#ai" class="footer-col__link">Artificial Intelligence</a>
+            <a href="../services/#cloud" class="footer-col__link">Cloud Enablement</a>
+            <a href="../services/#platform" class="footer-col__link">Platform Engineering</a>
+            <a href="../services/#devops" class="footer-col__link">DevOps &amp; DevSecOps</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__head">Company</p>
+            <a href="../about/" class="footer-col__link">About Us</a>
+            <a href="../industries/" class="footer-col__link">Industries</a>
+            <a href="../case-studies/" class="footer-col__link">Case Studies</a>
+            <a href="../contact/" class="footer-col__link">Contact</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__head">Sectors</p>
+            <a href="../industries/#financial-services" class="footer-col__link">Financial Services</a>
+            <a href="../industries/#public-sector" class="footer-col__link">Government</a>
+            <a href="../industries/#healthcare" class="footer-col__link">Healthcare</a>
+            <a href="../industries/#telecom" class="footer-col__link">Telecoms</a>
+          </div>
+        </nav>
       </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Consulting</h3>
-        <ul class="footer-links">
-          <li><a href="../services/#ai" class="footer-link">Artificial Intelligence</a></li>
-          <li><a href="../services/#cloud" class="footer-link">Cloud Enablement</a></li>
-          <li><a href="../services/#platform" class="footer-link">Platform Engineering</a></li>
-          <li><a href="../services/#devops" class="footer-link">DevOps &amp; DevSecOps</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Company</h3>
-        <ul class="footer-links">
-          <li><a href="../about/" class="footer-link">About Us</a></li>
-          <li><a href="../industries/" class="footer-link">Industries</a></li>
-          <li><a href="../case-studies/" class="footer-link">Case Studies</a></li>
-          <li><a href="../contact/" class="footer-link">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Dublin HQ</h3>
-        <p class="footer-col__desc" style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:var(--leading-normal);">
-          Irish Guru Ltd.<br>
-          Lower Baggot Street,<br>
-          Dublin 2, Ireland<br>
-          <strong>info.irishguru@gmail.com</strong>
-        </p>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Irish Guru Ltd. All rights reserved. Registered in Ireland (No. Placeholder).</p>
-      <div class="footer-meta-links">
-        <a href="#privacy">Privacy Statement</a>
-        <a href="#terms">Terms of Engagement</a>
+      <div class="footer-base">
+        <p>&copy; 2026 Irish Guru Ltd. All rights reserved. Registered in Ireland.</p>
+        <div class="footer-base__links"><a href="#privacy">Privacy</a><a href="#terms">Terms</a></div>
       </div>
     </div>
   </footer>

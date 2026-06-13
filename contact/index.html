@@ -3,50 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07070a" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#f9f9fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07070a">
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&f[]=cabinet-grotesk@800,700,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-  <title>Contact Us — Irish Guru Technology Consulting</title>
-  <meta name="description" content="Book a discovery call with a senior consulting architect in Dublin. AI, cloud, DevOps, and compliance delivery plans.">
-  <meta name="robots" content="index, follow">
+  <title>Contact — Irish Guru Technology Consulting</title>
+  <meta name="description" content="Book a 45-minute consultation with a senior Irish Guru consultant. No pitch, no proposal — a real assessment of your technology programme.">
   <link rel="canonical" href="https://irishguru.com/contact/">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Irish Guru">
-  <meta property="og:title" content="Contact Us — Irish Guru Technology Consulting">
-  <meta property="og:description" content="Reach our Dublin headquarters or book an on-site consultation at your UK site.">
-  <meta property="og:url" content="https://irishguru.com/contact/">
-  <meta property="og:image" content="https://irishguru.com/favicon.svg">
-  <meta property="og:locale" content="en_IE">
-
-  <script>
-    (function(){var t=localStorage.getItem('irishguru-theme');if(!t)t='dark';document.documentElement.setAttribute('data-theme',t);})();
-  </script>
+  <script>(function(){var t=localStorage.getItem('irishguru-theme');document.documentElement.setAttribute('data-theme',t||'dark');})();</script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-
-  <!-- --- Header / Navbar ---------------------------------------------------- -->
   <header class="site-header" role="banner">
     <div class="container site-header__inner">
       <a href="../" class="logo" aria-label="Irish Guru — Home">
-        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
           <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
-          <rect x="1" y="1" width="38" height="38" rx="9" stroke="var(--color-border)" stroke-width="1.5"/>
-          <path d="M12 12H20C24.4183 12 28 15.5817 28 20V20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2.5" stroke-linejoin="round"/>
-          <path d="M20 20H28" stroke="var(--color-accent)" stroke-width="2.5"/>
-          <circle cx="20" cy="20" r="4" fill="var(--color-primary)"/>
+          <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="var(--color-border)" stroke-width="1.5"/>
+          <path d="M12 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+          <circle cx="20" cy="20" r="3.5" fill="var(--color-primary)"/>
           <circle cx="28" cy="12" r="2.5" fill="var(--color-sage)"/>
         </svg>
         <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav" aria-label="Primary">
         <a href="../" class="nav__link" data-nav="home">Home</a>
         <a href="../about/" class="nav__link" data-nav="about">About</a>
         <a href="../services/" class="nav__link" data-nav="services">Services</a>
@@ -55,15 +39,16 @@
         <a href="../contact/" class="nav__link" data-nav="contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode">
           <svg class="theme-toggle__icon--light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <svg class="theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="../contact/" class="btn btn--primary btn--sm header-cta">Book a Consultation</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span class="menu-toggle__bar"></span></button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span>
+        </button>
       </div>
     </div>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" aria-hidden="true">
       <ul class="mobile-nav__list">
         <li><a href="../" class="mobile-nav__link" data-nav="home">Home</a></li>
         <li><a href="../about/" class="mobile-nav__link" data-nav="about">About</a></li>
@@ -72,88 +57,93 @@
         <li><a href="../case-studies/" class="mobile-nav__link" data-nav="case-studies">Case Studies</a></li>
         <li><a href="../contact/" class="mobile-nav__link" data-nav="contact">Contact</a></li>
       </ul>
-      <div class="mobile-nav__cta">
-        <a href="../contact/" class="btn btn--primary btn--lg btn--block">Book a Consultation</a>
-        <a href="../services/" class="btn btn--secondary btn--lg btn--block">Explore Services</a>
-      </div>
     </nav>
   </header>
 
   <main id="main">
-    <!-- --- Contact Hero ------------------------------------------------------- -->
-    <section class="page-hero">
+    <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="../">Home</a><span class="breadcrumb__sep" aria-hidden="true">/</span><span aria-current="page">Contact</span>
+          <a href="../">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">›</span>
+          <span aria-current="page">Contact</span>
         </nav>
-        <h1 class="page-hero__title">Initiate your transformation program</h1>
-        <p class="page-hero__desc">Submit your technical priorities. A principal consulting engineer will follow up within one business day to organize a discovery call.</p>
+        <h1 id="page-title" class="page-hero__title">Start with a real conversation.</h1>
+        <p class="page-hero__desc">45 minutes with a senior consultant. No pitch deck. A direct assessment of your programme scope and the most realistic path to production.</p>
       </div>
     </section>
 
-    <!-- --- Contact Split component ------------------------------------------- -->
-    <section class="section">
+    <section class="section" aria-label="Contact form and details">
       <div class="container">
         <div class="contact-split reveal">
-          
+
           <div class="contact-info">
-            <h2 class="contact-info__title">Practitioners on the ground</h2>
-            <p class="contact-info__text">We regularly travel to partner with technology sponsors at corporate offices and data centers across Dublin, London, and Belfast. Speak directly to our lead architect during your discovery session.</p>
-            
+            <h2 class="contact-info__title">What to expect</h2>
+            <p class="contact-info__text">You will speak directly with a principal consultant — not a business development manager. We will ask about your programme, your team, your timeline, and your constraints. We will tell you honestly whether we are a fit.</p>
+
             <div class="contact-details">
               <div class="contact-detail-card">
-                <h3>Dublin Headquarters</h3>
-                <p>Baggot Street Lower, Dublin 2, D02 F114</p>
+                <h3>Email</h3>
+                <p><a href="mailto:info.irishguru@gmail.com" style="color:var(--c-gold);">info.irishguru@gmail.com</a></p>
               </div>
               <div class="contact-detail-card">
-                <h3>General Communications</h3>
-                <p><strong>info.irishguru@gmail.com</strong></p>
+                <h3>Offices</h3>
+                <p>Lower Baggot Street, Dublin 2, Ireland<br>Available for on-site across Ireland &amp; the UK</p>
+              </div>
+              <div class="contact-detail-card">
+                <h3>Response time</h3>
+                <p>All enquiries receive a reply within one business day. Consultation calls scheduled within three working days of initial contact.</p>
               </div>
             </div>
           </div>
 
-          <!-- Luxury Lead Form -->
           <div>
-            <form class="contact-form" novalidate>
+            <form class="contact-form" novalidate aria-label="Book a consultation form">
               <div class="form-grid">
                 <div class="form__group">
-                  <label class="form__label" for="contact-name">Your Name *</label>
-                  <input class="form__input" type="text" id="contact-name" name="name" required placeholder="Cian O'Connor">
-                  <span class="form__error-message">This field is required.</span>
+                  <label class="form__label" for="f-first">First name *</label>
+                  <input class="form__input" type="text" id="f-first" name="first_name" required autocomplete="given-name" placeholder="Aidan">
+                  <span class="form__error-message">Please enter your first name</span>
                 </div>
                 <div class="form__group">
-                  <label class="form__label" for="contact-email">Corporate Email *</label>
-                  <input class="form__input" type="email" id="contact-email" name="email" required placeholder="cian@company.ie">
-                  <span class="form__error-message">Please enter a valid email address.</span>
+                  <label class="form__label" for="f-last">Last name *</label>
+                  <input class="form__input" type="text" id="f-last" name="last_name" required autocomplete="family-name" placeholder="O'Sullivan">
+                  <span class="form__error-message">Please enter your last name</span>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="f-email">Work email *</label>
+                  <input class="form__input" type="email" id="f-email" name="email" required autocomplete="email" placeholder="aidan@company.com">
+                  <span class="form__error-message">Please enter a valid email address</span>
+                </div>
+                <div class="form__group">
+                  <label class="form__label" for="f-company">Organisation</label>
+                  <input class="form__input" type="text" id="f-company" name="company" autocomplete="organization" placeholder="Company name">
                 </div>
                 <div class="form__group form-grid__span-2">
-                  <label class="form__label" for="contact-org">Organization Name</label>
-                  <input class="form__input" type="text" id="contact-org" name="organization" placeholder="Enterprise Group Ltd">
-                </div>
-                <div class="form__group form-grid__span-2">
-                  <label class="form__label" for="contact-subject">Primary Technical Objective *</label>
-                  <select class="form__select" id="contact-subject" name="subject" required>
-                    <option value="" disabled selected>Select an objective...</option>
-                    <option value="ai">Artificial Intelligence &amp; Model pipelines</option>
-                    <option value="cloud">Cloud Enablement &amp; Cost reduction</option>
-                    <option value="devops">DevOps &amp; Security automation</option>
-                    <option value="platform">Platform Engineering Golden-paths</option>
-                    <option value="strategy">Architectural Strategy &amp; Roadmapping</option>
+                  <label class="form__label" for="f-service">Primary interest</label>
+                  <select class="form__select" id="f-service" name="service">
+                    <option value="" disabled selected>Select a practice area</option>
+                    <option>Artificial Intelligence</option>
+                    <option>Cloud Enablement</option>
+                    <option>DevOps &amp; DevSecOps</option>
+                    <option>Platform Engineering</option>
+                    <option>Data &amp; Analytics</option>
+                    <option>Technology Strategy</option>
+                    <option>Not sure yet</option>
                   </select>
-                  <span class="form__error-message">Please select a technical objective.</span>
                 </div>
                 <div class="form__group form-grid__span-2">
-                  <label class="form__label" for="contact-message">Technical Scope Summary *</label>
-                  <textarea class="form__textarea" id="contact-message" name="message" required placeholder="Describe your current system bottleneck or migration target..."></textarea>
-                  <span class="form__error-message">Please enter a scope summary.</span>
+                  <label class="form__label" for="f-message">Tell us about your programme *</label>
+                  <textarea class="form__textarea" id="f-message" name="message" rows="5" required placeholder="Brief description of the challenge, your timeline, and what a successful outcome looks like for you."></textarea>
+                  <span class="form__error-message">Please describe your programme</span>
                 </div>
               </div>
-              <button class="btn btn--lg btn--primary btn--block" type="submit">Request Consultation Briefing</button>
+              <button class="btn btn--primary btn--lg btn--block" type="submit">Send Enquiry</button>
             </form>
 
-            <div class="form__success" role="alert">
-              <h3 style="font-size:var(--text-lg);margin-bottom:var(--space-2);color:var(--color-primary);">Briefing Request Logged</h3>
-              <p>Thank you for submitting your scope parameters. A principal engineer will contact you within one business day with proposed times for our discovery briefing.</p>
+            <div class="form__success" role="alert" aria-live="polite">
+              <p style="font-weight:700;color:var(--c-sage);margin-bottom:var(--s-2);">Enquiry received — thank you.</p>
+              <p style="font-size:var(--t-sm);color:var(--c-text-2);">A principal consultant will contact you within one business day to confirm next steps and schedule a call.</p>
             </div>
           </div>
 
@@ -162,57 +152,49 @@
     </section>
   </main>
 
-  <!-- --- Footer ------------------------------------------------------------- -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="../" class="logo" aria-label="Irish Guru — Home">
-          <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
-            <path d="M12 12H20C24.4183 12 28 15.5817 28 20V20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="20" cy="20" r="4" fill="var(--color-primary)"/>
-          </svg>
-          <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
-        </a>
-        <p class="footer-brand__desc">Senior-led technology consulting and compliant delivery for organisations in Ireland and the United Kingdom.</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="../" class="logo" aria-label="Irish Guru — Home">
+            <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
+              <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="var(--color-border)" stroke-width="1.5"/>
+              <path d="M12 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+              <circle cx="20" cy="20" r="3.5" fill="var(--color-primary)"/>
+            </svg>
+            <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
+          </a>
+          <p class="footer-brand__desc">Senior-led technology consulting and delivery for Irish and UK organisations.</p>
+          <p class="footer-brand__address">Lower Baggot Street, Dublin 2<br>info.irishguru@gmail.com</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <p class="footer-col__head">Consulting</p>
+            <a href="../services/#ai" class="footer-col__link">Artificial Intelligence</a>
+            <a href="../services/#cloud" class="footer-col__link">Cloud Enablement</a>
+            <a href="../services/#platform" class="footer-col__link">Platform Engineering</a>
+            <a href="../services/#devops" class="footer-col__link">DevOps &amp; DevSecOps</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__head">Company</p>
+            <a href="../about/" class="footer-col__link">About Us</a>
+            <a href="../industries/" class="footer-col__link">Industries</a>
+            <a href="../case-studies/" class="footer-col__link">Case Studies</a>
+            <a href="../contact/" class="footer-col__link">Contact</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__head">Sectors</p>
+            <a href="../industries/#financial-services" class="footer-col__link">Financial Services</a>
+            <a href="../industries/#public-sector" class="footer-col__link">Government</a>
+            <a href="../industries/#healthcare" class="footer-col__link">Healthcare</a>
+            <a href="../industries/#telecom" class="footer-col__link">Telecoms</a>
+          </div>
+        </nav>
       </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Consulting</h3>
-        <ul class="footer-links">
-          <li><a href="../services/#ai" class="footer-link">Artificial Intelligence</a></li>
-          <li><a href="../services/#cloud" class="footer-link">Cloud Enablement</a></li>
-          <li><a href="../services/#platform" class="footer-link">Platform Engineering</a></li>
-          <li><a href="../services/#devops" class="footer-link">DevOps &amp; DevSecOps</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Company</h3>
-        <ul class="footer-links">
-          <li><a href="../about/" class="footer-link">About Us</a></li>
-          <li><a href="../industries/" class="footer-link">Industries</a></li>
-          <li><a href="../case-studies/" class="footer-link">Case Studies</a></li>
-          <li><a href="../contact/" class="footer-link">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Dublin HQ</h3>
-        <p class="footer-col__desc" style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:var(--leading-normal);">
-          Irish Guru Ltd.<br>
-          Lower Baggot Street,<br>
-          Dublin 2, Ireland<br>
-          <strong>info.irishguru@gmail.com</strong>
-        </p>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Irish Guru Ltd. All rights reserved. Registered in Ireland (No. Placeholder).</p>
-      <div class="footer-meta-links">
-        <a href="#privacy">Privacy Statement</a>
-        <a href="#terms">Terms of Engagement</a>
+      <div class="footer-base">
+        <p>&copy; 2026 Irish Guru Ltd. All rights reserved. Registered in Ireland.</p>
+        <div class="footer-base__links"><a href="#privacy">Privacy</a><a href="#terms">Terms</a></div>
       </div>
     </div>
   </footer>

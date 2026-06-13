@@ -3,50 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07070a" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#f9f9fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07070a">
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&f[]=cabinet-grotesk@800,700,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
   <title>Services — Irish Guru Technology Consulting</title>
-  <meta name="description" content="Outcome-driven technology services across AI, cloud landing zones, hardened DevOps pipelines, and self-service platform engineering.">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Irish Guru delivers AI, cloud enablement, DevSecOps, platform engineering, data and analytics, and technology strategy for Irish and UK organisations.">
   <link rel="canonical" href="https://irishguru.com/services/">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Irish Guru">
-  <meta property="og:title" content="Services — Irish Guru Technology Consulting">
-  <meta property="og:description" content="Explore our senior-led capabilities, outcome statistics, and integration toolkits.">
-  <meta property="og:url" content="https://irishguru.com/services/">
-  <meta property="og:image" content="https://irishguru.com/favicon.svg">
-  <meta property="og:locale" content="en_IE">
-
-  <script>
-    (function(){var t=localStorage.getItem('irishguru-theme');if(!t)t='dark';document.documentElement.setAttribute('data-theme',t);})();
-  </script>
+  <script>(function(){var t=localStorage.getItem('irishguru-theme');document.documentElement.setAttribute('data-theme',t||'dark');})();</script>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-
-  <!-- --- Header / Navbar ---------------------------------------------------- -->
   <header class="site-header" role="banner">
     <div class="container site-header__inner">
       <a href="../" class="logo" aria-label="Irish Guru — Home">
-        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
           <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
-          <rect x="1" y="1" width="38" height="38" rx="9" stroke="var(--color-border)" stroke-width="1.5"/>
-          <path d="M12 12H20C24.4183 12 28 15.5817 28 20V20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2.5" stroke-linejoin="round"/>
-          <path d="M20 20H28" stroke="var(--color-accent)" stroke-width="2.5"/>
-          <circle cx="20" cy="20" r="4" fill="var(--color-primary)"/>
+          <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="var(--color-border)" stroke-width="1.5"/>
+          <path d="M12 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+          <circle cx="20" cy="20" r="3.5" fill="var(--color-primary)"/>
           <circle cx="28" cy="12" r="2.5" fill="var(--color-sage)"/>
         </svg>
         <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav" aria-label="Primary">
         <a href="../" class="nav__link" data-nav="home">Home</a>
         <a href="../about/" class="nav__link" data-nav="about">About</a>
         <a href="../services/" class="nav__link" data-nav="services">Services</a>
@@ -55,15 +39,17 @@
         <a href="../contact/" class="nav__link" data-nav="contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode">
           <svg class="theme-toggle__icon--light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
           <svg class="theme-toggle__icon--dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="../contact/" class="btn btn--primary btn--sm header-cta">Book a Consultation</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span class="menu-toggle__bar"></span></button>
+        <a href="../contact/" class="btn btn--primary btn--sm">Book a Consultation</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+          <span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span><span class="menu-toggle__bar"></span>
+        </button>
       </div>
     </div>
-    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile" aria-hidden="true">
       <ul class="mobile-nav__list">
         <li><a href="../" class="mobile-nav__link" data-nav="home">Home</a></li>
         <li><a href="../about/" class="mobile-nav__link" data-nav="about">About</a></li>
@@ -74,208 +60,234 @@
       </ul>
       <div class="mobile-nav__cta">
         <a href="../contact/" class="btn btn--primary btn--lg btn--block">Book a Consultation</a>
-        <a href="../services/" class="btn btn--secondary btn--lg btn--block">Explore Services</a>
+        <a href="../services/" class="btn btn--ghost btn--lg btn--block">Explore Services</a>
       </div>
     </nav>
   </header>
 
   <main id="main">
-    <!-- --- Services Hero ------------------------------------------------------ -->
-    <section class="page-hero">
+    <section class="page-hero" aria-labelledby="page-title">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="../">Home</a><span class="breadcrumb__sep" aria-hidden="true">/</span><span aria-current="page">Services</span>
+          <a href="../">Home</a>
+          <span class="breadcrumb__sep" aria-hidden="true">›</span>
+          <span aria-current="page">Services</span>
         </nav>
-        <h1 class="page-hero__title">Practice areas scoped to production goals</h1>
-        <p class="page-hero__desc">We build working architectures and compliant release structures. Every project includes structured knowledge-transfers and clean operator manuals.</p>
+        <h1 id="page-title" class="page-hero__title">Architecture to production — nothing outsourced.</h1>
+        <p class="page-hero__desc">Seven practice areas. Each led by a principal consultant who writes code, owns architecture decisions, and delivers production milestones — not reports.</p>
       </div>
     </section>
 
-    <!-- --- Practice Detail List ----------------------------------------------- -->
-    <section class="section">
+    <section class="section" aria-label="Service practice areas">
       <div class="container">
 
         <!-- AI -->
-        <article class="service-detail reveal" id="ai">
-          <div>
-            <p class="service-detail__label">Service 01</p>
+        <div class="service-detail reveal" id="ai">
+          <div class="service-detail__left">
+            <p class="service-detail__label">Practice 01</p>
             <h2 class="service-detail__title">Artificial Intelligence</h2>
-            <p class="service-detail__intro">Progress from basic sandboxes to secure, production-ready AI pipelines with human-in-the-loop triggers designed for strict UK/EU regulatory standards.</p>
+            <p class="service-detail__intro">We design and deliver production AI systems — not proof-of-concepts that stall before deployment. Every engagement ends with a model in production, governed, monitored, and handed over to your team.</p>
           </div>
-          <div>
+          <div class="service-detail__right">
             <ul class="service-detail__list">
-              <li>High-value use-case scoping, model curation, and cost evaluations.</li>
-              <li>Lakehouse construction, training schema baselines, and data ingestion.</li>
-              <li>Predictive models, safe document parsing, and compliant classification pipelines.</li>
-              <li>Real-time telemetry, model drift warnings, and automated fallback triggers.</li>
+              <li>Use-case validation and business-case development for AI programmes</li>
+              <li>LLM integration with RAG pipelines and vector database design</li>
+              <li>MLflow-based model registry, versioning, and drift detection</li>
+              <li>Human-in-the-loop controls and model governance frameworks</li>
+              <li>EU AI Act compliance assessment and documentation</li>
+              <li>Azure OpenAI, Databricks, and open-source model deployment</li>
+              <li>Automated data pipelines for ML feature stores and training datasets</li>
             </ul>
             <div class="service-detail__outcome">
-              <p class="service-detail__outcome-title">Typical outcome</p>
-              <p>An enterprise-ready model pipeline deployed in production within 14 weeks, meeting all internal compliance, safety and audit checkpoints.</p>
+              <p class="service-detail__outcome-title">Typical Outcome</p>
+              <p>First governed AI model in regulated production environment: 14 weeks from kickoff.</p>
             </div>
           </div>
-        </article>
+        </div>
 
-        <!-- Cloud Enablement -->
-        <article class="service-detail reveal" id="cloud">
-          <div>
-            <p class="service-detail__label">Service 02</p>
+        <!-- Cloud -->
+        <div class="service-detail reveal" id="cloud">
+          <div class="service-detail__left">
+            <p class="service-detail__label">Practice 02</p>
             <h2 class="service-detail__title">Cloud Enablement</h2>
-            <p class="service-detail__intro">Robust multi-tenant cloud landing zones, automated migrations, and FinOps operating structures configured for Irish and UK data sovereignty requirements.</p>
+            <p class="service-detail__intro">We design and build cloud landing zones, execute migration programmes, and establish FinOps disciplines for Irish and UK organisations — from first workload to multi-cloud at scale.</p>
           </div>
-          <div>
+          <div class="service-detail__right">
             <ul class="service-detail__list">
-              <li>IAM federations, network isolation segments, and security boundaries.</li>
-              <li>Application migrations using rehost, containerize, and serverless redesigns.</li>
-              <li>FinOps tagging standards, budget thresholds, and cost optimizations.</li>
-              <li>Disaster recovery across multi-cloud regions supporting extreme uptime targets.</li>
+              <li>Multi-cloud landing zone design and implementation (AWS, Azure, GCP)</li>
+              <li>Well-Architected reviews and remediation sprints</li>
+              <li>Lift-and-shift and re-platform migration programme delivery</li>
+              <li>FinOps programme establishment with tagging policy and showback reporting</li>
+              <li>Data residency and sovereignty baseline design for EU and UK requirements</li>
+              <li>Cloud disaster recovery and multi-region failover architecture</li>
+              <li>Network connectivity and private peering across hybrid environments</li>
             </ul>
             <div class="service-detail__outcome">
-              <p class="service-detail__outcome-title">Typical outcome</p>
-              <p>A stabilized, NCSC-compliant cloud baseline completed on-time, reducing monthly run-costs by 25–35% within the first six months.</p>
+              <p class="service-detail__outcome-title">Typical Outcome</p>
+              <p>25–35% cloud infrastructure cost reduction within two quarters of FinOps implementation.</p>
             </div>
           </div>
-        </article>
+        </div>
 
-        <!-- DevOps & DevSecOps -->
-        <article class="service-detail reveal" id="devops">
-          <div>
-            <p class="service-detail__label">Service 03</p>
+        <!-- DevOps -->
+        <div class="service-detail reveal" id="devops">
+          <div class="service-detail__left">
+            <p class="service-detail__label">Practice 03</p>
             <h2 class="service-detail__title">DevOps &amp; DevSecOps</h2>
-            <p class="service-detail__intro">CI/CD automation, Infrastructure as Code baselines, and security scanning integrations added directly to your release paths.</p>
+            <p class="service-detail__intro">We design, build, and hand over CI/CD pipelines with embedded security controls. Engineering teams deliver more often and with less risk — without a dedicated security team for each pipeline.</p>
           </div>
-          <div>
+          <div class="service-detail__right">
             <ul class="service-detail__list">
-              <li>High-velocity release pipelines using GitHub Actions, GitLab, or Azure DevOps.</li>
-              <li>Infrastructure as Code (IaC) with Terraform, Pulumi, and policy-as-code gates.</li>
-              <li>Vulnerability remediation, license analysis, and automated secrets protection.</li>
-              <li>Observability dashboards mapping error budgets, latency, and system thresholds.</li>
+              <li>CI/CD pipeline design and implementation on GitHub Actions, GitLab CI, Azure DevOps</li>
+              <li>Infrastructure as Code with Terraform, Pulumi, and Bicep</li>
+              <li>SAST, DAST, and SCA scanning integrated into automated gates</li>
+              <li>Container security, image signing, and supply-chain hardening</li>
+              <li>Secrets management with HashiCorp Vault and cloud-native KMS</li>
+              <li>FCA and NCSC DORA-aligned change control implementation</li>
+              <li>SLI, SLO, and error budget frameworks with Prometheus and Grafana</li>
             </ul>
             <div class="service-detail__outcome">
-              <p class="service-detail__outcome-title">Typical outcome</p>
-              <p>Deployment cadence improved 3–5× within the first quarter, with critical security remediation time compressed to under 48 hours.</p>
+              <p class="service-detail__outcome-title">Typical Outcome</p>
+              <p>CVE patches deployed within 48 hours. Deployment frequency increases 3–4× in the first quarter.</p>
             </div>
           </div>
-        </article>
+        </div>
 
-        <!-- Platform Engineering -->
-        <article class="service-detail reveal" id="platform">
-          <div>
-            <p class="service-detail__label">Service 04</p>
+        <!-- Platform -->
+        <div class="service-detail reveal" id="platform">
+          <div class="service-detail__left">
+            <p class="service-detail__label">Practice 04</p>
             <h2 class="service-detail__title">Platform Engineering</h2>
-            <p class="service-detail__intro">Self-service developer portals and automated infrastructure templates that reduce engineering toil and expedite development cycles.</p>
+            <p class="service-detail__intro">We design and operate internal developer platforms that eliminate infrastructure friction — so engineering teams ship features instead of waiting for environments.</p>
           </div>
-          <div>
+          <div class="service-detail__right">
             <ul class="service-detail__list">
-              <li>Developer portals built on Backstage or clean custom alternatives.</li>
-              <li>Golden path deployment templates for common microservices and containers.</li>
-              <li>Hardened Kubernetes control schemas, multi-tenant network policies, and ingress controls.</li>
-              <li>Unified metrics gathering, distributed tracing baselines, and logging collectors.</li>
+              <li>Internal developer portal design and Backstage implementation</li>
+              <li>Kubernetes fleet management and multi-tenant cluster design</li>
+              <li>Golden-path templates and self-service environment provisioning</li>
+              <li>GitOps delivery with ArgoCD and Flux</li>
+              <li>Service mesh deployment with Istio and Linkerd</li>
+              <li>Platform observability with Datadog, OpenTelemetry, and Loki</li>
+              <li>SRE practices, on-call framework design, and runbook development</li>
             </ul>
             <div class="service-detail__outcome">
-              <p class="service-detail__outcome-title">Typical outcome</p>
-              <p>New developer setup times slashed from weeks to hours, with internal platform support tickets reduced by 50% within six months.</p>
+              <p class="service-detail__outcome-title">Typical Outcome</p>
+              <p>Developer onboarding from weeks to hours. Infrastructure support tickets reduced by 65%.</p>
             </div>
           </div>
-        </article>
+        </div>
 
-        <!-- Data & Analytics -->
-        <article class="service-detail reveal" id="data">
-          <div>
-            <p class="service-detail__label">Service 05</p>
+        <!-- Data -->
+        <div class="service-detail reveal" id="data">
+          <div class="service-detail__left">
+            <p class="service-detail__label">Practice 05</p>
             <h2 class="service-detail__title">Data &amp; Analytics</h2>
-            <p class="service-detail__intro">Lakehouse architectures, secure stream-processing pipelines, and structured schemas to support operational reporting and high-fidelity AI workloads.</p>
+            <p class="service-detail__intro">We build data platforms that support both operational reporting today and AI workloads tomorrow — on a modern lakehouse foundation with proper governance from the start.</p>
           </div>
-          <div>
+          <div class="service-detail__right">
             <ul class="service-detail__list">
-              <li>Centralized data-lakes built on Databricks, Snowflake, or AWS S3.</li>
-              <li>Clean pipeline architectures using dbt, Apache Airflow, and container schedules.</li>
-              <li>Real-time event processing with Kafka, Event Hubs, or Kinesis.</li>
-              <li>Metadata management, access controls, GDPR compliance records, and lineage tracking.</li>
+              <li>Lakehouse design on Databricks, Snowflake, and Azure Synapse</li>
+              <li>dbt modelling and data transformation layer design</li>
+              <li>Streaming data pipelines with Kafka and Azure Event Hubs</li>
+              <li>Data governance and cataloguing with Unity Catalog and Purview</li>
+              <li>Apache Airflow orchestration design and implementation</li>
+              <li>BI layer integration with Power BI and Tableau</li>
+              <li>GDPR-compliant data anonymisation and access control frameworks</li>
             </ul>
             <div class="service-detail__outcome">
-              <p class="service-detail__outcome-title">Typical outcome</p>
-              <p>Reporting pipeline processing cycles cut by 60%, with automated GDPR audit records accepted by local data protection reviews.</p>
+              <p class="service-detail__outcome-title">Typical Outcome</p>
+              <p>Single governed data platform replacing three or more siloed tools within six months.</p>
             </div>
           </div>
-        </article>
+        </div>
 
-        <!-- Technology Strategy -->
-        <article class="service-detail reveal" id="strategy">
-          <div>
-            <p class="service-detail__label">Service 06</p>
+        <!-- Strategy -->
+        <div class="service-detail reveal" id="strategy">
+          <div class="service-detail__left">
+            <p class="service-detail__label">Practice 06</p>
             <h2 class="service-detail__title">Technology Strategy</h2>
-            <p class="service-detail__intro">Practical architectural blueprints, migration sequencing maps, and realistic budgeting cases written by practitioners who implement.</p>
+            <p class="service-detail__intro">We produce investment cases and technology roadmaps that survive CFO and board scrutiny. Unlike advisory firms, Irish Guru executes the roadmaps we design — so recommendations are not made without delivery realism.</p>
           </div>
-          <div>
+          <div class="service-detail__right">
             <ul class="service-detail__list">
-              <li>Board-ready technology roadmaps aligned to regulatory demands (such as DORA).</li>
-              <li>Due-diligence reports, modernization pricing sheets, and cloud assessments.</li>
-              <li>Vendor framework RFP construction, comparison sheets, and procurement advice.</li>
-              <li>Engineering organization designs, metrics setups, and skills mapping.</li>
+              <li>Technology portfolio assessment and rationalisation</li>
+              <li>Architecture roadmap development with delivery phasing</li>
+              <li>Build vs buy analysis for platform and tooling decisions</li>
+              <li>Vendor selection and procurement support</li>
+              <li>Technology investment case development for CFO and board presentation</li>
+              <li>Engineering culture and operating model assessment</li>
+              <li>CTO office advisory and interim CTO support</li>
             </ul>
             <div class="service-detail__outcome">
-              <p class="service-detail__outcome-title">Typical outcome</p>
-              <p>A rigorous 18-month roadmap delivered in 4 weeks, detailing cost savings, migration steps, and immediate risk-remediation targets.</p>
+              <p class="service-detail__outcome-title">Typical Outcome</p>
+              <p>Board-approved technology roadmap with phased delivery plan within six weeks of engagement start.</p>
             </div>
           </div>
-        </article>
+        </div>
 
       </div>
     </section>
+
+    <section class="section cta-section" aria-label="Book a consultation">
+      <div class="container">
+        <div class="cta-block reveal">
+          <div class="cta-block__copy">
+            <p class="section-hd__eye">Let's scope your programme</p>
+            <h2 class="cta-block__h">Not sure which practice fits your situation?</h2>
+            <p class="cta-block__p">Book a 45-minute call with a senior consultant. We will assess your programme and tell you exactly which practice areas are relevant — no proposal first.</p>
+          </div>
+          <div class="cta-block__actions">
+            <a href="../contact/" class="btn btn--primary btn--xl">Book a Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- --- Footer ------------------------------------------------------------- -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="../" class="logo" aria-label="Irish Guru — Home">
-          <svg class="logo__mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
-            <path d="M12 12H20C24.4183 12 28 15.5817 28 20V20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2.5" stroke-linejoin="round"/>
-            <circle cx="20" cy="20" r="4" fill="var(--color-primary)"/>
-          </svg>
-          <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
-        </a>
-        <p class="footer-brand__desc">Senior-led technology consulting and compliant delivery for organisations in Ireland and the United Kingdom.</p>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="../" class="logo" aria-label="Irish Guru — Home">
+            <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect width="40" height="40" rx="10" fill="var(--color-bg-elevated)"/>
+              <rect x="0.75" y="0.75" width="38.5" height="38.5" rx="9.25" stroke="var(--color-border)" stroke-width="1.5"/>
+              <path d="M12 12H20C24.4183 12 28 15.5817 28 20C28 24.4183 24.4183 28 20 28H12V12Z" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+              <circle cx="20" cy="20" r="3.5" fill="var(--color-primary)"/>
+            </svg>
+            <div class="logo__text">Irish Guru<span>Technology Consulting</span></div>
+          </a>
+          <p class="footer-brand__desc">Senior-led technology consulting and delivery for Irish and UK organisations.</p>
+          <p class="footer-brand__address">Lower Baggot Street, Dublin 2<br>info.irishguru@gmail.com</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-col">
+            <p class="footer-col__head">Consulting</p>
+            <a href="#ai" class="footer-col__link">Artificial Intelligence</a>
+            <a href="#cloud" class="footer-col__link">Cloud Enablement</a>
+            <a href="#platform" class="footer-col__link">Platform Engineering</a>
+            <a href="#devops" class="footer-col__link">DevOps &amp; DevSecOps</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__head">Company</p>
+            <a href="../about/" class="footer-col__link">About Us</a>
+            <a href="../industries/" class="footer-col__link">Industries</a>
+            <a href="../case-studies/" class="footer-col__link">Case Studies</a>
+            <a href="../contact/" class="footer-col__link">Contact</a>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col__head">Sectors</p>
+            <a href="../industries/#financial-services" class="footer-col__link">Financial Services</a>
+            <a href="../industries/#public-sector" class="footer-col__link">Government</a>
+            <a href="../industries/#healthcare" class="footer-col__link">Healthcare</a>
+            <a href="../industries/#telecom" class="footer-col__link">Telecoms</a>
+          </div>
+        </nav>
       </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Consulting</h3>
-        <ul class="footer-links">
-          <li><a href="../services/#ai" class="footer-link">Artificial Intelligence</a></li>
-          <li><a href="../services/#cloud" class="footer-link">Cloud Enablement</a></li>
-          <li><a href="../services/#platform" class="footer-link">Platform Engineering</a></li>
-          <li><a href="../services/#devops" class="footer-link">DevOps &amp; DevSecOps</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Company</h3>
-        <ul class="footer-links">
-          <li><a href="../about/" class="footer-link">About Us</a></li>
-          <li><a href="../industries/" class="footer-link">Industries</a></li>
-          <li><a href="../case-studies/" class="footer-link">Case Studies</a></li>
-          <li><a href="../contact/" class="footer-link">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="footer-col__title">Dublin HQ</h3>
-        <p class="footer-col__desc" style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:var(--leading-normal);">
-          Irish Guru Ltd.<br>
-          Lower Baggot Street,<br>
-          Dublin 2, Ireland<br>
-          <strong>info.irishguru@gmail.com</strong>
-        </p>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Irish Guru Ltd. All rights reserved. Registered in Ireland (No. Placeholder).</p>
-      <div class="footer-meta-links">
-        <a href="#privacy">Privacy Statement</a>
-        <a href="#terms">Terms of Engagement</a>
+      <div class="footer-base">
+        <p>&copy; 2026 Irish Guru Ltd. All rights reserved. Registered in Ireland.</p>
+        <div class="footer-base__links"><a href="#privacy">Privacy</a><a href="#terms">Terms</a></div>
       </div>
     </div>
   </footer>
