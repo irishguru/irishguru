@@ -125,83 +125,177 @@
           <!-- VISUAL -->
           <div class="hero__visual reveal reveal--delay-2" aria-hidden="true">
             <div class="hero-net">
-              <svg class="hero-net__svg" viewBox="0 0 540 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="hero-net__svg" viewBox="0 0 540 440" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Irish Guru capability services network">
                 <defs>
-                  <filter id="hglow" x="-60%" y="-60%" width="220%" height="220%">
+                  <!-- Deep glow for central node -->
+                  <filter id="hglow" x="-90%" y="-90%" width="280%" height="280%">
+                    <feGaussianBlur stdDeviation="10" result="b1"/>
+                    <feGaussianBlur stdDeviation="4" result="b2" in="SourceGraphic"/>
+                    <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                  <!-- Soft glow for featured AI node -->
+                  <filter id="ai-glow" x="-30%" y="-30%" width="160%" height="160%">
                     <feGaussianBlur stdDeviation="5" result="b"/>
                     <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
                   </filter>
-                  <filter id="sglow" x="-40%" y="-40%" width="180%" height="180%">
-                    <feGaussianBlur stdDeviation="2.5" result="b"/>
-                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  <!-- Drop shadow for all nodes (floating depth) -->
+                  <filter id="fshadow" x="-25%" y="-20%" width="150%" height="180%">
+                    <feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#000" flood-opacity=".6"/>
                   </filter>
-                  <linearGradient id="cg-a" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stop-color="#cfa276" stop-opacity=".55"/>
+                  <!-- Connector gradients — outward from center -->
+                  <linearGradient id="cg-tl" gradientUnits="userSpaceOnUse" x1="270" y1="220" x2="162" y2="112">
+                    <stop offset="0%" stop-color="#cfa276" stop-opacity=".7"/>
+                    <stop offset="100%" stop-color="#cfa276" stop-opacity=".06"/>
+                  </linearGradient>
+                  <linearGradient id="cg-tr" gradientUnits="userSpaceOnUse" x1="270" y1="220" x2="408" y2="112">
+                    <stop offset="0%" stop-color="#cfa276" stop-opacity=".5"/>
                     <stop offset="100%" stop-color="#cfa276" stop-opacity=".05"/>
                   </linearGradient>
-                  <linearGradient id="cg-b" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stop-color="#0da174" stop-opacity=".08"/>
-                    <stop offset="100%" stop-color="#0da174" stop-opacity=".5"/>
+                  <linearGradient id="cg-l" gradientUnits="userSpaceOnUse" x1="270" y1="220" x2="112" y2="220">
+                    <stop offset="0%" stop-color="#cfa276" stop-opacity=".5"/>
+                    <stop offset="100%" stop-color="#cfa276" stop-opacity=".04"/>
                   </linearGradient>
-                  <linearGradient id="cg-c" x1="0" y1="1" x2="0" y2="0">
-                    <stop offset="0%" stop-color="#cfa276" stop-opacity=".06"/>
-                    <stop offset="100%" stop-color="#cfa276" stop-opacity=".45"/>
+                  <linearGradient id="cg-r" gradientUnits="userSpaceOnUse" x1="270" y1="220" x2="428" y2="220">
+                    <stop offset="0%" stop-color="#0da174" stop-opacity=".6"/>
+                    <stop offset="100%" stop-color="#0da174" stop-opacity=".06"/>
                   </linearGradient>
+                  <linearGradient id="cg-bl" gradientUnits="userSpaceOnUse" x1="270" y1="220" x2="162" y2="338">
+                    <stop offset="0%" stop-color="#0da174" stop-opacity=".55"/>
+                    <stop offset="100%" stop-color="#0da174" stop-opacity=".06"/>
+                  </linearGradient>
+                  <linearGradient id="cg-br" gradientUnits="userSpaceOnUse" x1="270" y1="220" x2="408" y2="338">
+                    <stop offset="0%" stop-color="#0da174" stop-opacity=".5"/>
+                    <stop offset="100%" stop-color="#0da174" stop-opacity=".05"/>
+                  </linearGradient>
+                  <!-- Dot background -->
                   <pattern id="dots" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
-                    <circle cx="1" cy="1" r=".9" fill="#1c1d2a" opacity=".9"/>
+                    <circle cx="1" cy="1" r=".85" fill="#1c1d2a" opacity=".85"/>
                   </pattern>
                 </defs>
 
-                <!-- Panel background -->
-                <rect width="540" height="440" rx="20" fill="#07070a"/>
+                <!-- Panel -->
+                <rect width="540" height="440" rx="20" fill="#06060a"/>
                 <rect width="540" height="440" rx="20" fill="url(#dots)"/>
+                <!-- Soft center glow -->
+                <radialGradient id="center-glow" cx="50%" cy="50%" r="40%">
+                  <stop offset="0%" stop-color="#cfa276" stop-opacity=".07"/>
+                  <stop offset="100%" stop-color="#cfa276" stop-opacity="0"/>
+                </radialGradient>
+                <rect width="540" height="440" rx="20" fill="url(#center-glow)"/>
 
-                <!-- Ambient rings -->
-                <circle cx="270" cy="220" r="145" stroke="#cfa276" stroke-width=".8" stroke-dasharray="3 9" opacity=".07"/>
-                <circle cx="270" cy="220" r="198" stroke="#0da174" stroke-width=".8" stroke-dasharray="2 14" opacity=".04"/>
+                <!-- Animated ambient rings -->
+                <circle cx="270" cy="220" r="100" stroke="#cfa276" stroke-width=".5" stroke-dasharray="1 8" opacity=".06">
+                  <animateTransform attributeName="transform" type="rotate" from="0 270 220" to="360 270 220" dur="18s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="270" cy="220" r="148" stroke="#cfa276" stroke-width=".8" stroke-dasharray="3 9" opacity=".07">
+                  <animateTransform attributeName="transform" type="rotate" from="0 270 220" to="360 270 220" dur="26s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="270" cy="220" r="196" stroke="#0da174" stroke-width=".6" stroke-dasharray="2 14" opacity=".04">
+                  <animateTransform attributeName="transform" type="rotate" from="360 270 220" to="0 270 220" dur="40s" repeatCount="indefinite"/>
+                </circle>
 
-                <!-- ── CONNECTOR LINES ── -->
-                <line x1="270" y1="220" x2="162" y2="112" stroke="url(#cg-a)" stroke-width="1.5"/>
-                <line x1="270" y1="220" x2="408" y2="112" stroke="url(#cg-a)" stroke-width="1.5"/>
-                <line x1="270" y1="220" x2="112" y2="220" stroke="url(#cg-c)" stroke-width="1.5"/>
-                <line x1="270" y1="220" x2="428" y2="220" stroke="url(#cg-b)" stroke-width="1.5"/>
-                <line x1="270" y1="220" x2="162" y2="338" stroke="url(#cg-b)" stroke-width="1.5"/>
-                <line x1="270" y1="220" x2="408" y2="338" stroke="url(#cg-b)" stroke-width="1.5"/>
+                <!-- ── CONNECTOR PATHS (named for animateMotion) ── -->
+                <path id="p-ai"  d="M270 220 L162 112" stroke="url(#cg-tl)" stroke-width="1.5"/>
+                <path id="p-cld" d="M270 220 L408 112" stroke="url(#cg-tr)" stroke-width="1.5"/>
+                <path id="p-plt" d="M270 220 L112 220" stroke="url(#cg-l)"  stroke-width="1.5"/>
+                <path id="p-sec" d="M270 220 L428 220" stroke="url(#cg-r)"  stroke-width="1.5"/>
+                <path id="p-dat" d="M270 220 L162 338" stroke="url(#cg-bl)" stroke-width="1.5"/>
+                <path id="p-str" d="M270 220 L408 338" stroke="url(#cg-br)" stroke-width="1.5"/>
 
-                <!-- Flow markers on connectors -->
-                <circle cx="216" cy="166" r="2.5" fill="#cfa276" opacity=".5"/>
-                <circle cx="338" cy="166" r="2.5" fill="#cfa276" opacity=".4"/>
-                <circle cx="191" cy="220" r="2.5" fill="#cfa276" opacity=".3"/>
-                <circle cx="338" cy="280" r="2.5" fill="#0da174" opacity=".45"/>
+                <!-- ── ANIMATED FLOW PARTICLES ── -->
+                <!-- Outbound: center → AI -->
+                <circle r="2.5" fill="#cfa276">
+                  <animateMotion dur="2s" repeatCount="indefinite" begin="0s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#p-ai"/></animateMotion>
+                  <animate attributeName="opacity" values="0;.9;.9;0" keyTimes="0;0.08;0.82;1" dur="2s" repeatCount="indefinite" begin="0s"/>
+                </circle>
+                <!-- Outbound: center → Cloud -->
+                <circle r="2.5" fill="#cfa276">
+                  <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.7s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#p-cld"/></animateMotion>
+                  <animate attributeName="opacity" values="0;.8;.8;0" keyTimes="0;0.08;0.82;1" dur="2.4s" repeatCount="indefinite" begin="0.7s"/>
+                </circle>
+                <!-- Outbound: center → Platform -->
+                <circle r="2" fill="#cfa276">
+                  <animateMotion dur="1.9s" repeatCount="indefinite" begin="1.2s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#p-plt"/></animateMotion>
+                  <animate attributeName="opacity" values="0;.7;.7;0" keyTimes="0;0.1;0.82;1" dur="1.9s" repeatCount="indefinite" begin="1.2s"/>
+                </circle>
+                <!-- Inbound: Security → center -->
+                <circle r="2" fill="#0da174">
+                  <animateMotion dur="2.1s" repeatCount="indefinite" begin="0.4s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#p-sec"/></animateMotion>
+                  <animate attributeName="opacity" values="0;.8;.8;0" keyTimes="0;0.08;0.82;1" dur="2.1s" repeatCount="indefinite" begin="0.4s"/>
+                </circle>
+                <!-- Inbound: Data → center -->
+                <circle r="2" fill="#0da174">
+                  <animateMotion dur="2.3s" repeatCount="indefinite" begin="0.9s" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#p-dat"/></animateMotion>
+                  <animate attributeName="opacity" values="0;.7;.7;0" keyTimes="0;0.08;0.82;1" dur="2.3s" repeatCount="indefinite" begin="0.9s"/>
+                </circle>
+                <!-- Outbound: center → Strategy -->
+                <circle r="2" fill="#0da174">
+                  <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.5s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#p-str"/></animateMotion>
+                  <animate attributeName="opacity" values="0;.6;.6;0" keyTimes="0;0.08;0.82;1" dur="2.6s" repeatCount="indefinite" begin="1.5s"/>
+                </circle>
 
-                <!-- ── CORE NODE ── -->
-                <circle cx="270" cy="220" r="52" fill="#0c0c14" stroke="#cfa276" stroke-width="2" filter="url(#hglow)"/>
-                <circle cx="270" cy="220" r="46" fill="none" stroke="#cfa276" stroke-width=".5" opacity=".25"/>
+                <!-- ── CENTRAL NODE ── -->
+                <!-- Multi-ring pulse -->
+                <circle cx="270" cy="220" r="52" fill="none" stroke="#cfa276" stroke-width="1.5" opacity="0">
+                  <animate attributeName="r" values="54;76;54" dur="3s" repeatCount="indefinite" begin="0s"/>
+                  <animate attributeName="opacity" values=".3;0;.3" dur="3s" repeatCount="indefinite" begin="0s"/>
+                </circle>
+                <circle cx="270" cy="220" r="52" fill="none" stroke="#cfa276" stroke-width="1" opacity="0">
+                  <animate attributeName="r" values="56;88;56" dur="4.2s" repeatCount="indefinite" begin="1.1s"/>
+                  <animate attributeName="opacity" values=".18;0;.18" dur="4.2s" repeatCount="indefinite" begin="1.1s"/>
+                </circle>
+                <!-- Rotating dashed ring -->
+                <circle cx="270" cy="220" r="60" stroke="#cfa276" stroke-width="1" stroke-dasharray="5 5" opacity=".12">
+                  <animateTransform attributeName="transform" type="rotate" from="0 270 220" to="360 270 220" dur="14s" repeatCount="indefinite"/>
+                </circle>
+                <!-- Main node -->
+                <circle cx="270" cy="220" r="52" fill="#0c0c14" stroke="#cfa276" stroke-width="2.5" filter="url(#hglow)"/>
+                <circle cx="270" cy="220" r="45" fill="none" stroke="#cfa276" stroke-width=".5" opacity=".18"/>
                 <text x="270" y="209" text-anchor="middle" font-family="'Cabinet Grotesk',sans-serif" font-size="14" font-weight="800" fill="#cfa276" letter-spacing="-.5">IRISH</text>
-                <text x="270" y="226" text-anchor="middle" font-family="'Cabinet Grotesk',sans-serif" font-size="14" font-weight="800" fill="#f0f0f5" letter-spacing="-.5">GURU</text>
-                <text x="270" y="241" text-anchor="middle" font-family="monospace" font-size="7" fill="#62637a" letter-spacing="2.5">DELIVERY</text>
+                <text x="270" y="227" text-anchor="middle" font-family="'Cabinet Grotesk',sans-serif" font-size="14" font-weight="800" fill="#f0f0f5" letter-spacing="-.5">GURU</text>
+                <text x="270" y="243" text-anchor="middle" font-family="monospace" font-size="7" fill="#62637a" letter-spacing="2.5">DELIVERY</text>
 
-                <!-- ── SATELLITE: AI (top-left) ── -->
-                <g>
-                  <rect x="76" y="70" width="172" height="84" rx="10" fill="#0c0c14" stroke="#cfa276" stroke-width="1.5" filter="url(#sglow)"/>
+                <!-- ── FLOATING SATELLITE NODES ── -->
+
+                <!-- AI & Intel (top-left) — FEATURED -->
+                <g filter="url(#fshadow)">
+                  <animateTransform attributeName="transform" type="translate"
+                    values="0,0; 0,-7; 0,0; 0,3; 0,0"
+                    dur="3.8s" repeatCount="indefinite" calcMode="spline"
+                    keyTimes="0;0.3;0.5;0.75;1"
+                    keySplines=".45 .05 .55 .95;.45 .05 .55 .95;.45 .05 .55 .95;.45 .05 .55 .95"
+                    begin="0s"/>
+                  <rect x="76" y="70" width="172" height="84" rx="10" fill="#0d0c0a" stroke="#cfa276" stroke-width="2" filter="url(#ai-glow)"/>
                   <rect x="76" y="70" width="4" height="84" rx="2" fill="#cfa276"/>
-                  <text x="92" y="99" font-family="monospace" font-size="7.5" font-weight="700" fill="#cfa276" letter-spacing="1.2">AI &amp; INTEL</text>
+                  <text x="92" y="99"  font-family="monospace" font-size="7.5" font-weight="700" fill="#cfa276" letter-spacing="1.2">AI &amp; INTEL</text>
                   <text x="92" y="116" font-family="'Cabinet Grotesk',sans-serif" font-size="13" font-weight="600" fill="#f0f0f5">Artificial Intelligence</text>
                   <text x="92" y="133" font-family="monospace" font-size="7" fill="#62637a">LLM · MLOps · EU AI Act</text>
                 </g>
 
-                <!-- ── SATELLITE: Cloud (top-right) ── -->
-                <g>
-                  <rect x="292" y="70" width="172" height="84" rx="10" fill="#0c0c14" stroke="#1c1d2a" stroke-width="1.5"/>
+                <!-- Cloud (top-right) -->
+                <g filter="url(#fshadow)">
+                  <animateTransform attributeName="transform" type="translate"
+                    values="0,0; 0,-9; 0,0; 0,4; 0,0"
+                    dur="4.5s" repeatCount="indefinite" calcMode="spline"
+                    keyTimes="0;0.3;0.5;0.75;1"
+                    keySplines=".45 .05 .55 .95;.45 .05 .55 .95;.45 .05 .55 .95;.45 .05 .55 .95"
+                    begin="0.65s"/>
+                  <rect x="292" y="70" width="172" height="84" rx="10" fill="#0a0c0c" stroke="#1c2a28" stroke-width="1.5"/>
                   <rect x="292" y="70" width="4" height="84" rx="2" fill="#0da174"/>
-                  <text x="308" y="99" font-family="monospace" font-size="7.5" font-weight="700" fill="#0da174" letter-spacing="1.2">CLOUD</text>
+                  <text x="308" y="99"  font-family="monospace" font-size="7.5" font-weight="700" fill="#0da174" letter-spacing="1.2">CLOUD</text>
                   <text x="308" y="116" font-family="'Cabinet Grotesk',sans-serif" font-size="13" font-weight="600" fill="#f0f0f5">Cloud Enablement</text>
                   <text x="308" y="133" font-family="monospace" font-size="7" fill="#62637a">AWS · Azure · GCP · FinOps</text>
                 </g>
 
-                <!-- ── SATELLITE: Platform (left) ── -->
-                <g>
-                  <rect x="16" y="178" width="82" height="84" rx="10" fill="#0c0c14" stroke="#1c1d2a" stroke-width="1.5"/>
+                <!-- Platform (left) -->
+                <g filter="url(#fshadow)">
+                  <animateTransform attributeName="transform" type="translate"
+                    values="0,0; 0,-5; 0,0; 0,2.5; 0,0"
+                    dur="4.1s" repeatCount="indefinite" calcMode="spline"
+                    keyTimes="0;0.3;0.5;0.75;1"
+                    keySplines=".45 .05 .55 .95;.45 .05 .55 .95;.45 .05 .55 .95;.45 .05 .55 .95"
+                    begin="1.2s"/>
+                  <rect x="16" y="178" width="82" height="84" rx="10" fill="#0a0a0f" stroke="#1c1d2a" stroke-width="1.5"/>
                   <rect x="16" y="178" width="4" height="84" rx="2" fill="#cfa276" opacity=".5"/>
                   <text x="30" y="208" font-family="monospace" font-size="7" font-weight="700" fill="#9a9cb0" letter-spacing="1">PLATFORM</text>
                   <text x="30" y="224" font-family="'Cabinet Grotesk',sans-serif" font-size="11.5" font-weight="600" fill="#f0f0f5">Platform</text>
@@ -209,9 +303,15 @@
                   <text x="30" y="252" font-family="monospace" font-size="6.5" fill="#62637a">k8s · ArgoCD</text>
                 </g>
 
-                <!-- ── SATELLITE: DevSecOps (right) ── -->
-                <g>
-                  <rect x="442" y="178" width="82" height="84" rx="10" fill="#0c0c14" stroke="#1c1d2a" stroke-width="1.5"/>
+                <!-- DevSecOps (right) -->
+                <g filter="url(#fshadow)">
+                  <animateTransform attributeName="transform" type="translate"
+                    values="0,0; 0,-8; 0,0; 0,3.5; 0,0"
+                    dur="3.6s" repeatCount="indefinite" calcMode="spline"
+                    keyTimes="0;0.3;0.5;0.75;1"
+                    keySplines=".45 .05 .55 .95;.45 .05 .55 .95;.45 .05 .55 .95;.45 .05 .55 .95"
+                    begin="0.3s"/>
+                  <rect x="442" y="178" width="82" height="84" rx="10" fill="#0a0c0c" stroke="#1c2a28" stroke-width="1.5"/>
                   <rect x="442" y="178" width="4" height="84" rx="2" fill="#0da174"/>
                   <text x="456" y="208" font-family="monospace" font-size="7" font-weight="700" fill="#0da174" letter-spacing="1">SECURITY</text>
                   <text x="456" y="224" font-family="'Cabinet Grotesk',sans-serif" font-size="11.5" font-weight="600" fill="#f0f0f5">DevSecOps</text>
@@ -219,29 +319,41 @@
                   <text x="456" y="252" font-family="monospace" font-size="6.5" fill="#62637a">Snyk · Vault</text>
                 </g>
 
-                <!-- ── SATELLITE: Data (bottom-left) ── -->
-                <g>
-                  <rect x="76" y="286" width="172" height="84" rx="10" fill="#0c0c14" stroke="#1c1d2a" stroke-width="1.5"/>
+                <!-- Data & Analytics (bottom-left) -->
+                <g filter="url(#fshadow)">
+                  <animateTransform attributeName="transform" type="translate"
+                    values="0,0; 0,-6; 0,0; 0,3; 0,0"
+                    dur="4.8s" repeatCount="indefinite" calcMode="spline"
+                    keyTimes="0;0.3;0.5;0.75;1"
+                    keySplines=".45 .05 .55 .95;.45 .05 .55 .95;.45 .05 .55 .95;.45 .05 .55 .95"
+                    begin="0.95s"/>
+                  <rect x="76" y="286" width="172" height="84" rx="10" fill="#0a0a0f" stroke="#1c1d2a" stroke-width="1.5"/>
                   <rect x="76" y="286" width="4" height="84" rx="2" fill="#cfa276" opacity=".45"/>
                   <text x="92" y="315" font-family="monospace" font-size="7.5" font-weight="700" fill="#9a9cb0" letter-spacing="1.2">DATA</text>
                   <text x="92" y="332" font-family="'Cabinet Grotesk',sans-serif" font-size="13" font-weight="600" fill="#f0f0f5">Data &amp; Analytics</text>
                   <text x="92" y="349" font-family="monospace" font-size="7" fill="#62637a">dbt · Databricks · Kafka</text>
                 </g>
 
-                <!-- ── SATELLITE: Strategy (bottom-right) ── -->
-                <g>
-                  <rect x="292" y="286" width="172" height="84" rx="10" fill="#0c0c14" stroke="#1c1d2a" stroke-width="1.5"/>
+                <!-- Strategy (bottom-right) -->
+                <g filter="url(#fshadow)">
+                  <animateTransform attributeName="transform" type="translate"
+                    values="0,0; 0,-5; 0,0; 0,2; 0,0"
+                    dur="4.3s" repeatCount="indefinite" calcMode="spline"
+                    keyTimes="0;0.3;0.5;0.75;1"
+                    keySplines=".45 .05 .55 .95;.45 .05 .55 .95;.45 .05 .55 .95;.45 .05 .55 .95"
+                    begin="1.5s"/>
+                  <rect x="292" y="286" width="172" height="84" rx="10" fill="#0a0a0f" stroke="#1c1d2a" stroke-width="1.5"/>
                   <rect x="292" y="286" width="4" height="84" rx="2" fill="#62637a"/>
                   <text x="308" y="315" font-family="monospace" font-size="7.5" font-weight="700" fill="#62637a" letter-spacing="1.2">STRATEGY</text>
                   <text x="308" y="332" font-family="'Cabinet Grotesk',sans-serif" font-size="13" font-weight="600" fill="#f0f0f5">Tech Strategy</text>
                   <text x="308" y="349" font-family="monospace" font-size="7" fill="#62637a">Roadmap · CTO Advisory</text>
                 </g>
 
-                <!-- Live pulse -->
+                <!-- Live engagement badge -->
                 <circle cx="296" cy="177" r="5" fill="#0da174"/>
-                <circle cx="296" cy="177" r="9" stroke="#0da174" stroke-width="1" opacity=".3">
-                  <animate attributeName="r" values="6;11;6" dur="2.2s" repeatCount="indefinite"/>
-                  <animate attributeName="opacity" values=".4;0;.4" dur="2.2s" repeatCount="indefinite"/>
+                <circle cx="296" cy="177" r="5" stroke="#0da174" stroke-width="1" fill="none" opacity=".4">
+                  <animate attributeName="r" values="6;13;6" dur="2.2s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" values=".5;0;.5" dur="2.2s" repeatCount="indefinite"/>
                 </circle>
                 <text x="308" y="181" font-family="monospace" font-size="8" font-weight="700" fill="#0da174">LIVE ENGAGEMENTS</text>
               </svg>
