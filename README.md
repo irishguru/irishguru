@@ -1,208 +1,90 @@
-# Irish Guru — Static Website
+# Irish Guru Ltd. — Corporate Web Portal Redesign
 
-Production-ready marketing site for **[irishguru.com](https://irishguru.com)** — a Dublin-based technology consultancy serving Irish and UK organisations.
+A premium, agency-quality technological consultancy web portal, custom designed and custom built from scratch to establish executive credibility, showcase outcome-defined engineering results, and capture consulting briefs.
 
-Built with **plain HTML, CSS, and JavaScript**. No build step, no backend, no framework. Deploy anywhere static files are hosted.
+## Technical Architecture
 
----
-
-## Project overview
-
-| Item | Detail |
-|------|--------|
-| **Pages** | Home, About, Services, Industries, Case Studies, Contact |
-| **Stack** | HTML5 · CSS custom properties · ~250 lines vanilla JS |
-| **Features** | Light/dark theme, sticky header, mobile nav, FAQ accordion, contact form UI |
-| **Fonts** | Cabinet Grotesk & Satoshi (Fontshare), Source Serif 4 (Google Fonts) |
-| **Primary CTA** | “Schedule a Call” → `contact.html` |
-
-### File structure
-
-```
-irishguru/
-├── index.html              # Home
-├── about.html
-├── services.html           # Anchors: #ai #cloud #devops #platform #data #strategy #automation
-├── industries.html         # Anchors: #financial-services #public-sector #healthcare #telecom #enterprise
-├── case-studies.html
-├── contact.html
-├── 404.html                # GitHub Pages / host 404 page
-├── css/
-│   └── styles.css
-├── js/
-│   └── main.js
-├── favicon.svg
-├── robots.txt
-├── sitemap.xml
-├── .nojekyll               # Disables Jekyll on GitHub Pages
-├── .gitignore
-├── netlify.toml            # Netlify headers & publish dir
-├── vercel.json             # Vercel headers
-└── README.md
-```
+- **Sovereign Static Execution**: Standard static HTML5, pure CSS3, and native ECMAScript. Complies with high-performance edge distribution pipelines (Netlify, Vercel, GitHub Pages) without build-step overhead.
+- **Premium Fluid Design System**: Strictly defined CSS variables supporting fluid clamp ramps for typography (`--text-xs` to `--text-6xl`) and padding scales.
+- **Bi-Directional Themes**: Dark-mode leaning by default with obsidian surfaces, premium charcoal borders, and celtic bronze accents. Includes a high-end editorial, clinical paper-like Light mode.
+- **100% Inline Vector Assets**: Every diagram, icon, and brand mark is coded inline as responsive SVG paths. Ensures zero rendering delay, absolute scalability, and full CSS interactivity.
+- **Zero-Dependency Interactivity**: Single, clean vanilla JavaScript file handling scroll reveals, KPI increment counters, accordion drop-downs, and interactive SVG nodes using high-performance APIs (`IntersectionObserver`, `requestAnimationFrame`).
 
 ---
 
-## Local preview
+## Local Development & Running
 
-**Requirements:** Python 3 (recommended) or any static file server.
-
-```bash
-cd irishguru
-python -m http.server 8080
-```
-
-Open **http://localhost:8080**
-
-Alternatives:
+To launch and run the project locally on any operating system, run a local development server to avoid CORS constraints on module resources:
 
 ```bash
+# Python 3
+python -m http.server 8000
+
+# Node.js (Static-Server)
 npx serve .
-# or
-npx http-server -p 8080
+
+# PHP
+php -S localhost:8000
 ```
 
-> Do not rely on `file://` — use a local server so paths resolve correctly.
-
-### Quick QA locally
-
-1. Click every nav link and footer link
-2. Test service/industry anchor links (e.g. `services.html#devops`)
-3. Toggle light/dark mode — refresh to confirm persistence
-4. Open mobile nav (resize below 960px) — Escape to close
-5. Submit contact form empty (validation) and filled (success state)
-6. Resize at 375px, 768px, 1024px, 1440px
+Once running, navigate to `http://localhost:8000` (or the port specified by your tool) inside any modern web browser.
 
 ---
 
-## Push to GitHub
+## Modifying the Website
 
-Replace `YOUR_USERNAME` with your GitHub username.
+### 1. Editing Brand Logos & Mark Paths
+All SVG marks use consistent inline code structures.
+- To modify the logo on the homepage or inner pages, search for `<svg class="logo__mark"` in the header/footer regions.
+- The path coordinates represent a modern abstract cybernetic celtic block using high-contrast bronze (`var(--color-accent)`) and sage green (`var(--color-sage)`). Adjust the `stroke` or `fill` variables directly.
 
+### 2. Customizing Typography or Color Themes
+Global styling, fonts, and theme configurations live in `/css/styles.css`:
+- **Obsidian Dark Mode (Default)**: Modify properties inside `:root` selector.
+- **Prestige Light Mode**: Modify properties inside the `[data-theme='light']` selector.
+- **Bronze Accent Hex**: Adjust `--color-accent` (`#cfa276` dark, `#9b6c3f` light) and `--color-accent-hover`.
+- **Primary Typeface**: Update `--font-display` (Cabinet Grotesk) or `--font-body` (Satoshi).
+
+### 3. Adjusting Inline Diagrams
+All diagrams are built directly inside the HTML markup for maximum rendering speed and absolute scalability:
+- **Transformation Lifecycle (Homepage)**: Coded in `#why` column 1. The interactive nodes feature `data-tip-id` triggers that hook directly to the custom JavaScript interactive tooltip controller.
+- **Operational Metrics Plot (Homepage)**: Coded in `#capabilities` with coordinate node paths mapping average performance increases. Update the coordinates inside `<path d="..."` and label variables to align with new statistics.
+- **Data Migration Path (Homepage)**: Coded in `#case-study` mapping secure data transfers from a proprietary legacy warehouse to Azure cloud blob stores.
+
+### 4. Updating Content, Team, & Contact Parameters
+- **Inner Team Grid**: Head to `/about/index.html` and look for the `#team` ID sector. To add or adjust team details, modify the `<article class="team-card">` components. The card features fully inline SVG avatars matching roles (architect, AI engineer, cloud security).
+- **Contact Forms & Capture Actions**: Modify `/contact/index.html` structure. Validation rules and state triggers are handled natively in `/js/main.js` via `initForm()`. To link this form with a backend, replace the default submission listener with your preferred CRM API endpoint (`fetch()` or email relay handler).
+
+---
+
+## Deployment Procedures
+
+The portal is designed for high-end static hosting with edge caching configurations.
+
+### 1. NETLIFY Deployment
+Netlify handles the static redirect rules and custom security headers specified in `netlify.toml` automatically:
 ```bash
-cd irishguru
-git init
+# Initialize Netlify CLI
+npm install netlify-cli -g
+
+# Deploy from current directory
+netlify deploy --prod
+```
+Alternatively, link your GitHub repository to your Netlify account for automated continuous delivery (CD) on every branch push.
+
+### 2. VERCEL Deployment
+Vercel handles URL routing, trailing slashes, and performance caching based on `vercel.json`:
+```bash
+# Deploy with Vercel CLI
+npm install -g vercel
+vercel --prod
+```
+
+### 3. GITHUB PAGES Deployment
+To push directly to your remote repository and let GitHub Pages compile and host your production directory:
+```bash
 git add .
-git commit -m "Initial Irish Guru website"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/irishguru.git
-git push -u origin main
+git commit -m "rebrand: complete web portal redesign and visual overhaul"
+git push origin main
 ```
-
----
-
-## Deploy to GitHub Pages
-
-### Option A — User/organisation site (`username.github.io`)
-
-1. Push repo named **`username.github.io`** (must match your GitHub username).
-2. **Settings → Pages → Source:** Deploy from branch **`main`**, folder **`/ (root)`**.
-3. Site live at `https://YOUR_USERNAME.github.io`.
-
-### Option B — Project site (`username.github.io/irishguru`)
-
-1. Push repo named **`irishguru`** (or any name).
-2. **Settings → Pages → Source:** branch **`main`**, folder **`/ (root)`**.
-3. Site live at `https://YOUR_USERNAME.github.io/irishguru/`.
-
-All internal links are **relative** (`about.html`, `css/styles.css`) — they work for both root and project sites.
-
-### Custom domain (irishguru.com)
-
-1. Create **`CNAME`** in repo root containing:
-   ```
-   irishguru.com
-   ```
-2. **Settings → Pages → Custom domain:** enter `irishguru.com`.
-3. At your registrar, add DNS:
-   - **A records** → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - **OR CNAME** `www` → `YOUR_USERNAME.github.io`
-4. Enable **Enforce HTTPS** in GitHub Pages settings.
-
-`.nojekyll` is included so GitHub Pages serves files as-is (no Jekyll processing).
-
----
-
-## Deploy to Netlify
-
-### Git-connected (recommended)
-
-1. Push repo to GitHub.
-2. [app.netlify.com](https://app.netlify.com) → **Add new site → Import an existing project**.
-3. Connect GitHub repo.
-4. Build settings (auto-detected from `netlify.toml`):
-   - **Build command:** *(empty)*
-   - **Publish directory:** `.`
-5. **Deploy site**.
-6. **Domain management → Add custom domain** → `irishguru.com`.
-
-### Enable contact form on Netlify
-
-In `contact.html`, add the `netlify` attribute:
-
-```html
-<form class="form contact-form" netlify name="contact" novalidate aria-label="Contact form">
-```
-
-Submissions appear under **Forms** in the Netlify dashboard.
-
-### Drag-and-drop
-
-Zip the project **contents** (not the parent folder) and drop at [app.netlify.com/drop](https://app.netlify.com/drop).
-
----
-
-## Deploy to Vercel
-
-1. Push repo to GitHub.
-2. [vercel.com](https://vercel.com) → **Add New Project** → import repo.
-3. Framework preset: **Other**.
-4. Build command: *(empty)* · Output directory: `.`
-5. **Deploy**.
-6. **Settings → Domains** → add `irishguru.com`.
-
-`vercel.json` sets cache headers for CSS/JS and basic security headers.
-
----
-
-## Where to edit content
-
-| What to change | File(s) |
-|----------------|---------|
-| **Company name, email, phone, address** | `contact.html`, footer on all `.html` files, JSON-LD in each page `<head>` |
-| **Social links** (LinkedIn, X) | Footer on all `.html` files |
-| **Brand colours & dark mode** | `css/styles.css` — `:root` and `[data-theme='dark']` tokens |
-| **Logo** | Inline SVG with class `logo__mark` in header/footer of each page |
-| **Homepage copy & stats** | `index.html` |
-| **About / mission / methodology** | `about.html` |
-| **Service descriptions** | `services.html` + service index on `index.html` |
-| **Industry copy** | `industries.html` + industry rows on `index.html` |
-| **Case studies** | `case-studies.html`, featured block on `index.html` |
-| **FAQ** | `index.html` |
-| **Page titles & meta descriptions** | `<title>` and `<meta name="description">` in each `.html` file |
-| **Open Graph / Twitter cards** | `og:*` and `twitter:*` tags in each page `<head>` |
-| **Canonical URLs & sitemap** | `<link rel="canonical">` per page, all `<loc>` in `sitemap.xml`, `robots.txt` |
-| **JSON-LD Organization** | `<script type="application/ld+json">` in each page `<head>` |
-| **Favicon** | Replace `favicon.svg`; update `og:image` when you add a PNG social image |
-| **Contact form backend** | `contact.html` — Formspree, Netlify Forms, Web3Forms, etc. |
-| **404 page** | `404.html` |
-
----
-
-## Technical notes
-
-- **Theme:** Toggle stores preference in `localStorage` key `irishguru-theme`. Inline script in `<head>` prevents flash of wrong theme.
-- **Form:** Client-side validation only by default — connect a form service before launch.
-- **Images:** Site uses inline SVG and `favicon.svg` only — no raster images to lazy-load.
-- **Fonts:** Loaded from Fontshare and Google Fonts CDN; `preconnect` hints are in each page `<head>`.
-- **SEO image:** `og:image` currently points to `favicon.svg`. Replace with a 1200×630 PNG for better social previews.
-
----
-
-## Browser support
-
-Chrome, Firefox, Safari, Edge (current versions). Uses `color-mix()` for header transparency.
-
----
-
-© 2026 Irish Guru Ltd. All rights reserved.
+Configure your GitHub repository settings under **Pages** → Source: **Deploy from branch** → Branch: **main** (Root directory `/`).

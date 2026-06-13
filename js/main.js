@@ -1,5 +1,5 @@
 /**
- * Irish Guru — Main JavaScript (Refined)
+ * Irish Guru — Main JavaScript (Redesigned & High-Performance)
  */
 
 (function () {
@@ -124,11 +124,8 @@
     let currentPage = 'home';
     if (last && pageMap[last]) {
       currentPage = pageMap[last];
-    } else if (last === 'irishguru' || last === '') {
-      currentPage = 'home';
-    } else if (parts.length >= 2) {
-      const segment = parts[parts.length - 1];
-      if (pageMap[segment]) currentPage = pageMap[segment];
+    } else if (parts.length >= 1 && pageMap[parts[0]]) {
+      currentPage = pageMap[parts[0]];
     }
 
     document.querySelectorAll('[data-nav]').forEach((link) => {
@@ -173,7 +170,7 @@
     const form = document.querySelector('.contact-form');
     if (!form) return;
 
-    const success = form.querySelector('.form__success');
+    const success = document.querySelector('.form__success');
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -203,9 +200,11 @@
 
       if (valid) {
         form.classList.add('is-submitted');
-        success?.classList.add('is-visible');
-        success?.setAttribute('tabindex', '-1');
-        success?.focus();
+        if (success) {
+          success.classList.add('is-visible');
+          success.setAttribute('tabindex', '-1');
+          success.focus();
+        }
       } else {
         firstInvalid?.focus();
       }
@@ -241,7 +240,7 @@
           }
         });
       },
-      { threshold: 0.08, rootMargin: '0px 0px -32px 0px' }
+      { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
     );
 
     elements.forEach((el) => observer.observe(el));
@@ -255,7 +254,7 @@
       const progress = Math.min((now - start) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
       const value = from + (target - from) * eased;
-      el.textContent = value.toFixed(decimals) + suffix;
+      el.innerHTML = value.toFixed(decimals) + `<small>${suffix}</small>`;
       if (progress < 1) requestAnimationFrame(step);
     };
 
@@ -279,144 +278,44 @@
           const target = parseFloat(el.getAttribute('data-counter'));
           const suffix = el.getAttribute('data-counter-suffix') || '';
           const decimals = parseInt(el.getAttribute('data-counter-decimals') || '0', 10);
-          animateCounter(el, target, suffix, decimals, 1400);
+          animateCounter(el, target, suffix, decimals, 1600);
           observer.unobserve(el);
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    counters.forEach((el) => observer.observe(el));
-  }
-
-  function initHeroStage() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    const scene = document.getElementById('hero-scene');
-    if (!scene) return;
-
-    const core = scene.querySelector('.visual-theater__core, .platform-scene__core');
-    const chips = scene.querySelectorAll('.platform-chip');
-    const glow = scene.querySelector('.visual-theater__glow');
-    let raf = null;
-    let targetX = 0;
-    let targetY = 0;
-    let currentX = 0;
-    let currentY = 0;
-
-    const onMove = (e) => {
-      const rect = scene.getBoundingClientRect();
-      targetX = (e.clientX - rect.left) / rect.width - 0.5;
-      targetY = (e.clientY - rect.top) / rect.height - 0.5;
-      if (!raf) raf = requestAnimationFrame(update);
-    };
-
-    const update = () => {
-      currentX += (targetX - currentX) * 0.1;
-      currentY += (targetY - currentY) * 0.1;
-      raf = null;
-
-      const shiftX = currentX * 6;
-      const shiftY = currentY * 4;
-
-      if (core) {
-        if (Math.abs(shiftX) < 0.5 && Math.abs(shiftY) < 0.5) {
-          core.style.transform = '';
-        } else {
-          core.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
-        }
-      }
-
-      if (glow) {
-        if (Math.abs(currentX) < 0.01 && Math.abs(currentY) < 0.01) {
-          glow.style.transform = '';
-        } else {
-          glow.style.transform = `translate(${currentX * 10}px, ${currentY * 8}px)`;
-        }
-      }
-
-      chips.forEach((chip, i) => {
-        const depth = (i + 1) * 3;
-        const px = currentX * depth;
-        const py = currentY * depth;
-        if (Math.abs(px) < 0.5 && Math.abs(py) < 0.5) {
-          chip.style.transform = '';
-          return;
-        }
-        const base = chip.classList.contains('platform-chip--3') ? 'translateX(-50%) ' : '';
-        chip.style.transform = `${base}translate(${px}px, ${py}px)`;
-      });
-
-      if (Math.abs(targetX - currentX) > 0.001 || Math.abs(targetY - currentY) > 0.001) {
-        raf = requestAnimationFrame(update);
-      }
-    };
-
-    scene.addEventListener('mousemove', onMove);
-    scene.addEventListener('mouseleave', () => {
-      targetX = 0;
-      targetY = 0;
-      currentX = 0;
-      currentY = 0;
-      raf = null;
-      if (core) core.style.transform = '';
-      chips.forEach((chip) => { chip.style.transform = ''; });
-      if (glow) glow.style.transform = '';
-    });
-  }
-
-  function initStoryCompose() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    const compose = document.querySelector('.story-compose');
-    if (!compose) return;
-
-    const layers = compose.querySelectorAll('.story-compose__layer');
-    let raf = null;
-    let targetX = 0;
-    let targetY = 0;
-
-    const onMove = (e) => {
-      const rect = compose.getBoundingClientRect();
-      targetX = (e.clientX - rect.left) / rect.width - 0.5;
-      targetY = (e.clientY - rect.top) / rect.height - 0.5;
-      if (!raf) raf = requestAnimationFrame(update);
-    };
-
-    const update = () => {
-      raf = null;
-      layers.forEach((layer, i) => {
-        const depth = (i + 1) * 6;
-        layer.style.transform =
-          `translate3d(${targetX * depth}px, ${targetY * depth}px, 0)`;
-      });
-    };
-
-    compose.addEventListener('mousemove', onMove);
-    compose.addEventListener('mouseleave', () => {
-      targetX = 0;
-      targetY = 0;
-      layers.forEach((layer) => { layer.style.transform = ''; });
-    });
-  }
-
-  function initImpactCharts() {
-    const rows = document.querySelectorAll('.impact-chart__row');
-    if (!rows.length) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-animated');
-            observer.unobserve(entry.target);
-          }
         });
       },
       { threshold: 0.3 }
     );
 
-    rows.forEach((row) => observer.observe(row));
+    counters.forEach((el) => observer.observe(el));
+  }
+
+  /* --- Interactive Diagram Click & Highlight Behaviors --- */
+  function initDiagramInteractivity() {
+    const nodes = document.querySelectorAll('.diagram-node');
+    nodes.forEach(node => {
+      node.addEventListener('click', () => {
+        // Highlight logic
+        nodes.forEach(n => n.setAttribute('opacity', '0.4'));
+        node.setAttribute('opacity', '1');
+
+        const tipId = node.getAttribute('data-tip-id');
+        const activeTip = document.getElementById(tipId);
+        if (activeTip) {
+          document.querySelectorAll('.diagram-tooltip').forEach(tip => {
+            tip.classList.remove('is-active');
+          });
+          activeTip.classList.add('is-active');
+        }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.diagram-node') && !e.target.closest('.diagram-tooltip')) {
+        nodes.forEach(n => n.setAttribute('opacity', '1'));
+        document.querySelectorAll('.diagram-tooltip').forEach(tip => {
+          tip.classList.remove('is-active');
+        });
+      }
+    });
   }
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -428,8 +327,6 @@
     initForm();
     initReveal();
     initCounters();
-    initImpactCharts();
-    initHeroStage();
-    initStoryCompose();
+    initDiagramInteractivity();
   });
 })();
