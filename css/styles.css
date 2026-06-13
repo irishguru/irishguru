@@ -294,7 +294,16 @@ h1, h2, h3, h4 {
   font-size: var(--t-xl);
   letter-spacing: -.03em;
 }
-.logo__mark { width: 2.125rem; height: 2.125rem; flex-shrink: 0; }
+.logo__mark {
+  width: 2.125rem;
+  height: 2.125rem;
+  flex-shrink: 0;
+  transition: filter var(--fast), transform var(--fast);
+}
+.logo:hover .logo__mark {
+  filter: drop-shadow(0 0 10px rgba(207,162,118,.45));
+  transform: translateY(-1px);
+}
 .logo__text {
   display: flex;
   flex-direction: column;
